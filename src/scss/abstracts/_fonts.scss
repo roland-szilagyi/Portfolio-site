@@ -1,0 +1,6 @@
+$fontname-font-path: "../assets/fonts";
+@font-face {
+  src: url(#{$fontname-font-path}/fontname.ttf);
+  font-family: 'font1';
+  font-weight: 300;
+}

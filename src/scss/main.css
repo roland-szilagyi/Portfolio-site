@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/*
+Csak segédfunkciók és nem kimeneti kódrészletek.
+(betűtípus-importálások, újrafelhasználható mixinek, globális változók, színek stb.)
+*/
+@font-face {
+  src: url(../assets/fonts/fontname.ttf);
+  font-family: "font1";
+  font-weight: 300;
+}
+/*
+Tartalma a globális stílusok és a reset.
+*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  text-decoration: none;
+}
+
+body {
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+Tartalmazza az újrafelhasználható komponenseket.
+A komponensek csak egyetlen dolgot csinálnak és újrafelhasználhatóak.
+
+példa komponensek: alert, button, carousel, form, icon, input, label
+*/
+/*
+Tartalma az összetevők és alapstílusok egyedi kombinációi.
+
+példa layoutok: header, footer, nav, main, sidebar
+*//*# sourceMappingURL=main.css.map */

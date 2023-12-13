@@ -1,0 +1,126 @@
+// FLEXBOX
+@mixin flex($display, $flex-direction, $justify-content, $align-items, $flex-wrap) {
+    display: $display;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-wrap: $flex-wrap;
+}
+
+// IMG SIZE
+@mixin image($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+// TITLES
+@mixin title {
+    @include font-style($font-name, $font-large, $color-secondary);
+    font-weight: $font-weight-fat;
+    line-height: 1;
+}
+
+@mixin subtitle {
+    @include font-style($font-name, $font-base, $color-tertiary);
+    font-weight: $font-weight-fat;
+    line-height: 1;
+}
+
+@mixin content {
+    @include font-style($font-name, $font-medium, $color-white);
+    text-shadow: $text-shadow-slim;
+    font-weight: $font-weight-fat;
+    line-height: 1;
+    text-align: center;
+}
+
+// LINKS
+@mixin link {
+    text-decoration: none;
+    letter-spacing: $letter-spacing-small;
+    cursor: pointer;
+
+    &:hover {
+        color: $color-secondary;
+        text-shadow: $text-shadow-slim;
+        scale: 1.05;
+    }
+}
+
+// BUTTONS
+@mixin btn {
+    @include flex(flex, row, center, center, nowrap);
+    @include font-style($font-name, $font-small, $color-secondary);
+    @include border($border-small, "xy", $color-tertiary);
+    @include padding($padding-small, "xy");
+    box-shadow: $box-shadow-slim;
+    cursor: pointer;
+
+    &:hover {
+        color: $color-tertiary;
+        scale: 1.05;
+    }
+}
+
+// MARGIN - @include margin($margin-medium, 'xy');
+@mixin margin($size, $directions: "xy") {
+    @if $directions == "xy" {
+        margin: $size;
+    } @else if $directions == "x" {
+        margin-left: $size;
+        margin-right: $size;
+    } @else if $directions == "y" {
+        margin-top: $size;
+        margin-bottom: $size;
+    }   @else if $directions == "b" {
+        margin-bottom: $size;
+    }   @else if $directions == "t" {
+        margin-top: $size;
+    }   @else if $directions == "l" {
+        margin-left: $size;
+    }   @else if $directions == "r" {
+        margin-right: $size;
+    }
+}
+
+// PADDING - @include padding($padding-medium, 'xy');
+@mixin padding($size, $directions: "xy") {
+    @if $directions == "xy" {
+        padding: $size;
+    } @else if $directions == "x" {
+        padding-left: $size;
+        padding-right: $size;
+    } @else if $directions == "y" {
+        padding-top: $size;
+        padding-bottom: $size;
+    } @else if $directions == "b" {
+        padding-bottom: $size;
+    } @else if $directions == "t" {
+        padding-top: $size;
+    } 
+}
+
+// BORDER - @include border($..., 'xy', $color-shadow);
+@mixin border($size, $directions: "xy", $border-color) {
+    @if $directions == "xy" {
+        border: $size;
+    } @else if $directions == "x" {
+        border-left: $size;
+        border-right: $size;
+    } @else if $directions == "y" {
+        border-top: $size;
+        border-bottom: $size;
+    } @else if $directions == "b" {
+        border-bottom: $size;
+    } @else if $directions == "t" {
+        border-top: $size;
+    }
+        border-color: $border-color;
+}
+
+// FONTPACK (FAMILY-SIZE-COLOR)
+@mixin font-style($font-family, $font-size, $color) {
+    font-family: $font-family;
+    font-size: $font-size;
+    color: $color;
+}
