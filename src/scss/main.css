@@ -51,6 +51,11 @@ A komponensek csak egyetlen dolgot csinálnak és újrafelhasználhatóak.
 
 példa komponensek: alert, button, carousel, form, icon, input, label
 */
+.paperplane {
+  width: 10rem;
+  height: auto;
+}
+
 /*
 Tartalma az összetevők és alapstílusok egyedi kombinációi.
 
@@ -75,4 +80,13 @@ header .nav {
   align-items: center;
   flex-wrap: nowrap;
   outline: 2px solid #EF8C01;
+}
+
+aside {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  outline: 2px solid #64C466;
 }/*# sourceMappingURL=main.css.map */
