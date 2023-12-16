@@ -1,0 +1,6 @@
+.text-cont {
+  @include flex(flex, row, center, center, nowrap);
+  width: 80%;
+  text-align: center;
+  outline: $outline2;
+}

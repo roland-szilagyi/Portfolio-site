@@ -1,0 +1,4 @@
+main {
+  @include flex(flex, column, center, center, nowrap);
+  outline: $outline1;
+}

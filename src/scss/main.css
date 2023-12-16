@@ -56,6 +56,17 @@ példa komponensek: alert, button, carousel, form, icon, input, label
   height: auto;
 }
 
+.text-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 80%;
+  text-align: center;
+  outline: 2px solid #EF8C01;
+}
+
 /*
 Tartalma az összetevők és alapstílusok egyedi kombinációi.
 
@@ -80,6 +91,15 @@ header .nav {
   align-items: center;
   flex-wrap: nowrap;
   outline: 2px solid #EF8C01;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  outline: 2px solid #64C466;
 }
 
 aside {
