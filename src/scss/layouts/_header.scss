@@ -1,0 +1,14 @@
+header {
+  @include flex(flex, row, space-between, center, nowrap);
+  outline: $outline1;
+
+  .name {
+    text-align: center;
+    outline: $outline2;
+  }
+
+  .nav {
+    @include flex(flex, row, space-between, center, nowrap);
+    outline: $outline2;
+  }
+}

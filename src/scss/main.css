@@ -55,4 +55,24 @@ példa komponensek: alert, button, carousel, form, icon, input, label
 Tartalma az összetevők és alapstílusok egyedi kombinációi.
 
 példa layoutok: header, footer, nav, main, sidebar
-*//*# sourceMappingURL=main.css.map */
+*/
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  outline: 2px solid #64C466;
+}
+header .name {
+  text-align: center;
+  outline: 2px solid #EF8C01;
+}
+header .nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  outline: 2px solid #EF8C01;
+}/*# sourceMappingURL=main.css.map */
