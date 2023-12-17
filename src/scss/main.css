@@ -109,4 +109,22 @@ aside {
   align-items: center;
   flex-wrap: nowrap;
   outline: 2px solid #64C466;
+}
+
+.works {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  outline: 2px solid #64C466;
+}
+.works .works-title {
+  outline: 2px solid #EF8C01;
+}
+.works .works-text {
+  outline: 2px solid #EF8C01;
+}
+.works .works-projects {
+  outline: 2px solid #EF8C01;
 }/*# sourceMappingURL=main.css.map */

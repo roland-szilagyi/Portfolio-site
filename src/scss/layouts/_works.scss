@@ -1,0 +1,16 @@
+.works {
+  @include flex(flex, column, center, center, nowrap);
+  outline: $outline1;
+
+  .works-title {
+    outline: $outline2;
+  }
+
+  .works-text {
+    outline: $outline2;
+  }
+
+  .works-projects {
+    outline: $outline2;
+  }
+}
