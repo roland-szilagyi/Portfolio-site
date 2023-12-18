@@ -156,5 +156,10 @@ aside {
   outline: 2px solid #EF8C01;
 }
 .contact .contact-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
   outline: 2px solid #EF8C01;
 }/*# sourceMappingURL=main.css.map */

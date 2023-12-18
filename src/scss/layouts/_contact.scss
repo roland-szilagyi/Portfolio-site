@@ -11,6 +11,7 @@
   }
 
   .contact-links {
+    @include flex(flex, column, center, flex-start, nowrap);
     outline: $outline2;
   }
 }
