@@ -1,0 +1,30 @@
+.about {
+  @include flex(flex, column, center, center, nowrap);
+
+  .about-title {
+    outline: $outline2;
+  }
+
+  .about-text {
+    text-align: center;
+    outline: $outline2;
+  }
+
+  .about-profilpic {
+    width: 10rem;
+    outline: $outline2;
+  }
+
+  .about-skills-title {
+    outline: $outline2;
+  }
+
+  .about-skills-icons {
+    @include flex(flex, row, center, center, wrap);
+    outline: $outline2;
+
+    .skills-icon {
+      width: 4rem;
+    }
+  }
+}

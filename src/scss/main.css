@@ -162,4 +162,37 @@ aside {
   align-items: flex-start;
   flex-wrap: nowrap;
   outline: 2px solid #EF8C01;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.about .about-title {
+  outline: 2px solid #EF8C01;
+}
+.about .about-text {
+  text-align: center;
+  outline: 2px solid #EF8C01;
+}
+.about .about-profilpic {
+  width: 10rem;
+  outline: 2px solid #EF8C01;
+}
+.about .about-skills-title {
+  outline: 2px solid #EF8C01;
+}
+.about .about-skills-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  outline: 2px solid #EF8C01;
+}
+.about .about-skills-icons .skills-icon {
+  width: 4rem;
 }/*# sourceMappingURL=main.css.map */
