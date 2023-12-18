@@ -1,0 +1,16 @@
+.contact-form {
+  @include flex(flex, column, center, center, nowrap);
+  outline: $outline2;
+
+  #name-id {
+  
+  }
+
+  #email-id {
+
+  }
+
+  #message-id {
+    
+  }
+}

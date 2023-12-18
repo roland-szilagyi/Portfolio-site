@@ -7,6 +7,7 @@
   <title>Portfolio site</title>
 </head>
 <body>
+    <!-- header -->
   <header>
     <div class="name">
       <h1>CODERBOB</h1>
@@ -21,6 +22,7 @@
       <img src="/src/assets/imgs/paperplane-light.svg" alt="flying paperplane">
     </div>
   </aside>
+    <!-- main -->
   <main>
     <div class="text-cont">
       <p>Hello, I'm</p>
@@ -79,9 +81,34 @@
       <img src="/src/assets/icons/react.svg" alt="react-icon">
     </div>
   </article>
-  <article>
-    <!-- contact -->
+  <!-- contact -->
+  <article class="contact">
+    <div class="contact-title">
+      <h2>CONTACT</h2>
+    </div>
+    <div class="contact-text">
+      <p>Contact me for solutions.</p>
+    </div>
+    <form class="contact-form" action="#" method="post">
+      <label for="name-id">Name:
+        <input type="text" name="name" id="name-id" placeholder="John Rambo" required>
+      </label>
+      <label for="email-id">Email:
+        <input type="text" name="email" id="email-id" placeholder="email@icloud.com" required>
+      </label>
+      <label for="message-id">Message:
+        <textarea name="message" id="message-id" cols="30" rows="10">
+        </textarea>
+      </label>
+      <input class="button" type="submit" value="SEND">
+    </form>
+    <div class="contact-links">
+      <p>github</p>
+      <p>instagram</p>
+      <p>linkedin</p>
+    </div>
   </article>
   <script src="/src/js/script.js"></script>
+  <script src="https://kit.fontawesome.com/faa69f8bac.js" crossorigin="anonymous"></script>
 </body>
 </html>

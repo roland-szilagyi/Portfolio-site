@@ -51,6 +51,10 @@ A komponensek csak egyetlen dolgot csinálnak és újrafelhasználhatóak.
 
 példa komponensek: alert, button, carousel, form, icon, input, label
 */
+.button {
+  background-color: lightblue;
+}
+
 .paperplane {
   width: 10rem;
   height: auto;
@@ -67,6 +71,14 @@ példa komponensek: alert, button, carousel, form, icon, input, label
   outline: 2px solid #EF8C01;
 }
 
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  outline: 2px solid #EF8C01;
+}
 /*
 Tartalma az összetevők és alapstílusok egyedi kombinációi.
 
@@ -126,5 +138,23 @@ aside {
   outline: 2px solid #EF8C01;
 }
 .works .works-projects {
+  outline: 2px solid #EF8C01;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  outline: 2px solid #64C466;
+}
+.contact .contact-title {
+  outline: 2px solid #EF8C01;
+}
+.contact .contact-text {
+  outline: 2px solid #EF8C01;
+}
+.contact .contact-links {
   outline: 2px solid #EF8C01;
 }/*# sourceMappingURL=main.css.map */
