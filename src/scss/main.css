@@ -79,6 +79,50 @@ példa komponensek: alert, button, carousel, form, icon, input, label
   flex-wrap: nowrap;
   outline: 2px solid #EF8C01;
 }
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.hamburger .hamburger-xmark {
+  width: 1.5rem;
+  outline: 2px solid #EF8C01;
+}
+.hamburger .hamburger-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  outline: 2px solid #EF8C01;
+}
+.hamburger .hamburger-links .links-numbers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  outline: 2px solid #EF8C01;
+}
+.hamburger .hamburger-links .links-titles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  outline: 2px solid #EF8C01;
+}
+.hamburger .hamburger-social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  outline: 2px solid #EF8C01;
+}
+
 .hide {
   display: none;
 }

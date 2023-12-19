@@ -1,3 +1,32 @@
+.hamburger {
+  @include flex(flex, column, center, center, nowrap);
+
+  .hamburger-xmark {
+    width: 1.5rem;
+    outline: $outline2;
+  }
+
+  .hamburger-links {
+    @include flex(flex, row, center, center, nowrap);
+    outline: $outline2;
+
+    .links-numbers {
+      @include flex(flex, column, center, center, nowrap);
+      outline: $outline2;
+    }
+
+    .links-titles {
+      @include flex(flex, column, center, flex-start, nowrap);
+      outline: $outline2;
+    }
+  }
+
+  .hamburger-social-links {
+    @include flex(flex, row, center, center, nowrap);
+    outline: $outline2;
+  }
+}
+
 .hide {
   display: none;
 }

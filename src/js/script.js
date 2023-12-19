@@ -1,15 +1,18 @@
 // Hamburger toggle
-let hamburgerBtn = document.querySelector('.js-ham-btn');
-hamburgerBtn.addEventListener('click', hamburgerToggle);
+let hamburgerBtnOpen = document.querySelector('.js-ham-btn-open');
+hamburgerBtnOpen.addEventListener('click', hamburgerOpener);
 
-function hamburgerToggle() {
+let hamburgerBtnClose = document.querySelector('.js-ham-btn-close');
+hamburgerBtnClose.addEventListener('click', hamburgerCloser); 
+
+function hamburgerOpener() {
   let links = document.querySelector('.js-ham-links');
-  if ( links.classList.contains('hide') ) {
     links.classList.remove('hide');
     links.classList.add('show');
-  }
-  else if ( links.classList.contains('show') ) {
+};
+    
+function hamburgerCloser() {
+  let links = document.querySelector('.js-ham-links');
     links.classList.remove('show');
     links.classList.add('hide');
-  }
 };
