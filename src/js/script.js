@@ -4,10 +4,15 @@ hamBtnOpen.addEventListener('click', hamOpen);
 
 function hamOpen() {
   let hamIsOpen = document.querySelector('.hamburger');
-  let headerVisible = document.querySelector('.js-header');
   hamIsOpen.classList.remove('hidden');
-  headerVisible.classList.remove('visible');
-  headerVisible.classList.add('hidden');
+  headerInvisible();
+};
+
+// Header Invisible
+function headerInvisible() {
+  let headerInvisible = document.querySelector('.js-header');
+  headerInvisible.classList.add('hidden');
+  headerInvisible.classList.remove('visible');
 };
 
 // Hamburger Close
@@ -16,8 +21,13 @@ hamBtnClose.addEventListener('click', hamClose);
 
 function hamClose() {
   let hamIsClose = document.querySelector('.hamburger');
-  let headerVisible = document.querySelector('.js-header');
   hamIsClose.classList.add('hidden');
+  headerVisible();
+};
+
+// Header Visible
+function headerVisible() {
+  let headerVisible = document.querySelector('.js-header');
   headerVisible.classList.add('visible');
   headerVisible.classList.remove('hidden');
 };
@@ -26,13 +36,11 @@ function hamClose() {
 function pageLoader(value) {
   let pageOpen = document.querySelector('.' + value);
   let pageReset = document.querySelectorAll('.js-page');
-  let headerVisible = document.querySelector('.js-header');
   pageReset.forEach(function(page) {
     page.classList.remove('visible');
     page.classList.add('hidden');
   });
   pageOpen.classList.remove('hidden');
   pageOpen.classList.add('visible');
-  headerVisible.classList.add('visible');
-  headerVisible.classList.remove('hidden');
+  headerVisible();
 };
