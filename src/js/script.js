@@ -30,9 +30,9 @@ function PagesCloser() {
   });
 };
 
-// Visszahozza az összes oldalt ha a hamburgert bezárjuk
+// Visszahozza az oldalt ami megvolt nyitva ha a hamburgert bezárjuk
 function PagesOpener() {
-  let pages = document.querySelectorAll('.js-page');
+  let pages = document.querySelectorAll('.active');
     pages.forEach(function(page) {
     page.classList.remove('hide');
     page.classList.add('show');
