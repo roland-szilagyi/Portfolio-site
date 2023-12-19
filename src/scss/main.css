@@ -22,7 +22,7 @@ Tartalma a globális stílusok és a reset.
 }
 
 body {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 100;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -79,6 +79,10 @@ példa komponensek: alert, button, carousel, form, icon, input, label
   flex-wrap: nowrap;
   outline: 2px solid #EF8C01;
 }
+.hide {
+  display: none;
+}
+
 /*
 Tartalma az összetevők és alapstílusok egyedi kombinációi.
 
@@ -104,6 +108,9 @@ header .nav {
   align-items: center;
   flex-wrap: nowrap;
   outline: 2px solid #EF8C01;
+}
+header .nav .nav-icon {
+  width: 1.5rem;
 }
 
 main {

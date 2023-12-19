@@ -11,5 +11,9 @@ header {
   .nav {
     @include flex(flex, row, space-between, center, nowrap);
     outline: $outline2;
+
+    .nav-icon {
+      width: 1.5rem;
+    }
   }
 }
