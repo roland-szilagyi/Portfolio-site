@@ -7,8 +7,18 @@
   <title>Portfolio site</title>
 </head>
 <body>
+    <!-- header -->
+  <header class="header  visible  js-header">
+    <div class="name">
+      <h1>CODERBOB</h1>
+    </div>
+    <div class="nav">
+      <img class="nav-icon" src="./src/assets/icons/theme.svg" alt="lightordarkmodeicon">
+      <img class="nav-icon  js-ham-btn-open" src="./src/assets/icons/bars.svg" alt="hamburgermenubars">
+    </div>
+  </header>
     <!-- hamburger -->
-  <section class="js-ham  hamburger  hide">
+  <section class="hamburger  fix  hidden  js-page">
     <div>
       <img class="hamburger-xmark  js-ham-btn-close" src="./src/assets/icons/xmark.svg" alt="closehamburger">
     </div>
@@ -20,10 +30,10 @@
         <p>4.</p>
       </div>
       <ul class="links-titles">
-        <li class="js-main" onclick="handleClick('main')">HOME</li>
-        <li class="js-works" onclick="handleClick('works')">WORKS</li>
-        <li class="js-about" onclick="handleClick('about')">ABOUT</li>
-        <li class="js-contact" onclick="handleClick('contact')">CONTACT</li>
+        <li class="js-main" onclick="pageLoader('main')">HOME</li>
+        <li class="js-works" onclick="pageLoader('works')">WORKS</li>
+        <li class="js-about" onclick="pageLoader('about')">ABOUT</li>
+        <li class="js-contact" onclick="pageLoader('contact')">CONTACT</li>
       </ul>
     </div>
     <div class="hamburger-social-links">
@@ -38,18 +48,8 @@
       </div>
     </div>
   </section>
-    <!-- header -->
-  <header class="js-page  header  show  active">
-    <div class="name">
-      <h1>CODERBOB</h1>
-    </div>
-    <div class="nav">
-      <img class="nav-icon" src="./src/assets/icons/theme.svg" alt="lightordarkmodeicon">
-      <img class="nav-icon  js-ham-btn-open" src="./src/assets/icons/bars.svg" alt="hamburgermenubars">
-    </div>
-  </header>
     <!-- main -->
-  <main class="js-page  main  show  active">
+  <main class="main  visible  js-page">
     <div class="paperplane">
       <img src="./src/assets/imgs/paperplane-light.svg" alt="flying paperplane">
     </div>
@@ -71,7 +71,7 @@
     </div>
   </main>
     <!-- works -->
-  <article class="js-page  works  hide">
+  <article class="works  hidden  js-page">
     <div class="works-title">
       <h2>WORKS</h2>
     </div>
@@ -85,7 +85,7 @@
     </div>
   </article>
     <!-- about -->
-  <article class="js-page  about  hide">
+  <article class="about  hidden  js-page">
     <div class="about-title">
       <h2>ABOUT</h2>
     </div>
@@ -110,8 +110,8 @@
       <img class="skills-icon" src="./src/assets/icons/react.svg" alt="react-icon">
     </div>
   </article>
-  <!-- contact -->
-  <article class="js-page  contact  hide">
+    <!-- contact -->
+  <article class="contact  hidden  js-page">
     <div class="contact-title">
       <h2>CONTACT</h2>
     </div>

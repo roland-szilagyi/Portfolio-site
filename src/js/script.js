@@ -1,28 +1,38 @@
-let hamburgerBtnOpen = document.querySelector('.js-ham-btn-open');
-hamburgerBtnOpen.addEventListener('click', hamburgerOpener);
+// Hamburger Open
+let hamBtnOpen = document.querySelector('.js-ham-btn-open');
+hamBtnOpen.addEventListener('click', hamOpen);
 
-let hamburgerBtnClose = document.querySelector('.js-ham-btn-close');
-hamburgerBtnClose.addEventListener('click', hamburgerCloser);
-
-
-function hamburgerOpener() {
-  let hamburgerIsOpen = document.querySelector('.js-ham');
-  let pageIsOpen = document.querySelectorAll('.js-page');
-  hamburgerIsOpen.classList.add('show');
-  hamburgerIsOpen.classList.remove('hide');
-  pageIsOpen.forEach(function(page) {
-    page.classList.remove('show');
-    page.classList.add('hide');
-  })
+function hamOpen() {
+  let hamIsOpen = document.querySelector('.hamburger');
+  let headerVisible = document.querySelector('.js-header');
+  hamIsOpen.classList.remove('hidden');
+  headerVisible.classList.remove('visible');
+  headerVisible.classList.add('hidden');
 };
 
-function hamburgerCloser() {
-  let hamburgerIsOpen = document.querySelector('.js-ham');
-  let pageIsOpen = document.querySelectorAll('.active');
-  hamburgerIsOpen.classList.add('hide');
-  hamburgerIsOpen.classList.remove('show');
-  pageIsOpen.forEach(function(page) {
-    page.classList.remove('hide');
-    page.classList.add('show');
-  })
+// Hamburger Close
+let hamBtnClose = document.querySelector('.js-ham-btn-close');
+hamBtnClose.addEventListener('click', hamClose);
+
+function hamClose() {
+  let hamIsClose = document.querySelector('.hamburger');
+  let headerVisible = document.querySelector('.js-header');
+  hamIsClose.classList.add('hidden');
+  headerVisible.classList.add('visible');
+  headerVisible.classList.remove('hidden');
+};
+
+// Page Loader
+function pageLoader(value) {
+  let pageOpen = document.querySelector('.' + value);
+  let pageReset = document.querySelectorAll('.js-page');
+  let headerVisible = document.querySelector('.js-header');
+  pageReset.forEach(function(page) {
+    page.classList.remove('visible');
+    page.classList.add('hidden');
+  });
+  pageOpen.classList.remove('hidden');
+  pageOpen.classList.add('visible');
+  headerVisible.classList.add('visible');
+  headerVisible.classList.remove('hidden');
 };
