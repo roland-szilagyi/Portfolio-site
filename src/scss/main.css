@@ -90,7 +90,8 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
-  outline: 2px solid #64C466;
+  outline: 2px solid darkslategrey;
+  background-color: lightcoral;
 }
 header .name {
   text-align: center;
@@ -111,7 +112,8 @@ main {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  outline: 2px solid #64C466;
+  outline: 2px solid darkslategrey;
+  background-color: lightblue;
 }
 
 aside {
@@ -120,7 +122,8 @@ aside {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  outline: 2px solid #64C466;
+  outline: 2px solid darkslategrey;
+  background-color: gray;
 }
 
 .works {
@@ -129,7 +132,8 @@ aside {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  outline: 2px solid #64C466;
+  outline: 2px solid darkslategrey;
+  background-color: lightgreen;
 }
 .works .works-title {
   outline: 2px solid #EF8C01;
@@ -147,7 +151,8 @@ aside {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  outline: 2px solid #64C466;
+  outline: 2px solid darkslategrey;
+  background-color: lightpink;
 }
 .contact .contact-title {
   outline: 2px solid #EF8C01;
@@ -170,6 +175,8 @@ aside {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  outline: 2px solid darkslategrey;
+  background-color: lightseagreen;
 }
 .about .about-title {
   outline: 2px solid #EF8C01;

@@ -1,4 +1,5 @@
 aside {
   @include flex(flex, row, center, center, nowrap);
   outline: $outline1;
+  background-color: gray;
 }

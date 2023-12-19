@@ -1,6 +1,7 @@
 header {
   @include flex(flex, row, space-between, center, nowrap);
   outline: $outline1;
+  background-color: lightcoral;
 
   .name {
     text-align: center;

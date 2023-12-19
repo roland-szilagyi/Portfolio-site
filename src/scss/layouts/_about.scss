@@ -1,5 +1,7 @@
 .about {
   @include flex(flex, column, center, center, nowrap);
+  outline: $outline1;
+  background-color: lightseagreen;
 
   .about-title {
     outline: $outline2;

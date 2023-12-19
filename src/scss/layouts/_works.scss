@@ -1,6 +1,7 @@
 .works {
   @include flex(flex, column, center, center, nowrap);
   outline: $outline1;
+  background-color: lightgreen;
 
   .works-title {
     outline: $outline2;
