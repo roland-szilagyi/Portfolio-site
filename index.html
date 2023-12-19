@@ -7,17 +7,7 @@
   <title>Portfolio site</title>
 </head>
 <body>
-    <!-- header -->
-  <header class="js-page  header  show  active">
-    <div class="name">
-      <h1>CODERBOB</h1>
-    </div>
-    <div class="nav">
-      <img class="nav-icon" src="./src/assets/icons/theme.svg" alt="lightordarkmodeicon">
-      <img class="nav-icon  js-ham-btn-open" src="./src/assets/icons/bars.svg" alt="hamburgermenubars">
-    </div>
-  </header>
-  <!-- hamburger -->
+    <!-- hamburger -->
   <section class="js-ham  hamburger  hide">
     <div>
       <img class="hamburger-xmark  js-ham-btn-close" src="./src/assets/icons/xmark.svg" alt="closehamburger">
@@ -29,12 +19,12 @@
         <p>3.</p>
         <p>4.</p>
       </div>
-      <div class="links-titles">
-        <a href="#">HOME</a>
-        <a href="#">WORKS</a>
-        <a href="#">ABOUT</a>
-        <a href="#">CONTACT</a>
-      </div>
+      <ul class="links-titles">
+        <li class="js-main" onclick="handleClick('main')">HOME</li>
+        <li class="js-works" onclick="handleClick('works')">WORKS</li>
+        <li class="js-about" onclick="handleClick('about')">ABOUT</li>
+        <li class="js-contact" onclick="handleClick('contact')">CONTACT</li>
+      </ul>
     </div>
     <div class="hamburger-social-links">
       <div>
@@ -48,14 +38,21 @@
       </div>
     </div>
   </section>
-  <!-- logo -->
-  <aside class="js-page  logo  show  active">
+    <!-- header -->
+  <header class="js-page  header  show  active">
+    <div class="name">
+      <h1>CODERBOB</h1>
+    </div>
+    <div class="nav">
+      <img class="nav-icon" src="./src/assets/icons/theme.svg" alt="lightordarkmodeicon">
+      <img class="nav-icon  js-ham-btn-open" src="./src/assets/icons/bars.svg" alt="hamburgermenubars">
+    </div>
+  </header>
+    <!-- main -->
+  <main class="js-page  main  show  active">
     <div class="paperplane">
       <img src="./src/assets/imgs/paperplane-light.svg" alt="flying paperplane">
     </div>
-  </aside>
-    <!-- main -->
-  <main class="js-page  main  show  active">
     <div class="text-cont">
       <p>Hello, I'm</p>
       <h2>ROLAND</h2>
