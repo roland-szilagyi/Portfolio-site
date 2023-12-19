@@ -127,13 +127,16 @@ példa komponensek: alert, button, carousel, form, icon, input, label
   display: none;
 }
 
+.show {
+  display: flex;
+}
+
 /*
 Tartalma az összetevők és alapstílusok egyedi kombinációi.
 
 példa layoutok: header, footer, nav, main, sidebar
 */
-header {
-  display: flex;
+.header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -141,11 +144,11 @@ header {
   outline: 2px solid darkslategrey;
   background-color: lightcoral;
 }
-header .name {
+.header .name {
   text-align: center;
   outline: 2px solid #EF8C01;
 }
-header .nav {
+.header .nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -153,12 +156,11 @@ header .nav {
   flex-wrap: nowrap;
   outline: 2px solid #EF8C01;
 }
-header .nav .nav-icon {
+.header .nav .nav-icon {
   width: 1.5rem;
 }
 
-main {
-  display: flex;
+.main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -167,8 +169,7 @@ main {
   background-color: lightblue;
 }
 
-aside {
-  display: flex;
+.logo {
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -178,7 +179,6 @@ aside {
 }
 
 .works {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -197,7 +197,6 @@ aside {
 }
 
 .contact {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -221,7 +220,6 @@ aside {
 }
 
 .about {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;

@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/src/scss/main.css">
+  <link rel="stylesheet" href="./src/scss/main.css">
   <title>Portfolio site</title>
 </head>
 <body>
     <!-- header -->
-  <header>
+  <header class="js-page  header  show">
     <div class="name">
       <h1>CODERBOB</h1>
     </div>
     <div class="nav">
-      <img class="nav-icon" src="/src/assets/icons/theme.svg" alt="lightordarkmodeicon">
-      <img class="nav-icon  js-ham-btn-open" src="/src/assets/icons/bars.svg" alt="hamburgermenubars">
+      <img class="nav-icon" src="./src/assets/icons/theme.svg" alt="lightordarkmodeicon">
+      <img class="nav-icon  js-ham-btn-open" src="./src/assets/icons/bars.svg" alt="hamburgermenubars">
     </div>
   </header>
   <!-- hamburger -->
-  <section class="hamburger  js-ham-links hide">
+  <section class="js-ham  hamburger  hide">
     <div>
-      <img class="hamburger-xmark  js-ham-btn-close" src="/src/assets/icons/xmark.svg" alt="closehamburger">
+      <img class="hamburger-xmark  js-ham-btn-close" src="./src/assets/icons/xmark.svg" alt="closehamburger">
     </div>
     <div class="hamburger-links">
       <div class="links-numbers">
@@ -30,10 +30,10 @@
         <p>4.</p>
       </div>
       <div class="links-titles">
-        <a class="js-pages  js-home" href="#">HOME</a>
-        <a class="js-pages  js-works" href="#">WORKS</a>
-        <a class="js-pages  js-about" href="#">ABOUT</a>
-        <a class="js-pages  js-contact" href="#">CONTACT</a>
+        <a href="#">HOME</a>
+        <a href="#">WORKS</a>
+        <a href="#">ABOUT</a>
+        <a href="#">CONTACT</a>
       </div>
     </div>
     <div class="hamburger-social-links">
@@ -48,13 +48,14 @@
       </div>
     </div>
   </section>
-  <aside>
+  <!-- logo -->
+  <aside class="js-page  logo  show">
     <div class="paperplane">
-      <img src="/src/assets/imgs/paperplane-light.svg" alt="flying paperplane">
+      <img src="./src/assets/imgs/paperplane-light.svg" alt="flying paperplane">
     </div>
   </aside>
     <!-- main -->
-  <main>
+  <main class="js-page  main  show">
     <div class="text-cont">
       <p>Hello, I'm</p>
       <h2>ROLAND</h2>
@@ -73,7 +74,7 @@
     </div>
   </main>
     <!-- works -->
-  <article class="works">
+  <article class="js-page  works  show">
     <div class="works-title">
       <h2>WORKS</h2>
     </div>
@@ -87,7 +88,7 @@
     </div>
   </article>
     <!-- about -->
-  <article class="about">
+  <article class="js-page  about  show">
     <div class="about-title">
       <h2>ABOUT</h2>
     </div>
@@ -95,7 +96,7 @@
       <p>Site building and application logic development are my areas of expertise.</p>
     </div>
     <div class="about-profilpic">
-      <img src="/src/assets/imgs/profil.svg" alt="profil-picture">
+      <img src="./src/assets/imgs/profil.svg" alt="profil-picture">
     </div>
     <div class="about-text">
       <p>I speak HTML / CSS / JavaScript languages. I work mostly in React and I'm not afraid of challenges.</p>
@@ -104,16 +105,16 @@
       <h3>SKILLS THAT I USE</h3>
     </div>
     <div class="about-skills-icons">
-      <img class="skills-icon" src="/src/assets/icons/html.svg" alt="html-icon">
-      <img class="skills-icon" src="/src/assets/icons/css.svg" alt="css-icon">
-      <img class="skills-icon" src="/src/assets/icons/sass.svg" alt="sass-icon">
-      <img class="skills-icon" src="/src/assets/icons/javascript.svg" alt="javascript-icon">
-      <img class="skills-icon" src="/src/assets/icons/typescript.svg" alt="typescript-icon">
-      <img class="skills-icon" src="/src/assets/icons/react.svg" alt="react-icon">
+      <img class="skills-icon" src="./src/assets/icons/html.svg" alt="html-icon">
+      <img class="skills-icon" src="./src/assets/icons/css.svg" alt="css-icon">
+      <img class="skills-icon" src="./src/assets/icons/sass.svg" alt="sass-icon">
+      <img class="skills-icon" src="./src/assets/icons/javascript.svg" alt="javascript-icon">
+      <img class="skills-icon" src="./src/assets/icons/typescript.svg" alt="typescript-icon">
+      <img class="skills-icon" src="./src/assets/icons/react.svg" alt="react-icon">
     </div>
   </article>
   <!-- contact -->
-  <article class="contact">
+  <article class="js-page  contact  show">
     <div class="contact-title">
       <h2>CONTACT</h2>
     </div>
@@ -145,7 +146,7 @@
       </div>
     </div>
   </article>
-  <script src="/src/js/script.js"></script>
+  <script src="./src/js/script.js"></script>
   <script src="https://kit.fontawesome.com/faa69f8bac.js" crossorigin="anonymous"></script>
 </body>
 </html>

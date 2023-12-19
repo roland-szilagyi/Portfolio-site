@@ -1,5 +1,9 @@
 .contact {
-  @include flex(flex, column, center, center, nowrap);
+  // @include flex(flex, column, center, center, nowrap);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
   outline: $outline1;
   background-color: lightpink;
 

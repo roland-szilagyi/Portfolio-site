@@ -1,5 +1,9 @@
-header {
-  @include flex(flex, row, space-between, center, nowrap);
+.header {
+  // @include flex(flex, row, space-between, center, nowrap);
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
   outline: $outline1;
   background-color: lightcoral;
 
