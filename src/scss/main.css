@@ -4,8 +4,13 @@ Csak segédfunkciók és nem kimeneti kódrészletek.
 (betűtípus-importálások, újrafelhasználható mixinek, globális változók, színek stb.)
 */
 @font-face {
-  src: url(../assets/fonts/fontname.ttf);
+  src: url(../assets/fonts/lexiamono-light.ttf);
   font-family: "font1";
+  font-weight: 300;
+}
+@font-face {
+  src: url(../assets/fonts/adlery-pro.ttf);
+  font-family: "font2";
   font-weight: 300;
 }
 /*
@@ -154,7 +159,6 @@ példa layoutok: header, footer, nav, main, sidebar
   align-items: center;
   flex-wrap: nowrap;
   outline: 2px solid darkslategrey;
-  background-color: lightcoral;
 }
 .header .name {
   text-align: center;
@@ -178,7 +182,6 @@ példa layoutok: header, footer, nav, main, sidebar
   align-items: center;
   flex-wrap: nowrap;
   outline: 2px solid darkslategrey;
-  background-color: lightblue;
 }
 
 .works {
@@ -187,7 +190,6 @@ példa layoutok: header, footer, nav, main, sidebar
   align-items: center;
   flex-wrap: nowrap;
   outline: 2px solid darkslategrey;
-  background-color: lightgreen;
 }
 .works .works-title {
   outline: 2px solid #EF8C01;
@@ -205,7 +207,6 @@ példa layoutok: header, footer, nav, main, sidebar
   align-items: center;
   flex-wrap: nowrap;
   outline: 2px solid darkslategrey;
-  background-color: lightpink;
 }
 .contact .contact-title {
   outline: 2px solid #EF8C01;
@@ -228,7 +229,6 @@ példa layoutok: header, footer, nav, main, sidebar
   align-items: center;
   flex-wrap: nowrap;
   outline: 2px solid darkslategrey;
-  background-color: lightseagreen;
 }
 .about .about-title {
   outline: 2px solid #EF8C01;
