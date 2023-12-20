@@ -11,6 +11,7 @@ body {
     font-weight: 600;
     font-family: 'font1';
     color: whitesmoke;
+    text-shadow: 0.05rem 0.05rem $color-tertiary;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     background: linear-gradient($color-primary, $color-quaternary);
