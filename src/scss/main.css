@@ -28,7 +28,8 @@ Tartalma a globális stílusok és a reset.
 
 body {
   font-size: 15px;
-  font-weight: 100;
+  font-weight: 600;
+  font-family: "font1";
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   background: linear-gradient(#2ECBE9, #128FC8);
@@ -81,6 +82,10 @@ példa komponensek: alert, button, carousel, form, icon, input, label
   flex-direction: column;
 }
 
+.text-cont h2 {
+  font-family: "font2";
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -125,6 +130,7 @@ példa komponensek: alert, button, carousel, form, icon, input, label
   justify-content: center;
   align-items: flex-start;
   flex-wrap: nowrap;
+  font-family: "font2";
   outline: 2px solid #EF8C01;
 }
 .hamburger .hamburger-social-links {
@@ -163,6 +169,7 @@ példa layoutok: header, footer, nav, main, sidebar
 .header .name {
   text-align: center;
   outline: 2px solid #EF8C01;
+  font-family: "font2";
 }
 .header .nav {
   display: flex;
@@ -192,6 +199,7 @@ példa layoutok: header, footer, nav, main, sidebar
   outline: 2px solid darkslategrey;
 }
 .works .works-title {
+  font-family: "font2";
   outline: 2px solid #EF8C01;
 }
 .works .works-text {
@@ -209,6 +217,7 @@ példa layoutok: header, footer, nav, main, sidebar
   outline: 2px solid darkslategrey;
 }
 .contact .contact-title {
+  font-family: "font2";
   outline: 2px solid #EF8C01;
 }
 .contact .contact-text {
@@ -231,6 +240,7 @@ példa layoutok: header, footer, nav, main, sidebar
   outline: 2px solid darkslategrey;
 }
 .about .about-title {
+  font-family: "font2";
   outline: 2px solid #EF8C01;
 }
 .about .about-text {
@@ -242,6 +252,7 @@ példa layoutok: header, footer, nav, main, sidebar
   outline: 2px solid #EF8C01;
 }
 .about .about-skills-title {
+  font-family: "font2";
   outline: 2px solid #EF8C01;
 }
 .about .about-skills-icons {
