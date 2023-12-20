@@ -6,4 +6,16 @@
   align-items: center;
   flex-wrap: nowrap;
   outline: $outline1;
+
+  .paperplane {
+    width: 10rem;
+    height: auto;
+  }
+
+  .text-cont {
+    @include flex(flex, row, center, center, nowrap);
+    width: 80%;
+    text-align: center;
+    outline: $outline2;
+  }
 }

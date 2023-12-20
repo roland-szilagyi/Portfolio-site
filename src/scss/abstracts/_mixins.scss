@@ -14,24 +14,10 @@
 }
 
 // TITLES
-@mixin title {
-    @include font-style($font-name, $font-large, $color-secondary);
-    font-weight: $font-weight-fat;
-    line-height: 1;
-}
-
-@mixin subtitle {
-    @include font-style($font-name, $font-base, $color-tertiary);
-    font-weight: $font-weight-fat;
-    line-height: 1;
-}
-
-@mixin content {
-    @include font-style($font-name, $font-medium, $color-white);
-    text-shadow: $text-shadow-slim;
-    font-weight: $font-weight-fat;
-    line-height: 1;
-    text-align: center;
+@mixin title($font-family, $font-size, $color) {
+    font-family: $font-family;
+    font-size: $font-size;
+    color: $color;
 }
 
 // LINKS
@@ -116,11 +102,4 @@
         border-top: $size;
     }
         border-color: $border-color;
-}
-
-// FONTPACK (FAMILY-SIZE-COLOR)
-@mixin font-style($font-family, $font-size, $color) {
-    font-family: $font-family;
-    font-size: $font-size;
-    color: $color;
 }

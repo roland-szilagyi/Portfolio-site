@@ -2,12 +2,12 @@ $lexiamono-font-path: "../assets/fonts";
 @font-face {
   src: url(#{$lexiamono-font-path}/lexiamono-light.ttf);
   font-family: 'font1';
-  font-weight: 300;
+  font-weight: 900;
 }
 
 $adlery-font-path: "../assets/fonts";
 @font-face {
   src: url(#{$adlery-font-path}/adlery-pro.ttf);
   font-family: 'font2';
-  font-weight: 300;
+  font-weight: 100;
 }

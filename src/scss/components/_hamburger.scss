@@ -20,7 +20,6 @@
 
     .links-titles {
       @include flex(flex, column, center, flex-start, nowrap);
-      font-family: 'font2';
       outline: $outline2;
     }
   }
