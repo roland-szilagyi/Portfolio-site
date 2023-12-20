@@ -30,6 +30,7 @@ body {
   font-size: 15px;
   font-weight: 600;
   font-family: "font1";
+  color: whitesmoke;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   background: linear-gradient(#2ECBE9, #128FC8);
@@ -181,6 +182,7 @@ példa layoutok: header, footer, nav, main, sidebar
 }
 .header .nav .nav-icon {
   width: 1.5rem;
+  fill: whitesmoke;
 }
 
 .main {
