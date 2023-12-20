@@ -26,6 +26,7 @@ body {
   font-weight: 100;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  background: linear-gradient(#2ECBE9, #128FC8);
 }
 
 ol, ul {
@@ -69,6 +70,10 @@ példa komponensek: alert, button, carousel, form, icon, input, label
   width: 80%;
   text-align: center;
   outline: 2px solid #EF8C01;
+}
+
+.text-cont--column {
+  flex-direction: column;
 }
 
 .contact-form {
