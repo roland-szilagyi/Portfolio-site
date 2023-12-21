@@ -24,7 +24,7 @@
       }
 
       .content-text {
-        @include text($font-family1, $font-base, $color-basic, $text-shadow-slim);
+        @include text($font-family1, $font-xsmall, $color-basic, $text-shadow-slim);
         font-weight: $font-weight-medium; // esetleg ezt beépíteni az @include text-be.
         margin: 0.25rem 1rem 0.25rem 1rem; // ez ad margót a contenteknek.
       }

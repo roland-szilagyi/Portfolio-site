@@ -34,6 +34,7 @@
         .links-title {
           @include flex(flex, column, center, center, nowrap);
           @include text($font-family2, $font-xxlarge, $color-quinary, $text-shadow-fat); // resp: large
+          font-weight: $font-weight-slim;
           height: 6.5rem;
         }
       }
