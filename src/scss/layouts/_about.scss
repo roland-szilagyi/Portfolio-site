@@ -1,36 +1,81 @@
 .about {
-  // @include flex(flex, column, center, center, nowrap);
-  // display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  outline: $outline1;
+  @include d-flex(column, flex-start, center, nowrap);
+  // height: 90vh;
 
-  .about-title {
-    outline: $outline2;
+  .about-info-cont {
+    @include flex(flex, column, center, center, nowrap);
+
+    .about-info {
+      @include flex(flex, row, center, center, nowrap);
+      text-align: center;
+
+      .info-title {
+        @include text($font-family2, $font-xlarge, $color-quinary, $text-shadow-fat);
+        font-weight: $font-weight-slim; // esetleg ezt beépíteni az @include text-be.
+        text-align: center;
+        margin: 3rem 2rem 2rem 2rem; // fontos! minden címhez kell alkalmazni
+      }
+
+      .yellow {
+        color: $color-tertiary; // megoldást találni errre az osztályra. html-ben is.
+      }
+    }
+
+    .about-details {
+      @include flex(flex, row, center, center, nowrap);
+
+      .details-text {
+        @include text($font-family1, $font-xsmall, $color-basic, $text-shadow-slim);
+        font-weight: $font-weight-medium; // esetleg ezt beépíteni az @include text-be.
+        margin: 1rem; // ez ad margót a contenteknek.
+      }
+    }
+
+    .about-profile {
+
+      .profile-img {
+        width: 9rem;
+        margin: 2rem;
+      }
+    }
   }
 
-  .about-text {
-    text-align: center;
-    outline: $outline2;
-  }
+  .about-skills-cont {
+    @include flex(flex, column, center, center, nowrap);
 
-  .about-profilpic {
-    width: 10rem;
-    outline: $outline2;
-  }
+    .about-skills {
+      @include flex(flex, row, center, center, nowrap);
 
-  .about-skills-title {
-    outline: $outline2;
-  }
+      .skills-title {
+        @include text($font-family2, $font-medium, $color-quinary, $text-shadow-fat);
+        font-weight: $font-weight-slim; // esetleg ezt beépíteni az @include text-be.
+        margin: 2rem;
+      }
 
-  .about-skills-icons {
-    @include flex(flex, row, center, center, wrap);
-    outline: $outline2;
+      .yellow {
+        color: $color-tertiary; // megoldást találni errre az osztályra. html-ben is.
+      }
+    }
 
-    .skills-icon {
-      width: 4rem;
+    .about-workin {
+      @include flex(flex, row, center, center, nowrap);
+      text-align: center;
+
+      .workin-text {
+        @include text($font-family1, $font-xsmall, $color-basic, $text-shadow-slim);
+        font-weight: $font-weight-medium; // esetleg ezt beépíteni az @include text-be.
+        margin: 0.25rem 1rem 0.25rem 1rem; // ez ad margót a contenteknek.
+        margin: 1rem;
+      }
+    }
+
+    .about-elements {
+      @include flex(flex, row, center, center, wrap);
+
+      .elements-icon {
+        width: 3rem;
+        margin: 1rem;
+      }
     }
   }
 }

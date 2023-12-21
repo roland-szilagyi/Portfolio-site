@@ -130,7 +130,7 @@ példa komponensek: alert, button, carousel, form, icon, input, label
   font-size: 1.4rem;
   color: whitesmoke;
   text-shadow: 0.1rem 0.15rem darkslategrey;
-  margin: 1rem;
+  margin: 1rem 1rem 1rem 0;
 }
 .ham .ham-links-cont .ham-links .links-cont .links-title {
   display: flex;
@@ -143,7 +143,7 @@ példa komponensek: alert, button, carousel, form, icon, input, label
   color: #C4E8FE;
   text-shadow: 0.1rem 0.15rem darkslategrey;
   font-weight: 100;
-  height: 6.5rem;
+  height: 6.8rem;
 }
 .ham .ham-links-cont .ham-links .links-cont .links-title:hover {
   color: #FFBD33;
@@ -321,33 +321,106 @@ példa layoutok: header, footer, nav, main, sidebar
 
 .about {
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.about .about-info-cont {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  outline: 2px solid orange;
 }
-.about .about-title {
-  outline: 2px solid #EF8C01;
-}
-.about .about-text {
+.about .about-info-cont .about-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
   text-align: center;
-  outline: 2px solid #EF8C01;
 }
-.about .about-profilpic {
-  width: 10rem;
-  outline: 2px solid #EF8C01;
+.about .about-info-cont .about-info .info-title {
+  font-family: "font2";
+  font-size: 5rem;
+  color: #C4E8FE;
+  text-shadow: 0.1rem 0.15rem darkslategrey;
+  font-weight: 100;
+  text-align: center;
+  margin: 3rem 2rem 2rem 2rem;
 }
-.about .about-skills-title {
-  outline: 2px solid #EF8C01;
+.about .about-info-cont .about-info .yellow {
+  color: #FFBD33;
 }
-.about .about-skills-icons {
+.about .about-info-cont .about-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.about .about-info-cont .about-details .details-text {
+  font-family: "font1";
+  font-size: 1.2rem;
+  color: whitesmoke;
+  text-shadow: 0.05rem 0.05rem darkslategrey;
+  font-weight: 600;
+  margin: 1rem;
+}
+.about .about-info-cont .about-profile .profile-img {
+  width: 9rem;
+  margin: 2rem;
+}
+.about .about-skills-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.about .about-skills-cont .about-skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.about .about-skills-cont .about-skills .skills-title {
+  font-family: "font2";
+  font-size: 3rem;
+  color: #C4E8FE;
+  text-shadow: 0.1rem 0.15rem darkslategrey;
+  font-weight: 100;
+  margin: 2rem;
+}
+.about .about-skills-cont .about-skills .yellow {
+  color: #FFBD33;
+}
+.about .about-skills-cont .about-workin {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  text-align: center;
+}
+.about .about-skills-cont .about-workin .workin-text {
+  font-family: "font1";
+  font-size: 1.2rem;
+  color: whitesmoke;
+  text-shadow: 0.05rem 0.05rem darkslategrey;
+  font-weight: 600;
+  margin: 0.25rem 1rem 0.25rem 1rem;
+  margin: 1rem;
+}
+.about .about-skills-cont .about-elements {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  outline: 2px solid #EF8C01;
 }
-.about .about-skills-icons .skills-icon {
-  width: 4rem;
+.about .about-skills-cont .about-elements .elements-icon {
+  width: 3rem;
+  margin: 1rem;
 }/*# sourceMappingURL=main.css.map */

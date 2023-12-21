@@ -36,14 +36,14 @@
         .links-num {
           @include flex(flex, column, center, center, nowrap);
           @include text($font-family1, $font-small, $color-basic, $text-shadow-fat);
-          margin: 1rem; // ez ad margót a számoknak.
+          margin: 1rem 1rem 1rem 0; // ez ad margót a számoknak.
         }
 
         .links-title {
           @include flex(flex, column, center, center, nowrap);
           @include text($font-family2, $font-xxlarge, $color-quinary, $text-shadow-fat); // resp: large
           font-weight: $font-weight-slim;
-          height: 6.5rem;
+          height: 6.8rem;
 
           &:hover {
             color: $color-tertiary;
