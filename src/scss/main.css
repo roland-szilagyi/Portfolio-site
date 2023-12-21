@@ -6,12 +6,10 @@ Csak segédfunkciók és nem kimeneti kódrészletek.
 @font-face {
   src: url(../assets/fonts/lexiamono-light.ttf);
   font-family: "font1";
-  font-weight: 900;
 }
 @font-face {
   src: url(../assets/fonts/adlery-pro.ttf);
   font-family: "font2";
-  font-weight: 100;
 }
 /*
 Tartalma a globális stílusok és a reset.
@@ -27,13 +25,12 @@ Tartalma a globális stílusok és a reset.
 }
 
 body {
-  font-family: "font1";
   color: whitesmoke;
   font-size: 15px;
-  line-height: 1.5;
-  text-shadow: 0.05rem 0.05rem #00468B;
+  line-height: 1.2;
+  text-shadow: 0.05rem 0.05rem darkslategrey;
   -webkit-font-smoothing: antialiased;
-  background: linear-gradient(#2ECBE9, #128FC8);
+  background: linear-gradient(#128FC8, #00468B);
 }
 
 ol, ul {
@@ -60,7 +57,7 @@ A komponensek csak egyetlen dolgot csinálnak és újrafelhasználhatóak.
 példa komponensek: alert, button, carousel, form, icon, input, label
 */
 .button {
-  background-color: lightblue;
+  background-color: green;
 }
 
 .contact-form {
@@ -71,51 +68,88 @@ példa komponensek: alert, button, carousel, form, icon, input, label
   flex-wrap: nowrap;
   outline: 2px solid #EF8C01;
 }
-.hamburger {
+.ham {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
   width: 100vw;
   height: 100vh;
-  background-color: darkcyan;
+  background: linear-gradient(#219EBC, #00468B);
 }
-.hamburger .hamburger-xmark {
-  width: 1.5rem;
-  outline: 2px solid #EF8C01;
-}
-.hamburger .hamburger-links {
+.ham .ham-close-cont {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   flex-wrap: nowrap;
-  outline: 2px solid #EF8C01;
+  width: 100vw;
+  height: 10vh;
 }
-.hamburger .hamburger-links .links-numbers {
+.ham .ham-close-cont .close-img {
+  width: 1.4rem;
+  margin: 1rem;
+}
+.ham .ham-links-cont {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  outline: 2px solid #EF8C01;
+  height: 90vh;
 }
-.hamburger .hamburger-links .links-titles {
+.ham .ham-links-cont .ham-links {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   flex-wrap: nowrap;
-  outline: 2px solid #EF8C01;
 }
-.hamburger .hamburger-social-links {
+.ham .ham-links-cont .ham-links .links-cont {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  outline: 2px solid #EF8C01;
+}
+.ham .ham-links-cont .ham-links .links-cont .links-num {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  font-family: "font1";
+  font-size: 1.4rem;
+  color: whitesmoke;
+  text-shadow: 0.1rem 0.15rem darkslategrey;
+  margin: 1rem;
+}
+.ham .ham-links-cont .ham-links .links-cont .links-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  font-family: "font2";
+  font-size: 6rem;
+  color: #C4E8FE;
+  text-shadow: 0.1rem 0.15rem darkslategrey;
+  height: 6.5rem;
+}
+.ham .ham-links-cont .ham-social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.ham .ham-links-cont .ham-social .social-cont {
+  margin: 3rem;
+}
+.ham .ham-links-cont .ham-social .social-cont .social-img {
+  width: 3rem;
+  height: auto;
 }
 
 .fix {
@@ -140,44 +174,75 @@ példa layoutok: header, footer, nav, main, sidebar
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
-  outline: 2px solid darkslategrey;
+  height: 10vh;
 }
-.header .name {
-  text-align: center;
-  outline: 2px solid #EF8C01;
+.header .header-name-cont .name-title {
+  font-family: "font2";
+  font-size: 3rem;
+  color: #FFBD33;
+  text-shadow: 0.1rem 0.15rem darkslategrey;
+  font-weight: 100;
+  margin: 1rem;
 }
-.header .nav {
+.header .header-nav-cont {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
-  outline: 2px solid #EF8C01;
 }
-.header .nav .nav-icon {
-  width: 1.5rem;
+.header .header-nav-cont .nav-icon {
+  width: 1.4rem;
+  margin: 1rem;
 }
 
 .main {
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 90vh;
+}
+.main .main-paperplane-cont .paperplane-img {
+  width: 10rem;
+  height: auto;
+  margin: 3rem;
+}
+.main .main-content-cont {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  outline: 2px solid darkslategrey;
 }
-.main .paperplane {
-  width: 10rem;
-  height: auto;
-}
-.main .text-cont {
+.main .main-content-cont .main-content {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  width: 80%;
   text-align: center;
-  outline: 2px solid #EF8C01;
+}
+.main .main-content-cont .main-content .content-title {
+  font-family: "font2";
+  font-size: 4rem;
+  color: #C4E8FE;
+  text-shadow: 0.1rem 0.15rem darkslategrey;
+  font-weight: 100;
+}
+.main .main-content-cont .main-content .content-text {
+  font-family: "font1";
+  font-size: 1rem;
+  color: whitesmoke;
+  text-shadow: 0.05rem 0.05rem darkslategrey;
+  font-weight: 600;
+  margin: 0.25rem 1rem 0.25rem 1rem;
+}
+.main .main-content-cont .main-content .yellow {
+  color: #FFBD33;
+}
+.main .main-content-cont .row {
+  flex-direction: column;
 }
 
 .works {
@@ -185,9 +250,13 @@ példa layoutok: header, footer, nav, main, sidebar
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  outline: 2px solid darkslategrey;
+  outline: 2px solid orange;
 }
 .works .works-title {
+  font-family: "font2";
+  font-size: 4rem;
+  color: #00468B;
+  text-shadow: 0.1rem 0.15rem darkslategrey;
   outline: 2px solid #EF8C01;
 }
 .works .works-text {
@@ -202,7 +271,7 @@ példa layoutok: header, footer, nav, main, sidebar
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  outline: 2px solid darkslategrey;
+  outline: 2px solid orange;
 }
 .contact .contact-title {
   outline: 2px solid #EF8C01;
@@ -211,19 +280,9 @@ példa layoutok: header, footer, nav, main, sidebar
   outline: 2px solid #EF8C01;
 }
 .contact .contact-links {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: nowrap;
   outline: 2px solid #EF8C01;
 }
 .contact .contact-links .link-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
   outline: 2px solid #EF8C01;
 }
 
@@ -232,7 +291,7 @@ példa layoutok: header, footer, nav, main, sidebar
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  outline: 2px solid darkslategrey;
+  outline: 2px solid orange;
 }
 .about .about-title {
   outline: 2px solid #EF8C01;

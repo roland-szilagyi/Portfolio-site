@@ -9,68 +9,99 @@
 <body>
     <!-- header -->
   <header class="header  visible  js-header">
-    <div class="name">
-      <h1>CODERBOB</h1>
+    <div class="header-name-cont">
+      <h1 class="name-title">CODERBOB</h1>
     </div>
-    <div class="nav">
+    <div class="header-nav-cont">
       <img class="nav-icon" src="./src/assets/icons/theme.svg" alt="lightordarkmodeicon">
       <img class="nav-icon  js-ham-btn-open" src="./src/assets/icons/bars.svg" alt="hamburgermenubars">
     </div>
   </header>
+
     <!-- hamburger -->
-  <section class="hamburger  fix  hidden  js-page">
-    <div>
-      <img class="hamburger-xmark  js-ham-btn-close" src="./src/assets/icons/xmark.svg" alt="closehamburger">
+  <section class="ham  fix  hidden  js-page">
+    <div class="ham-close-cont">
+      <img class="close-img  js-ham-btn-close" src="./src/assets/icons/xmark.svg" alt="closehamburger">
     </div>
-    <div class="hamburger-links">
-      <div class="links-numbers">
-        <p>1.</p>
-        <p>2.</p>
-        <p>3.</p>
-        <p>4.</p>
+    <div class="ham-links-cont">
+      <div class="ham-links">
+        <div class="links-cont">
+          <p class="links-num">1.</p>
+          <h2 class="links-title  js-main" onclick="pageLoader('main')">HOME</h2>
+        </div>
+        <div class="links-cont">
+          <p class="links-num">2.</p>
+          <h2 class="links-title  js-works" onclick="pageLoader('works')">WORKS</h2>
+        </div>
+        <div class="links-cont">
+          <p class="links-num">3.</p>
+          <h2 class="links-title  js-about" onclick="pageLoader('about')">ABOUT</h2>
+        </div>
+        <div class="links-cont">
+          <p class="links-num">4.</p>
+          <h2 class="links-title  js-contact" onclick="pageLoader('contact')">CONTACT</h2>
+        </div>
       </div>
-      <ul class="links-titles">
-        <li class="js-main" onclick="pageLoader('main')">HOME</li>
-        <li class="js-works" onclick="pageLoader('works')">WORKS</li>
-        <li class="js-about" onclick="pageLoader('about')">ABOUT</li>
-        <li class="js-contact" onclick="pageLoader('contact')">CONTACT</li>
-      </ul>
-    </div>
-    <div class="hamburger-social-links">
-      <div>
-        <img src="./src/assets/icons/github.svg" alt="github-link">
-      </div>
-      <div>
-        <img src="./src/assets/icons/instagram.svg" alt="instagram-link">
-      </div>
-      <div>
-        <img src="./src/assets/icons/linkedin.svg" alt="linkedin-link">
+      <div class="ham-social">
+        <div class="social-cont">
+          <img class="social-img" src="./src/assets/icons/github.svg" alt="github-link">
+        </div>
+        <div class="social-cont">
+          <img class="social-img" src="./src/assets/icons/instagram.svg" alt="instagram-link">
+        </div>
+        <div class="social-cont">
+          <img class="social-img" src="./src/assets/icons/linkedin.svg" alt="linkedin-link">
+        </div>
       </div>
     </div>
   </section>
+
+
+
+
+
+
+
+
+
+
     <!-- main -->
   <main class="main  visible  js-page">
-    <div class="paperplane">
-      <img src="./src/assets/imgs/paperplane-light.svg" alt="flying paperplane">
+    <div class="main-paperplane-cont  paperplane">
+      <img class="paperplane-img" src="./src/assets/imgs/paperplane-light.svg" alt="flying paperplane">
     </div>
-    <div class="text-cont">
-      <p>Hello, I'm</p>
-      <h2>ROLAND</h2>
-    </div>
-    <div class="text-cont">
-      <p>I am a front-end developer and UX/UI designer based in Hungary.</p>
-      <p>I love simplicity and minimal design.</p>
-    </div>
-    <div class="text-cont">
-      <p>check my</p>
-      <h2>WORKS</h2>
-    </div>
-    <div class="text-cont">
-      <p>and</p>
-      <h2>CONTACT</h2>
-      <p>me.</p>
+    <div class="main-content-cont">
+      <div class="main-content">
+        <p class="content-text">Hello, I'm</p>
+        <h2 class="content-title  yellow">ROLAND</h2>
+      </div>
+      <div class="main-content  row">
+        <p class="content-text">I am a front-end developer and UX/UI designer based in Hungary.</p>
+        <p class="content-text">I love simplicity and minimal design.</p>
+      </div>
+      <div class="main-content">
+        <p class="content-text">check my</p>
+        <h2 class="content-title">WORKS</h2>
+      </div>
+      <div class="main-content">
+        <p class="content-text">and</p>
+        <h2 class="content-title">CONTACT</h2>
+        <p class="content-text">me.</p>
+      </div>
     </div>
   </main>
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- works -->
   <article class="works  hidden  js-page">
     <div class="works-title">

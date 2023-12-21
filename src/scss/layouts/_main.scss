@@ -1,21 +1,41 @@
 .main {
-  // @include flex(flex, column, center, center, nowrap);
-  // display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  outline: $outline1;
+  @include d-flex(column, flex-start, center, nowrap);
+  height: 90vh;
 
-  .paperplane {
-    width: 10rem;
-    height: auto;
+  .main-paperplane-cont {
+
+    .paperplane-img {
+      width: 10rem;
+      height: auto;
+      margin: 3rem;
+    }
   }
 
-  .text-cont {
-    @include flex(flex, row, center, center, nowrap);
-    width: 80%;
-    text-align: center;
-    outline: $outline2;
+  .main-content-cont {
+    @include flex(flex, column, center, center, nowrap);
+
+    .main-content {
+      @include flex(flex, row, center, center, nowrap);
+      text-align: center;
+
+      .content-title {
+        @include text($font-family2, $font-large, $color-quinary, $text-shadow-fat);
+        font-weight: $font-weight-slim; // esetleg ezt beépíteni az @include text-be.
+      }
+
+      .content-text {
+        @include text($font-family1, $font-base, $color-basic, $text-shadow-slim);
+        font-weight: $font-weight-medium; // esetleg ezt beépíteni az @include text-be.
+        margin: 0.25rem 1rem 0.25rem 1rem; // ez ad margót a contenteknek.
+      }
+
+      .yellow {
+        color: $color-tertiary; // megoldást találni errre az osztályra. html-ben is.
+      }
+    }
+
+    .row {
+      flex-direction: column;   // megoldást találni errre az osztályra. html-ben is.
+    }
   }
 }

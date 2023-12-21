@@ -7,17 +7,26 @@
     flex-wrap: $flex-wrap;
 }
 
+// FLEXBOX (without display)
+@mixin d-flex($flex-direction, $justify-content, $align-items, $flex-wrap) {
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-wrap: $flex-wrap;
+}
+
+// TEXT-SET
+@mixin text($font-family, $font-size, $color, $text-shadow) {
+    font-family: $font-family;
+    font-size: $font-size;
+    color: $color;
+    text-shadow: $text-shadow;
+}
+
 // IMG SIZE
 @mixin image($width, $height) {
     width: $width;
     height: $height;
-}
-
-// TITLES
-@mixin title($font-family, $font-size, $color) {
-    font-family: $font-family;
-    font-size: $font-size;
-    color: $color;
 }
 
 // LINKS

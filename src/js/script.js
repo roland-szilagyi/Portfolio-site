@@ -3,7 +3,7 @@ let hamBtnOpen = document.querySelector('.js-ham-btn-open');
 hamBtnOpen.addEventListener('click', hamOpen);
 
 function hamOpen() {
-  let hamIsOpen = document.querySelector('.hamburger');
+  let hamIsOpen = document.querySelector('.ham');
   hamIsOpen.classList.remove('hidden');
   headerInvisible();
 };
@@ -20,7 +20,7 @@ let hamBtnClose = document.querySelector('.js-ham-btn-close');
 hamBtnClose.addEventListener('click', hamClose);
 
 function hamClose() {
-  let hamIsClose = document.querySelector('.hamburger');
+  let hamIsClose = document.querySelector('.ham');
   hamIsClose.classList.add('hidden');
   headerVisible();
 };

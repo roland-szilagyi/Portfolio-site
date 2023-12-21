@@ -8,6 +8,7 @@
   outline: $outline1;
 
   .works-title {
+    @include text($font-family2, $font-large, $color-secondary, $text-shadow-fat);
     outline: $outline2;
   }
 

@@ -1,32 +1,56 @@
-.hamburger {
-  @include flex(flex, column, space-evenly, center, nowrap);
+.ham {
+  @include flex(flex, column, flex-start, center, nowrap);
   width: 100vw;
   height: 100vh;
-  background-color: darkcyan;
+  background: linear-gradient($color-fifth, $color-secondary);
 
-  .hamburger-xmark {
-    width: 1.5rem;
-    outline: $outline2;
+  .ham-close-cont {
+    @include flex(flex, row, flex-end, center, nowrap);
+    width: 100vw;
+    height: 10vh;
+
+    .close-img {
+      width: $img-size-small;
+      margin: 1rem; // ez löki beljebb az ikonokat
+    }
   }
 
-  .hamburger-links {
-    @include flex(flex, row, center, center, nowrap);
-    outline: $outline2;
+  .ham-links-cont {
+    @include flex(flex, column, center, center, nowrap); // resp: row
+    height: 90vh;
 
-    .links-numbers {
-      @include flex(flex, column, center, center, nowrap);
-      outline: $outline2;
-    }
-
-    .links-titles {
+    .ham-links {
       @include flex(flex, column, center, flex-start, nowrap);
-      outline: $outline2;
-    }
-  }
 
-  .hamburger-social-links {
-    @include flex(flex, row, center, center, nowrap);
-    outline: $outline2;
+      .links-cont {
+        @include flex(flex, row, center, center, nowrap);
+
+        .links-num {
+          @include flex(flex, column, center, center, nowrap);
+          @include text($font-family1, $font-small, $color-basic, $text-shadow-fat);
+          margin: 1rem; // ez ad margót a számoknak.
+        }
+
+        .links-title {
+          @include flex(flex, column, center, center, nowrap);
+          @include text($font-family2, $font-xxlarge, $color-quinary, $text-shadow-fat); // resp: large
+          height: 6.5rem;
+        }
+      }
+    }
+
+    .ham-social {
+      @include flex(flex, row, center, center, nowrap);
+
+      .social-cont {
+        margin: 3rem;
+
+        .social-img {
+          width: $img-size-large;
+          height: auto;
+        }
+      }
+    }
   }
 }
 

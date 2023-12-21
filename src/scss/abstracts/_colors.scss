@@ -1,14 +1,23 @@
-// set1
+// set-light:
 $color-basic: whitesmoke;
-$color-primary: #2ECBE9; // summer sky
-$color-secondary: #FFE45C; // mustard
-$color-tertiary: #00468B; // limed spruce
-$color-quaternary: #128FC8; // pacific blue
-$color-quinary: #8ECAE6; // lightblue
-$color-shadow: #128FC8; // pacific blue
+$color-shadow: darkslategrey;
 
-// set2
-// $color-primary: #249BDF; // curious blue
-// $color-secondary: #E3CD80; // putty
-// $color-tertiary: #375253; // limed spruce
-// $color-quaternary: #8CD4F8; // malibu
+$color-primary: #128FC8; // pacific blue (backgr.upper)
+$color-secondary: #00468B; // smalt (backgr.lower)
+$color-tertiary: #FFBD33; // yellow (links)
+$color-quinary: #C4E8FE; // lightblue (links unchecked)
+$color-fifth: #219EBC; // hamburger
+
+// night : #128FC8 comb. #00468B
+
+// set-dark:
+
+
+// colors:
+// #2ECBE9; // summer-sky
+// #249BDF; // curious blue
+// #E3CD80; // putty
+// #375253; // limed spruce
+// #8CD4F8; // malibu
+// #128FC8; // pacific blue
+// #219EBC; // zöldes

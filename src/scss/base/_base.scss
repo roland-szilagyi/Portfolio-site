@@ -7,13 +7,12 @@
 }
 
 body {
-    font-family: 'font1';
     color: $color-basic;
     font-size: 15px;
-    line-height: 1.5;
-    text-shadow: 0.05rem 0.05rem $color-tertiary;
+    line-height: 1.2;
+    text-shadow: 0.05rem 0.05rem $color-shadow;
     -webkit-font-smoothing: antialiased;
-    background: linear-gradient($color-primary, $color-quaternary);
+    background: linear-gradient($color-primary, $color-secondary);
 }
 
 ol, ul {

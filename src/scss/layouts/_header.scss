@@ -1,23 +1,22 @@
 .header {
-  // @include flex(flex, row, space-between, center, nowrap);
-  // display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-  outline: $outline1;
+  @include d-flex(row, space-between, center, nowrap);
+  height: 10vh;
 
-  .name {
-    text-align: center;
-    outline: $outline2;
+  .header-name-cont {
+
+    .name-title {
+      @include text($font-family2, $font-medium, $color-tertiary, $text-shadow-fat);
+      font-weight: $font-weight-slim; // esetleg ezt beépíteni az @include text-be.
+      margin: 1rem; // ez löki beljebb a CoderBob feliratot
+    }
   }
 
-  .nav {
+  .header-nav-cont {
     @include flex(flex, row, space-between, center, nowrap);
-    outline: $outline2;
 
     .nav-icon {
-      width: 1.5rem;
+      width: $img-size-small;
+      margin: 1rem; // ez löki beljebb az ikonokat
     }
   }
 }
