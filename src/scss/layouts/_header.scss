@@ -17,6 +17,14 @@
     .nav-icon {
       width: $img-size-small;
       margin: 1rem; // ez löki beljebb az ikonokat
+      fill: #C4E8FE;
+      filter: $drop-shadow-medium;
+
+      &:hover {
+        color: $color-tertiary;
+        cursor: pointer;
+        fill: #FFBD33;
+      }
     }
   }
 }

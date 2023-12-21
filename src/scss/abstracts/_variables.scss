@@ -21,6 +21,10 @@ $text-shadow-slim: 0.05rem 0.05rem $color-shadow;
 $text-shadow-medium: 0.07rem 0.07rem $color-shadow;
 $text-shadow-fat: 0.1rem 0.15rem $color-shadow;
 
+// DROP-SHADOW
+$drop-shadow-slim: drop-shadow(0.10rem 0.10rem 0.03rem $color-shadow);
+$drop-shadow-medium: drop-shadow(0.15rem 0.15rem 0.05rem $color-shadow);
+
 // LETTER-SPACING
 $letter-spacing-small: 0.1rem;
 $letter-spacing-medium: 0.2rem;
@@ -45,6 +49,7 @@ $border-large: 0.3rem solid lightgrey;
 $img-size-small: 1.4rem;
 $img-size-medium: 2rem;
 $img-size-large: 3rem;
+$img-size-xlarge: 5rem;
 $img-size-auto: auto;
 
 // FONT-FAMILIES

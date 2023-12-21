@@ -12,6 +12,14 @@
     .close-img {
       width: $img-size-small;
       margin: 1rem; // ez löki beljebb az ikonokat
+      fill: #C4E8FE;
+      filter: $drop-shadow-medium;
+
+      &:hover {
+        color: $color-tertiary;
+        cursor: pointer;
+        fill: #FFBD33;
+      }
     }
   }
 
@@ -49,11 +57,21 @@
       @include flex(flex, row, center, center, nowrap);
 
       .social-cont {
-        margin: 3rem;
+        margin: 2rem;
 
         .social-img {
           width: $img-size-large;
           height: auto;
+          opacity: 0.7;
+          fill: #C4E8FE;
+          filter: $drop-shadow-slim;
+
+          &:hover {
+            color: $color-tertiary;
+            cursor: pointer;
+            opacity: 1;
+            fill: #FFBD33;
+          }
         }
       }
     }

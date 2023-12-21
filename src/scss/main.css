@@ -90,6 +90,13 @@ példa komponensek: alert, button, carousel, form, icon, input, label
 .ham .ham-close-cont .close-img {
   width: 1.4rem;
   margin: 1rem;
+  fill: #C4E8FE;
+  filter: drop-shadow(0.15rem 0.15rem 0.05rem darkslategrey);
+}
+.ham .ham-close-cont .close-img:hover {
+  color: #FFBD33;
+  cursor: pointer;
+  fill: #FFBD33;
 }
 .ham .ham-links-cont {
   display: flex;
@@ -150,11 +157,20 @@ példa komponensek: alert, button, carousel, form, icon, input, label
   flex-wrap: nowrap;
 }
 .ham .ham-links-cont .ham-social .social-cont {
-  margin: 3rem;
+  margin: 2rem;
 }
 .ham .ham-links-cont .ham-social .social-cont .social-img {
   width: 3rem;
   height: auto;
+  opacity: 0.7;
+  fill: #C4E8FE;
+  filter: drop-shadow(0.1rem 0.1rem 0.03rem darkslategrey);
+}
+.ham .ham-links-cont .ham-social .social-cont .social-img:hover {
+  color: #FFBD33;
+  cursor: pointer;
+  opacity: 1;
+  fill: #FFBD33;
 }
 
 .fix {
@@ -199,6 +215,13 @@ példa layoutok: header, footer, nav, main, sidebar
 .header .header-nav-cont .nav-icon {
   width: 1.4rem;
   margin: 1rem;
+  fill: #C4E8FE;
+  filter: drop-shadow(0.15rem 0.15rem 0.05rem darkslategrey);
+}
+.header .header-nav-cont .nav-icon:hover {
+  color: #FFBD33;
+  cursor: pointer;
+  fill: #FFBD33;
 }
 
 .main {
