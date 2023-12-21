@@ -36,6 +36,11 @@
           @include text($font-family2, $font-xxlarge, $color-quinary, $text-shadow-fat); // resp: large
           font-weight: $font-weight-slim;
           height: 6.5rem;
+
+          &:hover {
+            color: $color-tertiary;
+            cursor: pointer;
+          }
         }
       }
     }

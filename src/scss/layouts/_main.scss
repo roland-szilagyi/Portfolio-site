@@ -21,6 +21,12 @@
       .content-title {
         @include text($font-family2, $font-large, $color-quinary, $text-shadow-fat);
         font-weight: $font-weight-slim; // esetleg ezt beépíteni az @include text-be.
+
+        &:hover {
+          color: $color-tertiary;
+          scale: 1.1;
+          cursor: pointer;
+        }
       }
 
       .content-text {
