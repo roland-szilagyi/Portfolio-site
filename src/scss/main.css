@@ -284,7 +284,7 @@ példa layoutok: header, footer, nav, main, sidebar
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  outline: 2px solid orange;
+  outline: 2px solid lightgreen;
 }
 .works .works-title {
   font-family: "font2";
@@ -348,8 +348,39 @@ példa layoutok: header, footer, nav, main, sidebar
   font-weight: 600;
   margin: 1rem;
 }
-.contact .contact-form-cont .contact-form {
-  margin: 2rem;
+.contact .contact-form {
+  outline: 2px solid #EF8C01;
+  margin: 3rem 1rem;
+}
+.contact .contact-form .form-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: 1rem;
+}
+.contact .contact-form .form-email {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: 1rem;
+}
+.contact .contact-form .form-message {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: 1rem;
+}
+.contact .contact-form .form-title {
+  margin-right: 2rem;
+}
+.contact .contact-form .form-input {
+  width: 13rem;
 }
 .contact .contact-social-cont {
   display: flex;
