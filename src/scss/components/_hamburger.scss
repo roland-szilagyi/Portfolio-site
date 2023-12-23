@@ -3,6 +3,7 @@
   width: 100vw;
   height: 100vh;
   background: linear-gradient($color-fifth, $color-secondary);
+  z-index: 100;
 
   .ham-close-cont {
     @include flex(flex, row, flex-end, center, nowrap);
