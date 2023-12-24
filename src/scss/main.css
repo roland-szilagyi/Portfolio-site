@@ -140,11 +140,24 @@ példa komponensek: alert, button, carousel, form, icon, input, label
   padding: 0.25rem 1rem;
 }
 .contact-form .form-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
   font-family: "font1";
   font-size: 1rem;
   color: whitesmoke;
   text-shadow: 0.1rem 0.15rem darkslategrey;
   margin: 1.2rem 0;
+}
+.contact-form .form-icon {
+  width: 1.4rem;
+  margin-right: 1rem;
+  height: auto;
+  opacity: 0.7;
+  fill: #C4E8FE;
+  filter: drop-shadow(0.1rem 0.1rem 0.03rem darkslategrey);
 }
 .contact-form .form-input {
   font-family: "font1";
