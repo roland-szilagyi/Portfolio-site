@@ -66,8 +66,107 @@ példa komponensek: alert, button, carousel, form, icon, input, label
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  outline: 2px solid #EF8C01;
+  margin: 3rem 1rem;
 }
+.contact-form .form-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  width: 20rem;
+  margin: 2rem;
+}
+.contact-form .form-email {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  width: 20rem;
+  margin: 2rem;
+}
+.contact-form .form-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  width: 20rem;
+  margin: 2rem;
+}
+.contact-form .form-message textarea {
+  width: 20rem;
+  border-top: 1px solid rgba(196, 232, 254, 0.8);
+  resize: none;
+}
+.contact-form .checkbox-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  width: 20rem;
+  margin: 2rem;
+}
+.contact-form .checkbox-cont .form-checkbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+.contact-form .checkbox-cont .form-checkbox .checkbox {
+  font-family: "font1";
+  font-size: 1rem;
+  color: #C4E8FE;
+  text-shadow: 0.05rem 0.05rem darkslategrey;
+  font-weight: 600;
+}
+.contact-form .checkbox-cont .form-checkbox .checkbox:hover {
+  cursor: pointer;
+  color: #FFBD33;
+}
+.contact-form .checkbox-cont .form-checkbox .checkbox .checkbox-input {
+  margin: 0 0.5rem;
+}
+.contact-form .submit-button {
+  font-family: "font1";
+  font-size: 1rem;
+  color: #FFBD33;
+  text-shadow: 0.05rem 0.05rem darkslategrey;
+  margin: 1rem;
+  padding: 0.25rem 1rem;
+}
+.contact-form .form-title {
+  font-family: "font1";
+  font-size: 1rem;
+  color: whitesmoke;
+  text-shadow: 0.1rem 0.15rem darkslategrey;
+  margin: 1.2rem 0;
+}
+.contact-form .form-input {
+  font-family: "font1";
+  font-size: 1rem;
+  color: whitesmoke;
+  text-shadow: 0.05rem 0.05rem darkslategrey;
+  width: 20rem;
+  padding: 0.7rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  border-bottom: 1px solid rgba(196, 232, 254, 0.8);
+  border-radius: 0.25rem;
+}
+.contact-form .form-input::-moz-placeholder {
+  color: #C4E8FE;
+  opacity: 0.5;
+}
+.contact-form .form-input::placeholder {
+  color: #C4E8FE;
+  opacity: 0.5;
+}
+
 .ham {
   display: flex;
   flex-direction: column;
@@ -347,40 +446,7 @@ példa layoutok: header, footer, nav, main, sidebar
   text-shadow: 0.05rem 0.05rem darkslategrey;
   font-weight: 600;
   margin: 1rem;
-}
-.contact .contact-form {
-  outline: 2px solid #EF8C01;
-  margin: 3rem 1rem;
-}
-.contact .contact-form .form-name {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-  margin: 1rem;
-}
-.contact .contact-form .form-email {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-  margin: 1rem;
-}
-.contact .contact-form .form-message {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-  margin: 1rem;
-}
-.contact .contact-form .form-title {
-  margin-right: 2rem;
-}
-.contact .contact-form .form-input {
-  width: 13rem;
+  text-align: center;
 }
 .contact .contact-social-cont {
   display: flex;

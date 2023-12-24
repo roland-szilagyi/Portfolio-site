@@ -1,16 +1,84 @@
 .contact-form {
   @include flex(flex, column, center, center, nowrap);
-  outline: $outline2;
+  // border: 0.25rem solid rgba($color: $color-quinary, $alpha: 0.8);
+  // border-radius: 0.5rem;
+  margin: 3rem 1rem;
 
-  #name-id {
-  
+  .form-name {
+    @include flex(flex, column, space-between, flex-start, nowrap);
+    width: 20rem;
+    margin: 2rem;
   }
 
-  #email-id {
-
+  .form-email {
+    // @include flex(flex, row, space-between, center, nowrap);
+    @include flex(flex, column, space-between, flex-start, nowrap);
+    width: 20rem;
+    margin: 2rem;
   }
 
-  #message-id {
+  .form-message {
+    // @include flex(flex, row, space-between, flex-start, nowrap);
+    @include flex(flex, column, space-between, flex-start, nowrap);
+    width: 20rem;
+    margin: 2rem;
+
+    textarea {
+      width: 20rem;
+      border-top: 1px solid rgba($color: $color-quinary, $alpha: 0.8);
+      resize: none;
+    }
+  }
+
+  .checkbox-cont {
+    @include flex(flex, column, space-between, flex-start, nowrap);
+    width: 20rem;
+    margin: 2rem;
+
+    .form-checkbox {
+      @include flex(flex, row, space-between, flex-start, nowrap);
+      width: 100%;
+
+      .checkbox {
+        @include text($font-family1, $font-base, $color-quinary, $text-shadow-slim);
+        font-weight: $font-weight-medium;
+
+        &:hover {
+          cursor: pointer;
+          color: $color-tertiary;
+        }
     
+        .checkbox-input {
+          margin: 0 0.5rem;
+        }
+      }
+    }
+  }
+
+  .submit-button {
+    @include text($font-family1, $font-base, $color-tertiary, $text-shadow-slim);
+    margin: 1rem;
+    padding: 0.25rem 1rem;
+  }
+
+  .form-title {
+    @include text($font-family1, $font-base, $color-basic, $text-shadow-fat);
+    margin: 1.2rem 0;
+  }
+
+  .form-input { // name, email, message
+    @include text($font-family1, $font-base, $color-basic, $text-shadow-slim);
+    width: 20rem;
+    padding: 0.7rem;
+    background-color:rgba(0, 0, 0, 0.3);
+    // background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba($color: $color-quinary, $alpha: 0.8);
+    border-radius: 0.25rem; // lekerekített inputmezök
+
+    &::placeholder {
+      color: $color-quinary;
+      opacity: 0.5;
+    }
   }
 }

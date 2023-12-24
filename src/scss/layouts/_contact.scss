@@ -28,6 +28,7 @@
         @include text($font-family1, $font-xsmall, $color-basic, $text-shadow-slim);
         font-weight: $font-weight-medium; // esetleg ezt beépíteni az @include text-be.
         margin: 1rem; // ez ad margót a contenteknek.
+        text-align: center;
       }
     }
   }
@@ -41,37 +42,7 @@
 
 
 
-.contact-form {
-  outline: $outline2;
-  margin: 3rem 1rem;
 
-  .form-name {
-    @include flex(flex, row, space-between, center, nowrap);
-    margin: 1rem;
-  }
-
-  .form-email {
-    @include flex(flex, row, space-between, center, nowrap);
-    margin: 1rem;
-  }
-
-  .form-message {
-    @include flex(flex, row, space-between, center, nowrap);
-    margin: 1rem;
-  }
-
-  .submit-button {
-
-  }
-
-  .form-title {
-    margin-right: 2rem;
-  }
-
-  .form-input { // name, email, message
-    width: 13rem;
-  }
-}
 
 
 

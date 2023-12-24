@@ -137,23 +137,37 @@
         <h2 class="info-title  yellow">CONTACT</h2>
       </div>
       <div class="contact-details">
-        <p class="details-text">Get in touch with me via social media or email.</p>
+        <p class="details-text">Get in touch with me via email or social media.</p>
       </div>
     </div>
 
     <!-- ürlap konténer -->
     <form class="contact-form" action="#" method="post">
       <label class="form-name" for="name-id">
-        <h3 class="form-title">Name:</h3>
+        <h3 class="form-title">Name*</h3>
         <input class="form-input" type="text" name="name" id="name-id" placeholder="John Rambo" required>
       </label>
       <label class="form-email" for="email-id">
-        <h3 class="form-title">Email:</h3>
+        <h3 class="form-title">Email*</h3>
         <input class="form-input" type="text" name="email" id="email-id" placeholder="email@icloud.com" required>
       </label>
+      <div class="checkbox-cont">
+        <h3 class="form-title">Subject</h3>
+        <div class="form-checkbox">
+          <label class="checkbox" for="check1">
+            <input class="checkbox-input" type="checkbox" id="check1" name="development">Development
+          </label>
+          <label class="checkbox" for="check2">
+            <input class="checkbox-input" type="checkbox" id="check2" name="Fixing">Fixing
+          </label>
+          <label class="checkbox" for="check3">
+            <input class="checkbox-input" type="checkbox" id="check3" name="Design">Design
+          </label>
+        </div>
+      </div>
       <label class="form-message" for="message-id">
-        <h3 class="form-title">Message:</h3>
-        <textarea class="form-input" name="message" id="message-id" rows="3" required></textarea>
+        <h3 class="form-title">Message*</h3>
+        <textarea class="form-input" name="message" id="message-id" rows="18" placeholder="typing here..." required></textarea>
       </label>
       <input class="submit-button" type="submit" value="SEND">
     </form>
