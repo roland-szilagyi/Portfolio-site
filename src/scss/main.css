@@ -57,7 +57,28 @@ A komponensek csak egyetlen dolgot csinálnak és újrafelhasználhatóak.
 példa komponensek: alert, button, carousel, form, icon, input, label
 */
 .button {
-  background-color: green;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  font-family: "font1";
+  font-size: 1rem;
+  color: whitesmoke;
+  text-shadow: 0.05rem 0.05rem darkslategrey;
+  font-weight: 600;
+  background-color: #128FC8;
+  filter: drop-shadow(0.1rem 0.1rem 0.03rem darkslategrey);
+  padding: 0.6rem 1.8rem;
+  border-radius: 0.5rem;
+  border-style: none;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #FFBD33;
+  color: darkslategrey;
+  text-shadow: none;
 }
 
 .contact-form {

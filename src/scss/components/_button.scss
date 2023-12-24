@@ -1,3 +1,17 @@
 .button {
-  background-color: green;
+  @include flex(flex, row, center, center, nowrap);
+  @include text($font-family1, $font-base, $color-basic, $text-shadow-slim);
+  font-weight: $font-weight-medium;
+  background-color: $color-primary;
+  filter: $drop-shadow-slim;
+  padding: 0.6rem 1.8rem;
+  border-radius: 0.5rem;
+  border-style: none;
+}
+
+.button:hover,
+.button:focus {
+  background-color: $color-tertiary;
+  color: $color-shadow;
+  text-shadow: none;
 }
