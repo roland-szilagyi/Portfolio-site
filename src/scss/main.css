@@ -69,6 +69,7 @@ példa komponensek: alert, button, carousel, form, icon, input, label
   font-weight: 600;
   background-color: #128FC8;
   filter: drop-shadow(0.1rem 0.1rem 0.03rem darkslategrey);
+  margin: 2rem;
   padding: 0.6rem 1.8rem;
   border-radius: 0.5rem;
   border-style: none;
@@ -118,7 +119,6 @@ példa komponensek: alert, button, carousel, form, icon, input, label
 }
 .contact-form .form-message textarea {
   width: 20rem;
-  border-top: 1px solid rgba(196, 232, 254, 0.8);
   resize: none;
 }
 .contact-form .checkbox-cont {
@@ -170,7 +170,7 @@ példa komponensek: alert, button, carousel, form, icon, input, label
   font-size: 1rem;
   color: whitesmoke;
   text-shadow: 0.1rem 0.15rem darkslategrey;
-  margin: 1.2rem 0;
+  margin: 1.5rem 0;
 }
 .contact-form .form-icon {
   width: 1.4rem;

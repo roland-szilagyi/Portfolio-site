@@ -25,7 +25,7 @@
 
     textarea {
       width: 20rem;
-      border-top: 1px solid rgba($color: $color-quinary, $alpha: 0.8);
+      // border-top: 1px solid rgba($color: $color-quinary, $alpha: 0.8);
       resize: none;
     }
   }
@@ -64,7 +64,7 @@
   .form-title {
     @include flex(flex, row, center, center, nowrap);
     @include text($font-family1, $font-base, $color-basic, $text-shadow-fat);
-    margin: 1.2rem 0;
+    margin: 1.5rem 0;
   }
 
   .form-icon {
