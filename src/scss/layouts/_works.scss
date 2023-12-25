@@ -1,22 +1,58 @@
 .works {
-  // @include flex(flex, column, center, center, nowrap);
-  // display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  outline: $outline1;
+  @include d-flex(column, flex-start, center, nowrap);
 
-  .works-title {
-    @include text($font-family2, $font-large, $color-secondary, $text-shadow-fat);
-    outline: $outline2;
-  }
+  .works-info-cont {
+    @include flex(flex, column, center, center, nowrap);
 
-  .works-text {
-    outline: $outline2;
+    .works-info {
+      @include flex(flex, row, center, center, nowrap);
+      text-align: center;
+
+      .info-title {
+        @include text($font-family2, $font-xlarge, $color-quinary, $text-shadow-fat);
+        font-weight: $font-weight-slim; // esetleg ezt beépíteni az @include text-be.
+        text-align: center;
+        margin: 3rem 2rem 2rem 2rem; // fontos! minden címhez kell alkalmazni
+      }
+
+      .yellow {
+        color: $color-tertiary; // megoldást találni errre az osztályra. html-ben is.
+      }
+    }
+
+    .works-details {
+      @include flex(flex, row, center, center, nowrap);
+
+      .details-text {
+        @include text($font-family1, $font-xsmall, $color-basic, $text-shadow-slim);
+        font-weight: $font-weight-medium; // esetleg ezt beépíteni az @include text-be.
+        margin: 1rem; // ez ad margót a contenteknek.
+        text-align: center;
+      }
+    }
   }
 
   .works-projects {
-    outline: $outline2;
+    @include flex(flex, column, center, center, nowrap);
+
+    .projects-boxes {
+      outline: $outline2;
+      width: 20rem;
+      margin: 3rem 0;
+
+      .boxes-thumbnails {
+    
+      }
+
+      .boxes-title {
+        @include text($font-family1, $font-small, $color-basic, $text-shadow-fat);
+        text-align: center;
+        margin: 2rem 0;
+      }
+
+      .boxes-text {
+        @include text($font-family1, $font-base, $color-basic, $text-shadow-slim);
+      }
+    }
   }
 }

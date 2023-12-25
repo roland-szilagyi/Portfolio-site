@@ -415,23 +415,78 @@ példa layoutok: header, footer, nav, main, sidebar
 
 .works {
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.works .works-info-cont {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  outline: 2px solid lightgreen;
 }
-.works .works-title {
+.works .works-info-cont .works-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  text-align: center;
+}
+.works .works-info-cont .works-info .info-title {
   font-family: "font2";
-  font-size: 4rem;
-  color: #00468B;
+  font-size: 5rem;
+  color: #C4E8FE;
   text-shadow: 0.1rem 0.15rem darkslategrey;
-  outline: 2px solid #EF8C01;
+  font-weight: 100;
+  text-align: center;
+  margin: 3rem 2rem 2rem 2rem;
 }
-.works .works-text {
-  outline: 2px solid #EF8C01;
+.works .works-info-cont .works-info .yellow {
+  color: #FFBD33;
+}
+.works .works-info-cont .works-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.works .works-info-cont .works-details .details-text {
+  font-family: "font1";
+  font-size: 1.2rem;
+  color: whitesmoke;
+  text-shadow: 0.05rem 0.05rem darkslategrey;
+  font-weight: 600;
+  margin: 1rem;
+  text-align: center;
 }
 .works .works-projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.works .works-projects .projects-boxes {
   outline: 2px solid #EF8C01;
+  width: 20rem;
+  margin: 3rem 0;
+}
+.works .works-projects .projects-boxes .boxes-title {
+  font-family: "font1";
+  font-size: 1.4rem;
+  color: whitesmoke;
+  text-shadow: 0.1rem 0.15rem darkslategrey;
+  text-align: center;
+  margin: 2rem 0;
+}
+.works .works-projects .projects-boxes .boxes-text {
+  font-family: "font1";
+  font-size: 1rem;
+  color: whitesmoke;
+  text-shadow: 0.05rem 0.05rem darkslategrey;
 }
 
 .contact {
