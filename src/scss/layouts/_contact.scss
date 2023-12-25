@@ -62,7 +62,7 @@
   
     .contact-social {
       @include flex(flex, row, center, center, nowrap);
-      margin: 0 1.5rem;
+      margin: 2rem 1.5rem;
   
       &:hover {
         color: $color-tertiary;

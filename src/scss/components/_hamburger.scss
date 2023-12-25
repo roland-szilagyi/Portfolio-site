@@ -33,6 +33,7 @@
 
       .links-cont {
         @include flex(flex, row, center, center, nowrap);
+        margin: 0.3rem;
 
         .links-num {
           @include flex(flex, column, center, center, nowrap);
@@ -61,7 +62,7 @@
         margin: 2rem;
 
         .social-img {
-          width: $img-size-large;
+          width: $img-size-medium;
           height: auto;
           opacity: 0.7;
           fill: #C4E8FE;
