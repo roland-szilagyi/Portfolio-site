@@ -1,6 +1,5 @@
 .about {
   @include d-flex(column, flex-start, center, nowrap);
-  // height: 90vh;
 
   .about-info-cont {
     @include flex(flex, column, center, center, nowrap);
@@ -22,19 +21,31 @@
     }
 
     .about-details {
-      @include flex(flex, row, center, center, nowrap);
+      @include flex(flex, row, center, flex-start, nowrap);
 
-      .details-text {
-        @include text($font-family1, $font-xsmall, $color-basic, $text-shadow-slim);
-        font-weight: $font-weight-medium; // esetleg ezt beépíteni az @include text-be.
-        margin: 1rem; // ez ad margót a contenteknek.
+      .details-coderdesigner {
+        @include flex(flex, column, center, center, nowrap);
+        text-align: center;
+        width: 45vw;
+
+        .details-title {
+          @include text($font-family2, $font-medium, $color-quinary, $text-shadow-slim);
+          font-weight: $font-weight-slim; // esetleg ezt beépíteni az @include text-be.
+          margin: 1rem 0 0.5rem 0;
+        }
+
+        .details-text {
+          @include text($font-family1, $font-xsmall, $color-basic, $text-shadow-medium);
+          font-weight: $font-weight-medium; // esetleg ezt beépíteni az @include text-be.
+          margin: 0.5 0 1rem 0;
+        }
       }
+      // .details-coderdesigner{}...
     }
-
     .about-profile {
 
       .profile-img {
-        width: 9rem;
+        width: 10rem;
         margin: 2rem;
       }
     }

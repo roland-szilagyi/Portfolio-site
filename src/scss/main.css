@@ -621,19 +621,36 @@ példa layoutok: header, footer, nav, main, sidebar
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: nowrap;
 }
-.about .about-info-cont .about-details .details-text {
+.about .about-info-cont .about-details .details-coderdesigner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  text-align: center;
+  width: 45vw;
+}
+.about .about-info-cont .about-details .details-coderdesigner .details-title {
+  font-family: "font2";
+  font-size: 3rem;
+  color: #C4E8FE;
+  text-shadow: 0.05rem 0.05rem darkslategrey;
+  font-weight: 100;
+  margin: 1rem 0 0.5rem 0;
+}
+.about .about-info-cont .about-details .details-coderdesigner .details-text {
   font-family: "font1";
   font-size: 1.2rem;
   color: whitesmoke;
-  text-shadow: 0.05rem 0.05rem darkslategrey;
+  text-shadow: 0.07rem 0.07rem darkslategrey;
   font-weight: 600;
-  margin: 1rem;
+  margin: 0.5 0 1rem 0;
 }
 .about .about-info-cont .about-profile .profile-img {
-  width: 9rem;
+  width: 10rem;
   margin: 2rem;
 }
 .about .about-skills-cont {
