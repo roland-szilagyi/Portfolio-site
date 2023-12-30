@@ -9,14 +9,14 @@
       text-align: center;
 
       .info-title {
-        @include text($font-family2, $font-xlarge, $color-quinary, $text-shadow-fat);
-        font-weight: $font-weight-slim; // esetleg ezt beépíteni az @include text-be.
+        @include text($font-family2, $font-xlarge, $font-weight-slim, $color-quinary, $text-shadow-fat);
+        @include margin($margin-xlarge, y); // fontos! minden címhez kell alkalmazni
+        @include margin($margin-large, x); // fontos! minden címhez kell alkalmazni
         text-align: center;
-        margin: 3rem 2rem 2rem 2rem; // fontos! minden címhez kell alkalmazni
       }
 
       .yellow {
-        color: $color-tertiary; // megoldást találni errre az osztályra. html-ben is.
+        color: $color-tertiary;
       }
     }
 
@@ -24,9 +24,8 @@
       @include flex(flex, row, center, center, nowrap);
 
       .details-text {
-        @include text($font-family1, $font-xsmall, $color-basic, $text-shadow-slim);
-        font-weight: $font-weight-medium; // esetleg ezt beépíteni az @include text-be.
-        margin: 1rem; // ez ad margót a contenteknek.
+        @include text($font-family1, $font-xsmall, $font-weight-medium, $color-basic, $text-shadow-slim);
+        @include margin($margin-large, xy);
         text-align: center;
       }
     }
@@ -36,22 +35,35 @@
     @include flex(flex, column, center, center, nowrap);
 
     .projects-boxes {
-      outline: $outline2;
+      @include border($border-medium, xy, $color-quinary);
+      background: linear-gradient($color-fifth, $color-secondary);
+      filter: $drop-shadow-medium;
+      border-radius: 0.25rem;
       width: 20rem;
       margin: 3rem 0;
 
+      &:hover {
+        @include border($border-medium, xy, $color-tertiary);
+        scale: 1.02;
+      }
+
       .boxes-thumbnails {
-    
+        @include border($border-medium, b, $color-quinary);
+
+        &:hover {
+          @include border($border-medium, b, $color-tertiary);
+        }
       }
 
       .boxes-title {
-        @include text($font-family1, $font-small, $color-basic, $text-shadow-fat);
+        @include text($font-family1, $font-small, $font-weight-medium, $color-basic, $text-shadow-fat);
         text-align: center;
         margin: 2rem 0;
       }
 
       .boxes-text {
-        @include text($font-family1, $font-base, $color-basic, $text-shadow-slim);
+        @include text($font-family1, $font-base, $font-weight-medium, $color-basic, $text-shadow-slim);
+        @include padding($padding-large, xy);
       }
     }
   }

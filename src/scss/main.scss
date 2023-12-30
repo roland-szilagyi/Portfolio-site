@@ -1,16 +1,21 @@
-@charset 'utf-8';
+// ABSTRACTS
+@import "./abstracts/colors";
+@import "./abstracts/fonts";
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
 
-//Vendor
-@import "vendor/__vendor-dir";
+// BASE
+@import "./base/base";
 
-//Abstracts
-@import "abstracts/__abstracts-dir";
+// COMPONENTS
+@import "./components/button";
+@import "./components/form";
+@import "./components/hamburger";
 
-//Base Styles
-@import "base/__base-dir";
-
-//Components
-@import "components/__components-dir";
-
-//Layouts
-@import "layouts/__layouts-dir";
+// LAYOUTS
+@import "./layouts/about";
+@import "./layouts/contact";
+@import "./layouts/footer";
+@import "./layouts/header";
+@import "./layouts/main";
+@import "./layouts/works";

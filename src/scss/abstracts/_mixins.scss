@@ -15,46 +15,33 @@
     flex-wrap: $flex-wrap;
 }
 
-// TEXT-SET
-@mixin text($font-family, $font-size, $color, $text-shadow) {
-    font-family: $font-family;
-    font-size: $font-size;
-    color: $color;
-    text-shadow: $text-shadow;
-}
-
-// IMG SIZE
-@mixin image($width, $height) {
+// WIDTH/HEIGHT
+@mixin size($width, $height) {
     width: $width;
     height: $height;
 }
 
-// LINKS
-@mixin link {
-    text-decoration: none;
-    letter-spacing: $letter-spacing-small;
-    cursor: pointer;
-
-    &:hover {
-        color: $color-secondary;
-        text-shadow: $text-shadow-slim;
-        scale: 1.05;
-    }
+// TEXT
+@mixin text($font-family, $font-size, $font-weight, $color, $text-shadow) {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+    text-shadow: $text-shadow;
 }
 
-// BUTTONS
-@mixin btn {
-    @include flex(flex, row, center, center, nowrap);
-    @include font-style($font-name, $font-small, $color-secondary);
-    @include border($border-small, "xy", $color-tertiary);
-    @include padding($padding-small, "xy");
-    box-shadow: $box-shadow-slim;
-    cursor: pointer;
+// LINK HOVER T1
+@mixin linkhover {
+    cursor: $cursor-pointer;
+    color: $color-tertiary;
+    fill: $color-tertiary;
+}
 
-    &:hover {
-        color: $color-tertiary;
-        scale: 1.05;
-    }
+// LINK HOVER T2
+@mixin linkhover2 {
+    cursor: $cursor-pointer;
+    color: $color-tertiary;
+    scale: 1.1;
 }
 
 // MARGIN - @include margin($margin-medium, 'xy');

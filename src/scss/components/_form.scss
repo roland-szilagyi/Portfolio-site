@@ -40,8 +40,7 @@
       width: 100%;
 
       .checkbox {
-        @include text($font-family1, $font-base, $color-quinary, $text-shadow-slim);
-        font-weight: $font-weight-medium;
+        @include text($font-family1, $font-base, $font-weight-medium, $color-quinary, $text-shadow-slim);
 
         &:hover {
           cursor: pointer;
@@ -56,19 +55,19 @@
   }
 
   .submit-button {
-    @include text($font-family1, $font-base, $color-tertiary, $text-shadow-slim);
+    @include text($font-family1, $font-base, $font-weight-medium, $color-tertiary, $text-shadow-slim);
     margin: 1rem;
     padding: 0.25rem 1rem;
   }
 
   .form-title {
     @include flex(flex, row, center, center, nowrap);
-    @include text($font-family1, $font-base, $color-basic, $text-shadow-fat);
+    @include text($font-family1, $font-base, $font-weight-medium, $color-basic, $text-shadow-fat);
     margin: 1.5rem 0;
   }
 
   .form-icon {
-    width: $img-size-small;
+    width: $size-small;
     margin-right: 1rem;
     height: auto;
     opacity: 0.7;
@@ -77,7 +76,7 @@
   }
 
   .form-input { // name, email, message
-    @include text($font-family1, $font-base, $color-basic, $text-shadow-slim);
+    @include text($font-family1, $font-base, $font-weight-medium, $color-basic, $text-shadow-slim);
     width: 20rem;
     padding: 0.7rem;
     background-color:rgba(0, 0, 0, 0.3);

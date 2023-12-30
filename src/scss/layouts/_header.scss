@@ -1,29 +1,24 @@
 .header {
   @include d-flex(row, space-between, center, nowrap);
-  height: 10vh;
+  @include size(100vw, 10vh);
 
-  .header-name-cont {
-
-    .name-title {
-      @include text($font-family2, $font-medium, $color-tertiary, $text-shadow-fat);
-      font-weight: $font-weight-slim; // esetleg ezt beépíteni az @include text-be.
-      margin: 1rem; // ez löki beljebb a CoderBob feliratot
-    }
+  &__title {
+    @include text($font-family-b, $font-size-m, $font-weight-s, $color-tertiary, $text-shadow-l);
+    @include margin($margin-s, xy);
+    cursor: pointer;
   }
 
-  .header-nav-cont {
+  .nav {
     @include flex(flex, row, space-between, center, nowrap);
 
-    .nav-icon {
-      width: $img-size-small;
-      margin: 1rem; // ez löki beljebb az ikonokat
+    &__link {
+      @include size($size-small, $size-auto);
+      @include margin($margin-medium, xy);
       fill: #C4E8FE;
       filter: $drop-shadow-medium;
 
       &:hover {
-        color: $color-tertiary;
-        cursor: pointer;
-        fill: #FFBD33;
+        @include linkhover;
       }
     }
   }

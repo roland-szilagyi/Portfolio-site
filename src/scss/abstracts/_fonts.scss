@@ -1,11 +1,11 @@
 $lexiamono-font-path: "../assets/fonts";
 @font-face {
   src: url(#{$lexiamono-font-path}/lexiamono-light.ttf);
-  font-family: 'font1'; // contents
+  font-family: 'font1';
 }
 
 $adlery-font-path: "../assets/fonts";
 @font-face {
   src: url(#{$adlery-font-path}/adlery-pro.ttf);
-  font-family: 'font2'; // titles
+  font-family: 'font2';
 }

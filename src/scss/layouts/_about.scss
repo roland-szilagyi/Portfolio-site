@@ -9,8 +9,7 @@
       text-align: center;
 
       .info-title {
-        @include text($font-family2, $font-xlarge, $color-quinary, $text-shadow-fat);
-        font-weight: $font-weight-slim; // esetleg ezt beépíteni az @include text-be.
+        @include text($font-family2, $font-xlarge, $font-weight-slim, $color-quinary, $text-shadow-fat);
         text-align: center;
         margin: 3rem 2rem 2rem 2rem; // fontos! minden címhez kell alkalmazni
       }
@@ -29,14 +28,12 @@
         width: 45vw;
 
         .details-title {
-          @include text($font-family2, $font-medium, $color-quinary, $text-shadow-slim);
-          font-weight: $font-weight-slim; // esetleg ezt beépíteni az @include text-be.
+          @include text($font-family2, $font-medium, $font-weight-slim, $color-tertiary, $text-shadow-medium);
           margin: 1rem 0 0.5rem 0;
         }
 
         .details-text {
-          @include text($font-family1, $font-xsmall, $color-basic, $text-shadow-medium);
-          font-weight: $font-weight-medium; // esetleg ezt beépíteni az @include text-be.
+          @include text($font-family1, $font-xsmall, $font-weight-medium, $color-basic, $text-shadow-medium);
           margin: 0.5 0 1rem 0;
         }
       }
@@ -58,8 +55,7 @@
       @include flex(flex, row, center, center, nowrap);
 
       .skills-title {
-        @include text($font-family2, $font-medium, $color-quinary, $text-shadow-fat);
-        font-weight: $font-weight-slim; // esetleg ezt beépíteni az @include text-be.
+        @include text($font-family2, $font-medium, $font-weight-slim, $color-quinary, $text-shadow-fat);
         margin: 2rem;
       }
 
@@ -73,8 +69,7 @@
       text-align: center;
 
       .workin-text {
-        @include text($font-family1, $font-xsmall, $color-basic, $text-shadow-slim);
-        font-weight: $font-weight-medium; // esetleg ezt beépíteni az @include text-be.
+        @include text($font-family1, $font-xsmall, $font-weight-medium, $color-basic, $text-shadow-slim);
         margin: 0.25rem 1rem 0.25rem 1rem; // ez ad margót a contenteknek.
         margin: 1rem;
       }

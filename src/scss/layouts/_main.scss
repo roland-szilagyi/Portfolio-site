@@ -1,14 +1,10 @@
 .main {
   @include d-flex(column, flex-start, center, nowrap);
-  height: 90vh;
+  @include size($size-auto, 80vh);
 
-  .main-paperplane-cont {
-
-    .paperplane-img {
-      width: 10rem;
-      height: auto;
-      margin: 3rem;
-    }
+  .paperplane-img {
+    @include size(10rem, $size-auto);
+    @include margin($margin-xlarge, xy);
   }
 
   .main-content-cont {
@@ -19,29 +15,26 @@
       text-align: center;
 
       .content-title {
-        @include text($font-family2, $font-large, $color-quinary, $text-shadow-fat);
-        font-weight: $font-weight-slim; // esetleg ezt beépíteni az @include text-be.
+        @include text($font-family2, $font-large, $font-weight-slim, $color-quinary, $text-shadow-fat);
 
         &:hover {
-          color: $color-tertiary;
-          scale: 1.1;
-          cursor: pointer;
+          @include linkhover2;
         }
       }
 
       .content-text {
-        @include text($font-family1, $font-xsmall, $color-basic, $text-shadow-slim);
-        font-weight: $font-weight-medium; // esetleg ezt beépíteni az @include text-be.
-        margin: 0.25rem 1rem 0.25rem 1rem; // ez ad margót a contenteknek.
+        @include text($font-family1, $font-xsmall, $font-weight-medium, $color-basic, $text-shadow-slim);
+        @include margin($margin-xsmall, y);
+        @include margin($margin-medium, x);
       }
 
       .yellow {
-        color: $color-tertiary; // megoldást találni errre az osztályra. html-ben is.
+        color: $color-tertiary;
       }
     }
 
     .row {
-      flex-direction: column;   // megoldást találni errre az osztályra. html-ben is.
+      flex-direction: column;
     }
   }
 }

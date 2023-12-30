@@ -1,0 +1,36 @@
+.footer {
+  @include flex(flex, column, center, center, nowrap);
+  @include text($font-family1, $font-footer, $font-weight-slim, $color-quinary, $text-shadow-fat);
+  height: 10vh;
+
+  .made-cont {
+    @include flex(flex, flex, space-evenly, center, nowrap);
+
+    .made-text {
+      margin: 0.5rem;
+    }
+  }
+
+  .skips-cont {
+    @include flex(flex, flex, center, center, nowrap);
+
+    .skips-link {
+      margin: 0.5rem 0;
+      cursor: pointer;
+
+      &:hover {
+        color: $color-tertiary;
+      }
+    }
+
+    
+  }
+
+  .skips-cont p::before {
+    content: "\00a0"
+  }
+
+  .skips-cont p:not(:last-child)::after {
+    content: " |"
+  }
+}

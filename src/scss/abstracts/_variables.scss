@@ -1,58 +1,91 @@
-// OUTLINES
+// SIZE
+$size-s: 1.4rem;
+$size-m: 2rem;
+$size-l: 3rem;
+$size-xl: 5rem;
+$size-auto: auto;
+
+/* --- FONTS --- */
+
+// FONT-SIZE
+$font-size-xs: 1.2rem;
+$font-size-s: 1.4rem;
+$font-size-m: 3rem;
+$font-size-l: 4rem;
+$font-size-xl: 5rem;
+$font-size-xxl: 6rem;
+$font-size-base: 1rem;
+$font-size-footer: 0.7rem;
+
+// FONT-FAMILY
+$font-family-a: 'font1';
+$font-family-b: 'font2';
+
+// FONT-WEIGHT
+$font-weight-s: 100;
+$font-weight-m: 600;
+$font-weight-l: 900;
+
+// LETTER-SPACING
+$letter-spacing-s: 0.1rem;
+$letter-spacing-m: 0.2rem;
+$letter-spacing-l: 0.3rem;
+
+/* --- DECORATION --- */
+
+// OUTLINE
 $outline1: 2px solid lightgreen;
 $outline2: 2px solid #EF8C01;
 $outline3: 2px solid lightblue;
 
-// FONT-SIZES
-$font-base: 1rem;
-$font-xsmall: 1.2rem;
-$font-small: 1.4rem;
-$font-medium: 3rem;
-$font-large: 4rem;
-$font-xlarge: 5rem;
-$font-xxlarge: 6rem;
+// BORDER
+$border-s: 0.1rem solid lightgrey;
+$border-m: 0.2rem solid lightgrey;
+$border-l: 0.3rem solid lightgrey;
 
-// FONT-WEIGHT
-$font-weight-slim: 100;
-$font-weight-medium: 600;
-$font-weight-fat: 900;
+// BORDER-RADIUS
+$border-radius-s: 0.2rem;
+$border-radius-m: 0.4rem;
+$border-radius-l: 0.6rem;
+
+/* --- SHADOW--- */
 
 // TEXT-SHADOW
-$text-shadow-slim: 0.05rem 0.05rem $color-shadow;
-$text-shadow-medium: 0.07rem 0.07rem $color-shadow;
-$text-shadow-fat: 0.1rem 0.15rem $color-shadow;
+$text-shadow-s: 0.05rem 0.05rem $color-shadow;
+$text-shadow-m: 0.07rem 0.07rem $color-shadow;
+$text-shadow-l: 0.1rem 0.15rem $color-shadow;
+$text-shadow-none: none;
 
 // DROP-SHADOW
-$drop-shadow-slim: drop-shadow(0.10rem 0.10rem 0.03rem $color-shadow);
-$drop-shadow-medium: drop-shadow(0.15rem 0.15rem 0.05rem $color-shadow);
+$drop-shadow-s: drop-shadow(0.10rem 0.10rem 0.03rem $color-shadow);
+$drop-shadow-m: drop-shadow(0.15rem 0.15rem 0.05rem $color-shadow);
 
-// LETTER-SPACING
-$letter-spacing-small: 0.1rem;
-$letter-spacing-medium: 0.2rem;
-$letter-spacing-large: 0.3rem;
+// CURSOR
+$cursor-pointer: pointer;
+
+/* --- BOX MODEL --- */
 
 // MARGIN
-$margin-small: 0.5rem;
-$margin-medium: 1rem;
-$margin-large: 2rem;
+$margin-xs: 0.3rem;
+$margin-s: 0.5rem;
+$margin-m: 1rem;
+$margin-l: 2rem;
+$margin-xl: 3rem;
 
 // PADDING
-$padding-small: 0.5rem;
-$padding-medium: 1rem;
-$padding-large: 2rem;
+$padding-xs: 0.3rem;
+$padding-s: 0.5rem;
+$padding-m: 1rem;
+$padding-l: 2rem;
+$padding-xl: 3rem;
 
-// BORDER
-$border-small: 0.1rem solid lightgrey;
-$border-medium: 0.2rem solid lightgrey;
-$border-large: 0.3rem solid lightgrey;
+// Z-INDEX
+$z-index-first: 100;
+$z-index-second: 200;
+$z-index-third: 300;
 
-// IMG SIZE
-$img-size-small: 1.4rem;
-$img-size-medium: 2rem;
-$img-size-large: 3rem;
-$img-size-xlarge: 5rem;
-$img-size-auto: auto;
-
-// FONT-FAMILIES
-$font-family1: 'font1';
-$font-family2: 'font2';
+/* --- MEDIA QUERY --- */
+$breakpoint-tablet: 768px;
+$breakpoint-laptop: 1024px;
+$breakpoint-desktop: 1280px;
+$breakpoint-xlscreen: 1920px;

@@ -1,55 +1,49 @@
 .ham {
   @include flex(flex, column, flex-start, center, nowrap);
-  width: 100vw;
-  height: 100vh;
+  @include size(100vw, 100vh);
   background: linear-gradient($color-fifth, $color-secondary);
   z-index: 100;
 
   .ham-close-cont {
     @include flex(flex, row, flex-end, center, nowrap);
-    width: 100vw;
-    height: 10vh;
+    @include size(100vw, 10vh);
 
     .close-img {
-      width: $img-size-small;
-      margin: 1rem; // ez löki beljebb az ikonokat
-      fill: #C4E8FE;
+      @include size($size-small, $size-auto);
+      @include margin($margin-medium);
+      fill: $color-quinary;
       filter: $drop-shadow-medium;
 
       &:hover {
-        color: $color-tertiary;
-        cursor: pointer;
-        fill: #FFBD33;
+        @include linkhover;
       }
     }
   }
 
   .ham-links-cont {
-    @include flex(flex, column, center, center, nowrap); // resp: row
-    height: 90vh;
+    @include flex(flex, column, center, center, nowrap);
+    @include size($size-auto, 90vh);
 
     .ham-links {
       @include flex(flex, column, center, flex-start, nowrap);
 
       .links-cont {
         @include flex(flex, row, center, center, nowrap);
-        margin: 0.3rem;
+        @include margin($margin-xsmall, xy);
 
         .links-num {
           @include flex(flex, column, center, center, nowrap);
-          @include text($font-family1, $font-small, $color-basic, $text-shadow-fat);
-          margin: 1rem 1rem 1rem 0; // ez ad margót a számoknak.
+          @include text($font-family1, $font-small, $font-weight-slim, $color-basic, $text-shadow-fat);
+          @include margin($margin-medium, x);
         }
 
         .links-title {
           @include flex(flex, column, center, center, nowrap);
-          @include text($font-family2, $font-xxlarge, $color-quinary, $text-shadow-fat); // resp: large
-          font-weight: $font-weight-slim;
-          height: 6.8rem;
+          @include text($font-family2, $font-xxlarge, $font-weight-slim, $color-quinary, $text-shadow-fat);
+          @include size($size-auto, 6.8rem);
 
           &:hover {
-            color: $color-tertiary;
-            cursor: pointer;
+            @include linkhover;
           }
         }
       }
@@ -57,22 +51,20 @@
 
     .ham-social {
       @include flex(flex, row, center, center, nowrap);
+      @include size(100vw, $size-auto);
 
       .social-cont {
-        margin: 2rem;
+        @include margin($margin-large);
 
         .social-img {
-          width: $img-size-medium;
-          height: auto;
+          @include size($size-medium, $size-auto);
           opacity: 0.7;
-          fill: #C4E8FE;
+          fill: $color-quinary;
           filter: $drop-shadow-slim;
 
           &:hover {
-            color: $color-tertiary;
-            cursor: pointer;
+            @include linkhover;
             opacity: 1;
-            fill: #FFBD33;
           }
         }
       }

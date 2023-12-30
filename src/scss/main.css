@@ -1,8 +1,4 @@
 @charset "UTF-8";
-/*
-Csak segédfunkciók és nem kimeneti kódrészletek.
-(betűtípus-importálások, újrafelhasználható mixinek, globális változók, színek stb.)
-*/
 @font-face {
   src: url(../assets/fonts/lexiamono-light.ttf);
   font-family: "font1";
@@ -11,9 +7,11 @@ Csak segédfunkciók és nem kimeneti kódrészletek.
   src: url(../assets/fonts/adlery-pro.ttf);
   font-family: "font2";
 }
-/*
-Tartalma a globális stílusok és a reset.
-*/
+/* --- FONTS --- */
+/* --- DECORATION --- */
+/* --- SHADOW--- */
+/* --- BOX MODEL --- */
+/* --- MEDIA QUERY --- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -28,7 +26,6 @@ body {
   color: whitesmoke;
   font-size: 15px;
   line-height: 1.2;
-  text-shadow: 0.05rem 0.05rem darkslategrey;
   -webkit-font-smoothing: antialiased;
   background: linear-gradient(#128FC8, #00468B);
 }
@@ -50,12 +47,6 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
-/*
-Tartalmazza az újrafelhasználható komponenseket.
-A komponensek csak egyetlen dolgot csinálnak és újrafelhasználhatóak.
-
-példa komponensek: alert, button, carousel, form, icon, input, label
-*/
 .button {
   display: flex;
   flex-direction: row;
@@ -64,9 +55,9 @@ példa komponensek: alert, button, carousel, form, icon, input, label
   flex-wrap: nowrap;
   font-family: "font1";
   font-size: 1rem;
+  font-weight: 600;
   color: whitesmoke;
   text-shadow: 0.05rem 0.05rem darkslategrey;
-  font-weight: 600;
   background-color: #128FC8;
   filter: drop-shadow(0.1rem 0.1rem 0.03rem darkslategrey);
   margin: 2rem;
@@ -141,9 +132,9 @@ példa komponensek: alert, button, carousel, form, icon, input, label
 .contact-form .checkbox-cont .form-checkbox .checkbox {
   font-family: "font1";
   font-size: 1rem;
+  font-weight: 600;
   color: #C4E8FE;
   text-shadow: 0.05rem 0.05rem darkslategrey;
-  font-weight: 600;
 }
 .contact-form .checkbox-cont .form-checkbox .checkbox:hover {
   cursor: pointer;
@@ -155,6 +146,7 @@ példa komponensek: alert, button, carousel, form, icon, input, label
 .contact-form .submit-button {
   font-family: "font1";
   font-size: 1rem;
+  font-weight: 600;
   color: #FFBD33;
   text-shadow: 0.05rem 0.05rem darkslategrey;
   margin: 1rem;
@@ -168,6 +160,7 @@ példa komponensek: alert, button, carousel, form, icon, input, label
   flex-wrap: nowrap;
   font-family: "font1";
   font-size: 1rem;
+  font-weight: 600;
   color: whitesmoke;
   text-shadow: 0.1rem 0.15rem darkslategrey;
   margin: 1.5rem 0;
@@ -183,6 +176,7 @@ példa komponensek: alert, button, carousel, form, icon, input, label
 .contact-form .form-input {
   font-family: "font1";
   font-size: 1rem;
+  font-weight: 600;
   color: whitesmoke;
   text-shadow: 0.05rem 0.05rem darkslategrey;
   width: 20rem;
@@ -223,13 +217,14 @@ példa komponensek: alert, button, carousel, form, icon, input, label
 }
 .ham .ham-close-cont .close-img {
   width: 1.4rem;
+  height: auto;
   margin: 1rem;
   fill: #C4E8FE;
   filter: drop-shadow(0.15rem 0.15rem 0.05rem darkslategrey);
 }
 .ham .ham-close-cont .close-img:hover {
-  color: #FFBD33;
   cursor: pointer;
+  color: #FFBD33;
   fill: #FFBD33;
 }
 .ham .ham-links-cont {
@@ -238,6 +233,7 @@ példa komponensek: alert, button, carousel, form, icon, input, label
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  width: auto;
   height: 90vh;
 }
 .ham .ham-links-cont .ham-links {
@@ -263,9 +259,11 @@ példa komponensek: alert, button, carousel, form, icon, input, label
   flex-wrap: nowrap;
   font-family: "font1";
   font-size: 1.4rem;
+  font-weight: 100;
   color: whitesmoke;
   text-shadow: 0.1rem 0.15rem darkslategrey;
-  margin: 1rem 1rem 1rem 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 .ham .ham-links-cont .ham-links .links-cont .links-title {
   display: flex;
@@ -275,14 +273,16 @@ példa komponensek: alert, button, carousel, form, icon, input, label
   flex-wrap: nowrap;
   font-family: "font2";
   font-size: 6rem;
+  font-weight: 100;
   color: #C4E8FE;
   text-shadow: 0.1rem 0.15rem darkslategrey;
-  font-weight: 100;
+  width: auto;
   height: 6.8rem;
 }
 .ham .ham-links-cont .ham-links .links-cont .links-title:hover {
-  color: #FFBD33;
   cursor: pointer;
+  color: #FFBD33;
+  fill: #FFBD33;
 }
 .ham .ham-links-cont .ham-social {
   display: flex;
@@ -290,6 +290,8 @@ példa komponensek: alert, button, carousel, form, icon, input, label
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  width: 100vw;
+  height: auto;
 }
 .ham .ham-links-cont .ham-social .social-cont {
   margin: 2rem;
@@ -302,10 +304,10 @@ példa komponensek: alert, button, carousel, form, icon, input, label
   filter: drop-shadow(0.1rem 0.1rem 0.03rem darkslategrey);
 }
 .ham .ham-links-cont .ham-social .social-cont .social-img:hover {
-  color: #FFBD33;
   cursor: pointer;
-  opacity: 1;
+  color: #FFBD33;
   fill: #FFBD33;
+  opacity: 1;
 }
 
 .fix {
@@ -320,65 +322,20 @@ példa komponensek: alert, button, carousel, form, icon, input, label
   display: none;
 }
 
-/*
-Tartalma az összetevők és alapstílusok egyedi kombinációi.
-
-példa layoutok: header, footer, nav, main, sidebar
-*/
-.header {
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-  height: 10vh;
-}
-.header .header-name-cont .name-title {
-  font-family: "font2";
-  font-size: 3rem;
-  color: #FFBD33;
-  text-shadow: 0.1rem 0.15rem darkslategrey;
-  font-weight: 100;
-  margin: 1rem;
-}
-.header .header-nav-cont {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-.header .header-nav-cont .nav-icon {
-  width: 1.4rem;
-  margin: 1rem;
-  fill: #C4E8FE;
-  filter: drop-shadow(0.15rem 0.15rem 0.05rem darkslategrey);
-}
-.header .header-nav-cont .nav-icon:hover {
-  color: #FFBD33;
-  cursor: pointer;
-  fill: #FFBD33;
-}
-
-.main {
+.about {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
-  height: 90vh;
 }
-.main .main-paperplane-cont .paperplane-img {
-  width: 10rem;
-  height: auto;
-  margin: 3rem;
-}
-.main .main-content-cont {
+.about .about-info-cont {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
 }
-.main .main-content-cont .main-content {
+.about .about-info-cont .about-info {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -386,107 +343,106 @@ példa layoutok: header, footer, nav, main, sidebar
   flex-wrap: nowrap;
   text-align: center;
 }
-.main .main-content-cont .main-content .content-title {
-  font-family: "font2";
-  font-size: 4rem;
-  color: #C4E8FE;
-  text-shadow: 0.1rem 0.15rem darkslategrey;
-  font-weight: 100;
-}
-.main .main-content-cont .main-content .content-title:hover {
-  color: #FFBD33;
-  scale: 1.1;
-  cursor: pointer;
-}
-.main .main-content-cont .main-content .content-text {
-  font-family: "font1";
-  font-size: 1.2rem;
-  color: whitesmoke;
-  text-shadow: 0.05rem 0.05rem darkslategrey;
-  font-weight: 600;
-  margin: 0.25rem 1rem 0.25rem 1rem;
-}
-.main .main-content-cont .main-content .yellow {
-  color: #FFBD33;
-}
-.main .main-content-cont .row {
-  flex-direction: column;
-}
-
-.works {
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-.works .works-info-cont {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-.works .works-info-cont .works-info {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  text-align: center;
-}
-.works .works-info-cont .works-info .info-title {
+.about .about-info-cont .about-info .info-title {
   font-family: "font2";
   font-size: 5rem;
+  font-weight: 100;
   color: #C4E8FE;
   text-shadow: 0.1rem 0.15rem darkslategrey;
-  font-weight: 100;
   text-align: center;
   margin: 3rem 2rem 2rem 2rem;
 }
-.works .works-info-cont .works-info .yellow {
+.about .about-info-cont .about-info .yellow {
   color: #FFBD33;
 }
-.works .works-info-cont .works-details {
+.about .about-info-cont .about-details {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: nowrap;
 }
-.works .works-info-cont .works-details .details-text {
+.about .about-info-cont .about-details .details-coderdesigner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  text-align: center;
+  width: 45vw;
+}
+.about .about-info-cont .about-details .details-coderdesigner .details-title {
+  font-family: "font2";
+  font-size: 3rem;
+  font-weight: 100;
+  color: #FFBD33;
+  text-shadow: 0.07rem 0.07rem darkslategrey;
+  margin: 1rem 0 0.5rem 0;
+}
+.about .about-info-cont .about-details .details-coderdesigner .details-text {
   font-family: "font1";
   font-size: 1.2rem;
-  color: whitesmoke;
-  text-shadow: 0.05rem 0.05rem darkslategrey;
   font-weight: 600;
-  margin: 1rem;
-  text-align: center;
+  color: whitesmoke;
+  text-shadow: 0.07rem 0.07rem darkslategrey;
+  margin: 0.5 0 1rem 0;
 }
-.works .works-projects {
+.about .about-info-cont .about-profile .profile-img {
+  width: 10rem;
+  margin: 2rem;
+}
+.about .about-skills-cont {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
 }
-.works .works-projects .projects-boxes {
-  outline: 2px solid #EF8C01;
-  width: 20rem;
-  margin: 3rem 0;
+.about .about-skills-cont .about-skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
 }
-.works .works-projects .projects-boxes .boxes-title {
-  font-family: "font1";
-  font-size: 1.4rem;
-  color: whitesmoke;
+.about .about-skills-cont .about-skills .skills-title {
+  font-family: "font2";
+  font-size: 3rem;
+  font-weight: 100;
+  color: #C4E8FE;
   text-shadow: 0.1rem 0.15rem darkslategrey;
-  text-align: center;
-  margin: 2rem 0;
+  margin: 2rem;
 }
-.works .works-projects .projects-boxes .boxes-text {
+.about .about-skills-cont .about-skills .yellow {
+  color: #FFBD33;
+}
+.about .about-skills-cont .about-workin {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  text-align: center;
+}
+.about .about-skills-cont .about-workin .workin-text {
   font-family: "font1";
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
   color: whitesmoke;
   text-shadow: 0.05rem 0.05rem darkslategrey;
+  margin: 0.25rem 1rem 0.25rem 1rem;
+  margin: 1rem;
+}
+.about .about-skills-cont .about-elements {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.about .about-skills-cont .about-elements .elements-icon {
+  width: 3rem;
+  margin: 1rem;
 }
 
 .contact {
@@ -513,9 +469,9 @@ példa layoutok: header, footer, nav, main, sidebar
 .contact .contact-info-cont .contact-info .info-title {
   font-family: "font2";
   font-size: 5rem;
+  font-weight: 100;
   color: #C4E8FE;
   text-shadow: 0.1rem 0.15rem darkslategrey;
-  font-weight: 100;
   text-align: center;
   margin: 3rem 2rem 2rem 2rem;
 }
@@ -532,9 +488,9 @@ példa layoutok: header, footer, nav, main, sidebar
 .contact .contact-info-cont .contact-details .details-text {
   font-family: "font1";
   font-size: 1.2rem;
+  font-weight: 600;
   color: whitesmoke;
   text-shadow: 0.05rem 0.05rem darkslategrey;
-  font-weight: 600;
   margin: 1rem;
   text-align: center;
 }
@@ -578,26 +534,165 @@ példa layoutok: header, footer, nav, main, sidebar
 .contact .contact-social-cont .contact-social .social-text {
   font-family: "font1";
   font-size: 1rem;
+  font-weight: 600;
   color: whitesmoke;
   text-shadow: 0.05rem 0.05rem darkslategrey;
-  font-weight: 600;
   opacity: 0.7;
 }
 
-.about {
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  font-family: "font1";
+  font-size: 0.7rem;
+  font-weight: 100;
+  color: #C4E8FE;
+  text-shadow: 0.1rem 0.15rem darkslategrey;
+  height: 10vh;
+}
+.footer .made-cont {
+  display: flex;
+  flex-direction: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.footer .made-cont .made-text {
+  margin: 0.5rem;
+}
+.footer .skips-cont {
+  display: flex;
+  flex-direction: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.footer .skips-cont .skips-link {
+  margin: 0.5rem 0;
+  cursor: pointer;
+}
+.footer .skips-cont .skips-link:hover {
+  color: #FFBD33;
+}
+.footer .skips-cont p::before {
+  content: " ";
+}
+.footer .skips-cont p:not(:last-child)::after {
+  content: " |";
+}
+
+.header {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100vw;
+  height: 10vh;
+}
+.header__title {
+  font-family: "font2";
+  font-size: 3rem;
+  font-weight: 100;
+  color: #FFBD33;
+  text-shadow: 0.1rem 0.15rem darkslategrey;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+.header .nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.header .nav__link {
+  width: 1.4rem;
+  height: auto;
+  margin: 1rem;
+  fill: #C4E8FE;
+  filter: drop-shadow(0.15rem 0.15rem 0.05rem darkslategrey);
+}
+.header .nav__link:hover {
+  cursor: pointer;
+  color: #FFBD33;
+  fill: #FFBD33;
+}
+
+.main {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: auto;
+  height: 80vh;
+}
+.main .paperplane-img {
+  width: 10rem;
+  height: auto;
+  margin: 3rem;
+}
+.main .main-content-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.main .main-content-cont .main-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  text-align: center;
+}
+.main .main-content-cont .main-content .content-title {
+  font-family: "font2";
+  font-size: 4rem;
+  font-weight: 100;
+  color: #C4E8FE;
+  text-shadow: 0.1rem 0.15rem darkslategrey;
+}
+.main .main-content-cont .main-content .content-title:hover {
+  cursor: pointer;
+  color: #FFBD33;
+  scale: 1.1;
+}
+.main .main-content-cont .main-content .content-text {
+  font-family: "font1";
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: whitesmoke;
+  text-shadow: 0.05rem 0.05rem darkslategrey;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.main .main-content-cont .main-content .yellow {
+  color: #FFBD33;
+}
+.main .main-content-cont .row {
+  flex-direction: column;
+}
+
+.works {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
 }
-.about .about-info-cont {
+.works .works-info-cont {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
 }
-.about .about-info-cont .about-info {
+.works .works-info-cont .works-info {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -605,104 +700,80 @@ példa layoutok: header, footer, nav, main, sidebar
   flex-wrap: nowrap;
   text-align: center;
 }
-.about .about-info-cont .about-info .info-title {
+.works .works-info-cont .works-info .info-title {
   font-family: "font2";
   font-size: 5rem;
+  font-weight: 100;
   color: #C4E8FE;
   text-shadow: 0.1rem 0.15rem darkslategrey;
-  font-weight: 100;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
   text-align: center;
-  margin: 3rem 2rem 2rem 2rem;
 }
-.about .about-info-cont .about-info .yellow {
+.works .works-info-cont .works-info .yellow {
   color: #FFBD33;
 }
-.about .about-info-cont .about-details {
+.works .works-info-cont .works-details {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-}
-.about .about-info-cont .about-details .details-coderdesigner {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  text-align: center;
-  width: 45vw;
 }
-.about .about-info-cont .about-details .details-coderdesigner .details-title {
-  font-family: "font2";
-  font-size: 3rem;
-  color: #C4E8FE;
-  text-shadow: 0.05rem 0.05rem darkslategrey;
-  font-weight: 100;
-  margin: 1rem 0 0.5rem 0;
-}
-.about .about-info-cont .about-details .details-coderdesigner .details-text {
+.works .works-info-cont .works-details .details-text {
   font-family: "font1";
   font-size: 1.2rem;
-  color: whitesmoke;
-  text-shadow: 0.07rem 0.07rem darkslategrey;
   font-weight: 600;
-  margin: 0.5 0 1rem 0;
-}
-.about .about-info-cont .about-profile .profile-img {
-  width: 10rem;
+  color: whitesmoke;
+  text-shadow: 0.05rem 0.05rem darkslategrey;
   margin: 2rem;
+  text-align: center;
 }
-.about .about-skills-cont {
+.works .works-projects {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
 }
-.about .about-skills-cont .about-skills {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
+.works .works-projects .projects-boxes {
+  border: 0.2rem solid lightgrey;
+  border-color: #C4E8FE;
+  background: linear-gradient(#219EBC, #00468B);
+  filter: drop-shadow(0.15rem 0.15rem 0.05rem darkslategrey);
+  border-radius: 0.25rem;
+  width: 20rem;
+  margin: 3rem 0;
 }
-.about .about-skills-cont .about-skills .skills-title {
-  font-family: "font2";
-  font-size: 3rem;
-  color: #C4E8FE;
-  text-shadow: 0.1rem 0.15rem darkslategrey;
-  font-weight: 100;
-  margin: 2rem;
+.works .works-projects .projects-boxes:hover {
+  border: 0.2rem solid lightgrey;
+  border-color: #FFBD33;
+  scale: 1.02;
 }
-.about .about-skills-cont .about-skills .yellow {
-  color: #FFBD33;
+.works .works-projects .projects-boxes .boxes-thumbnails {
+  border-bottom: 0.2rem solid lightgrey;
+  border-color: #C4E8FE;
 }
-.about .about-skills-cont .about-workin {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  text-align: center;
+.works .works-projects .projects-boxes .boxes-thumbnails:hover {
+  border-bottom: 0.2rem solid lightgrey;
+  border-color: #FFBD33;
 }
-.about .about-skills-cont .about-workin .workin-text {
+.works .works-projects .projects-boxes .boxes-title {
   font-family: "font1";
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: whitesmoke;
+  text-shadow: 0.1rem 0.15rem darkslategrey;
+  text-align: center;
+  margin: 2rem 0;
+}
+.works .works-projects .projects-boxes .boxes-text {
+  font-family: "font1";
+  font-size: 1rem;
+  font-weight: 600;
   color: whitesmoke;
   text-shadow: 0.05rem 0.05rem darkslategrey;
-  font-weight: 600;
-  margin: 0.25rem 1rem 0.25rem 1rem;
-  margin: 1rem;
-}
-.about .about-skills-cont .about-elements {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.about .about-skills-cont .about-elements .elements-icon {
-  width: 3rem;
-  margin: 1rem;
+  padding: 2rem;
 }/*# sourceMappingURL=main.css.map */
