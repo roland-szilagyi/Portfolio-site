@@ -1,69 +1,69 @@
 .works {
   @include d-flex(column, flex-start, center, nowrap);
 
-  .works-info-cont {
+  .works__info {
     @include flex(flex, column, center, center, nowrap);
 
-    .works-info {
+    .info {
       @include flex(flex, row, center, center, nowrap);
       text-align: center;
 
-      .info-title {
-        @include text($font-family2, $font-xlarge, $font-weight-slim, $color-quinary, $text-shadow-fat);
-        @include margin($margin-xlarge, y); // fontos! minden címhez kell alkalmazni
-        @include margin($margin-large, x); // fontos! minden címhez kell alkalmazni
+      &__title {
+        @include text($font-family-b, $font-size-xl, $font-weight-s, $color-quinary, $text-shadow-l);
+        @include margin($margin-xl, y); // fontos! minden címhez kell alkalmazni
+        @include margin($margin-l, x); // fontos! minden címhez kell alkalmazni
         text-align: center;
       }
 
-      .yellow {
+      .color--yellow {
         color: $color-tertiary;
       }
     }
 
-    .works-details {
+    .details {
       @include flex(flex, row, center, center, nowrap);
 
-      .details-text {
-        @include text($font-family1, $font-xsmall, $font-weight-medium, $color-basic, $text-shadow-slim);
-        @include margin($margin-large, xy);
+      &__text {
+        @include text($font-family-a, $font-size-xs, $font-weight-m, $color-basic, $text-shadow-s);
+        @include margin($margin-l, xy);
         text-align: center;
       }
     }
   }
 
-  .works-projects {
+  .works__projects {
     @include flex(flex, column, center, center, nowrap);
 
-    .projects-boxes {
-      @include border($border-medium, xy, $color-quinary);
+    .projects {
+      @include border($border-m, xy, $color-quinary);
+      @include margin($margin-xl, y);
+      @include size(20rem, auto);
       background: linear-gradient($color-fifth, $color-secondary);
-      filter: $drop-shadow-medium;
-      border-radius: 0.25rem;
-      width: 20rem;
-      margin: 3rem 0;
+      border-radius: $border-radius-s;
+      filter: $drop-shadow-m;
 
       &:hover {
-        @include border($border-medium, xy, $color-tertiary);
+        @include border($border-m, xy, $color-tertiary);
         scale: 1.02;
       }
 
-      .boxes-thumbnails {
-        @include border($border-medium, b, $color-quinary);
+      .projects__thumbnails {
+        @include border($border-m, b, $color-quinary);
 
         &:hover {
-          @include border($border-medium, b, $color-tertiary);
+          @include border($border-m, b, $color-tertiary);
         }
       }
 
-      .boxes-title {
-        @include text($font-family1, $font-small, $font-weight-medium, $color-basic, $text-shadow-fat);
+      .projects__title {
+        @include text($font-family-a, $font-size-s, $font-weight-m, $color-basic, $text-shadow-l);
+        @include margin($margin-l, y);
         text-align: center;
-        margin: 2rem 0;
       }
 
-      .boxes-text {
-        @include text($font-family1, $font-base, $font-weight-medium, $color-basic, $text-shadow-slim);
-        @include padding($padding-large, xy);
+      .projects__text {
+        @include text($font-family-a, $font-size-base, $font-weight-m, $color-basic, $text-shadow-s);
+        @include padding($padding-l, xy);
       }
     }
   }

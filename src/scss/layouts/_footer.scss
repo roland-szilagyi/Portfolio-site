@@ -1,6 +1,6 @@
 .footer {
   @include flex(flex, column, center, center, nowrap);
-  @include text($font-family1, $font-footer, $font-weight-slim, $color-quinary, $text-shadow-fat);
+  @include text($font-family-a, $font-size-footer, $font-weight-s, $color-quinary, $text-shadow-l);
   height: 10vh;
 
   .made-cont {

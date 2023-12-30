@@ -2,17 +2,17 @@
   @include flex(flex, column, flex-start, center, nowrap);
   @include size(100vw, 100vh);
   background: linear-gradient($color-fifth, $color-secondary);
-  z-index: 100;
+  z-index: $z-index-first;
 
-  .ham-close-cont {
+  &__header {
     @include flex(flex, row, flex-end, center, nowrap);
     @include size(100vw, 10vh);
 
-    .close-img {
-      @include size($size-small, $size-auto);
-      @include margin($margin-medium);
+    .close__img {
+      @include size($size-s, $size-auto);
+      @include margin($margin-m);
       fill: $color-quinary;
-      filter: $drop-shadow-medium;
+      filter: $drop-shadow-m;
 
       &:hover {
         @include linkhover;
@@ -20,26 +20,26 @@
     }
   }
 
-  .ham-links-cont {
+  &__body {
     @include flex(flex, column, center, center, nowrap);
     @include size($size-auto, 90vh);
 
-    .ham-links {
+    .links {
       @include flex(flex, column, center, flex-start, nowrap);
 
-      .links-cont {
+      .links__item {
         @include flex(flex, row, center, center, nowrap);
-        @include margin($margin-xsmall, xy);
+        @include margin($margin-xs, xy);
 
-        .links-num {
+        .links__number {
           @include flex(flex, column, center, center, nowrap);
-          @include text($font-family1, $font-small, $font-weight-slim, $color-basic, $text-shadow-fat);
-          @include margin($margin-medium, x);
+          @include text($font-family-a, $font-size-s, $font-weight-s, $color-basic, $text-shadow-l);
+          @include margin($margin-m, x);
         }
 
-        .links-title {
+        .links__title {
           @include flex(flex, column, center, center, nowrap);
-          @include text($font-family2, $font-xxlarge, $font-weight-slim, $color-quinary, $text-shadow-fat);
+          @include text($font-family-b, $font-size-xxl, $font-weight-s, $color-quinary, $text-shadow-l);
           @include size($size-auto, 6.8rem);
 
           &:hover {
@@ -49,18 +49,18 @@
       }
     }
 
-    .ham-social {
+    .social {
       @include flex(flex, row, center, center, nowrap);
       @include size(100vw, $size-auto);
 
-      .social-cont {
-        @include margin($margin-large);
+      .social__item {
+        @include margin($margin-l);
 
-        .social-img {
-          @include size($size-medium, $size-auto);
+        .social__img {
+          @include size($size-m, $size-auto);
           opacity: 0.7;
           fill: $color-quinary;
-          filter: $drop-shadow-slim;
+          filter: $drop-shadow-s;
 
           &:hover {
             @include linkhover;
@@ -72,7 +72,7 @@
   }
 }
 
-.fix {
+.ham--fix {
   position: fixed;
 }
 

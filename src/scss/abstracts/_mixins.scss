@@ -22,9 +22,9 @@
 }
 
 // TEXT
-@mixin text($font-family, $font-size, $font-weight, $color, $text-shadow) {
+@mixin text($font-family, $font-size-size, $font-weight, $color, $text-shadow) {
     font-family: $font-family;
-    font-size: $font-size;
+    font-size: $font-size-size;
     font-weight: $font-weight;
     color: $color;
     text-shadow: $text-shadow;
@@ -44,7 +44,7 @@
     scale: 1.1;
 }
 
-// MARGIN - @include margin($margin-medium, 'xy');
+// MARGIN - @include margin($margin-m, 'xy');
 @mixin margin($size, $directions: "xy") {
     @if $directions == "xy" {
         margin: $size;
@@ -65,7 +65,7 @@
     }
 }
 
-// PADDING - @include padding($padding-medium, 'xy');
+// PADDING - @include padding($padding-m, 'xy');
 @mixin padding($size, $directions: "xy") {
     @if $directions == "xy" {
         padding: $size;

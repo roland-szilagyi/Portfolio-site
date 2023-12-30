@@ -1,86 +1,90 @@
 .about {
   @include d-flex(column, flex-start, center, nowrap);
 
-  .about-info-cont {
+  &__info {
     @include flex(flex, column, center, center, nowrap);
 
-    .about-info {
+    .info {
       @include flex(flex, row, center, center, nowrap);
       text-align: center;
 
-      .info-title {
-        @include text($font-family2, $font-xlarge, $font-weight-slim, $color-quinary, $text-shadow-fat);
+      &__title {
+        @include text($font-family-b, $font-size-xl, $font-weight-s, $color-quinary, $text-shadow-l);
+        @include margin($margin-xl, y); // fontos! minden címhez kell alkalmazni
+        @include margin($margin-l, x); // fontos! minden címhez kell alkalmazni
         text-align: center;
-        margin: 3rem 2rem 2rem 2rem; // fontos! minden címhez kell alkalmazni
       }
 
-      .yellow {
-        color: $color-tertiary; // megoldást találni errre az osztályra. html-ben is.
+      .color--yellow {
+        color: $color-tertiary;
       }
     }
 
-    .about-details {
+    .details {
       @include flex(flex, row, center, flex-start, nowrap);
 
-      .details-coderdesigner {
+      &__item {
         @include flex(flex, column, center, center, nowrap);
+        @include size(45vw, auto);
         text-align: center;
-        width: 45vw;
 
-        .details-title {
-          @include text($font-family2, $font-medium, $font-weight-slim, $color-tertiary, $text-shadow-medium);
-          margin: 1rem 0 0.5rem 0;
+        &__title {
+          @include text($font-family-b, $font-size-m, $font-weight-s, $color-tertiary, $text-shadow-m);
+          @include margin($margin-m, t);
+          @include margin($margin-s, b);
         }
 
-        .details-text {
-          @include text($font-family1, $font-xsmall, $font-weight-medium, $color-basic, $text-shadow-medium);
-          margin: 0.5 0 1rem 0;
+        &__text {
+          @include text($font-family-a, $font-size-xs, $font-weight-m, $color-basic, $text-shadow-m);
+          @include margin($margin-s, t);
+          @include margin($margin-m, b);
         }
       }
-      // .details-coderdesigner{}...
     }
-    .about-profile {
 
-      .profile-img {
-        width: 10rem;
-        margin: 2rem;
+    .profile {
+      @include flex(flex, row, center, center, nowrap);
+
+      &__img {
+        @include size($img-size-l, auto);
+        @include margin($margin-l, xy);
       }
     }
   }
 
-  .about-skills-cont {
+  .about__skills {
     @include flex(flex, column, center, center, nowrap);
 
-    .about-skills {
+    .skills {
       @include flex(flex, row, center, center, nowrap);
 
-      .skills-title {
-        @include text($font-family2, $font-medium, $font-weight-slim, $color-quinary, $text-shadow-fat);
-        margin: 2rem;
+      &__title {
+        @include text($font-family-b, $font-size-m, $font-weight-s, $color-quinary, $text-shadow-l);
+        @include margin($margin-l, xy);
       }
 
-      .yellow {
-        color: $color-tertiary; // megoldást találni errre az osztályra. html-ben is.
+      .color--yellow {
+        color: $color-tertiary;
       }
     }
 
-    .about-workin {
+    .workin {
       @include flex(flex, row, center, center, nowrap);
       text-align: center;
 
-      .workin-text {
-        @include text($font-family1, $font-xsmall, $font-weight-medium, $color-basic, $text-shadow-slim);
-        margin: 0.25rem 1rem 0.25rem 1rem; // ez ad margót a contenteknek.
-        margin: 1rem;
+      &__text {
+        @include text($font-family-a, $font-size-xs, $font-weight-m, $color-basic, $text-shadow-s);
+        @include margin($margin-m, y);
+        @include margin($margin-xs, x);
       }
     }
 
-    .about-elements {
+    .elements {
       @include flex(flex, row, center, center, wrap);
 
-      .elements-icon {
-        width: 3rem;
-        margin: 1rem;
+      &__icon {
+        @include size($size-l, auto);
+        @include margin($margin-m, xy);
       }
     }
   }

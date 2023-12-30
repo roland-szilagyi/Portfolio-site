@@ -12,10 +12,10 @@
     @include flex(flex, row, space-between, center, nowrap);
 
     &__link {
-      @include size($size-small, $size-auto);
-      @include margin($margin-medium, xy);
+      @include size($size-s, $size-auto);
+      @include margin($margin-m, xy);
       fill: #C4E8FE;
-      filter: $drop-shadow-medium;
+      filter: $drop-shadow-m;
 
       &:hover {
         @include linkhover;
