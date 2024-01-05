@@ -10,8 +10,7 @@
 
       &__title {
         @include text($font-family-b, $font-size-xl, $font-weight-s, $color-quinary, $text-shadow-l);
-        @include margin($margin-xl, y); // fontos! minden címhez kell alkalmazni
-        @include margin($margin-l, x); // fontos! minden címhez kell alkalmazni
+        margin: $margin-xl, $margin-l;
         text-align: center;
       }
 
@@ -25,19 +24,17 @@
 
       &__item {
         @include flex(flex, column, center, center, nowrap);
-        @include size(45vw, auto);
+        width: 45vw;
         text-align: center;
 
         &__title {
           @include text($font-family-b, $font-size-m, $font-weight-s, $color-tertiary, $text-shadow-m);
-          @include margin($margin-m, t);
-          @include margin($margin-s, b);
+          margin: $margin-m, 0 $margin-s, 0;
         }
 
         &__text {
           @include text($font-family-a, $font-size-xs, $font-weight-m, $color-basic, $text-shadow-m);
-          @include margin($margin-s, t);
-          @include margin($margin-m, b);
+          margin: $margin-s, 0 $margin-m, 0;
         }
       }
     }
@@ -46,8 +43,8 @@
       @include flex(flex, row, center, center, nowrap);
 
       &__img {
-        @include size($img-size-l, auto);
-        @include margin($margin-l, xy);
+        width: $img-size-l;
+        margin: $margin-l;
       }
     }
   }
@@ -60,7 +57,7 @@
 
       &__title {
         @include text($font-family-b, $font-size-m, $font-weight-s, $color-quinary, $text-shadow-l);
-        @include margin($margin-l, xy);
+        margin: $margin-l;
       }
 
       .color--yellow {
@@ -74,8 +71,7 @@
 
       &__text {
         @include text($font-family-a, $font-size-xs, $font-weight-m, $color-basic, $text-shadow-s);
-        @include margin($margin-m, y);
-        @include margin($margin-xs, x);
+        margin: $margin-xs, $margin-m;
       }
     }
 
@@ -83,8 +79,8 @@
       @include flex(flex, row, center, center, wrap);
 
       &__icon {
-        @include size($size-l, auto);
-        @include margin($margin-m, xy);
+        width: $size-l;
+        margin: $margin-m;
       }
     }
   }

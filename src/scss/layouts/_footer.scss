@@ -7,7 +7,7 @@
     @include flex(flex, flex, space-evenly, center, nowrap);
 
     .made-text {
-      margin: 0.5rem;
+      margin: $margin-s;
     }
   }
 
@@ -15,15 +15,13 @@
     @include flex(flex, flex, center, center, nowrap);
 
     .skips-link {
-      margin: 0.5rem 0;
+      margin: $margin-s, 0;
       cursor: pointer;
 
       &:hover {
         color: $color-tertiary;
       }
     }
-
-    
   }
 
   .skips-cont p::before {

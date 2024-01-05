@@ -1,10 +1,10 @@
 .main {
   @include d-flex(column, flex-start, center, nowrap);
-  @include size($size-auto, 80vh);
+  height: 80vh;
 
   .paperplane__img {
-    @include size(10rem, $size-auto);
-    @include margin($margin-xl, xy);
+    margin: $margin-xl;
+    width: $img-size-l;
   }
 
   .main__content {
@@ -24,8 +24,7 @@
 
       .content__text {
         @include text($font-family-a, $font-size-xs, $font-weight-m, $color-basic, $text-shadow-s);
-        @include margin($margin-xs, y);
-        @include margin($margin-m, x);
+        margin: $margin-m $margin-xs;
       }
 
       .color--yellow {

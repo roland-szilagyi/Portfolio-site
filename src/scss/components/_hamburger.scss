@@ -9,8 +9,8 @@
     @include size(100vw, 10vh);
 
     .close__img {
-      @include size($size-s, $size-auto);
-      @include margin($margin-m);
+      width: $size-s;
+      margin: $margin-m;
       fill: $color-quinary;
       filter: $drop-shadow-m;
 
@@ -22,25 +22,25 @@
 
   &__body {
     @include flex(flex, column, center, center, nowrap);
-    @include size($size-auto, 90vh);
+    height: 90vh;
 
     .links {
       @include flex(flex, column, center, flex-start, nowrap);
 
       .links__item {
         @include flex(flex, row, center, center, nowrap);
-        @include margin($margin-xs, xy);
+        margin: $margin-xs;
 
         .links__number {
           @include flex(flex, column, center, center, nowrap);
           @include text($font-family-a, $font-size-s, $font-weight-s, $color-basic, $text-shadow-l);
-          @include margin($margin-m, x);
+          margin: 0 $margin-m;
         }
 
         .links__title {
           @include flex(flex, column, center, center, nowrap);
           @include text($font-family-b, $font-size-xxl, $font-weight-s, $color-quinary, $text-shadow-l);
-          @include size($size-auto, 6.8rem);
+          height: 6.8rem;
 
           &:hover {
             @include linkhover;
@@ -51,13 +51,13 @@
 
     .social {
       @include flex(flex, row, center, center, nowrap);
-      @include size(100vw, $size-auto);
+      width: 100vw;
 
       .social__item {
-        @include margin($margin-l);
+        margin: $margin-l;
 
         .social__img {
-          @include size($size-m, $size-auto);
+          width: $size-m;
           opacity: 0.7;
           fill: $color-quinary;
           filter: $drop-shadow-s;

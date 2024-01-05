@@ -10,8 +10,7 @@
 
       &__title {
         @include text($font-family-b, $font-size-xl, $font-weight-s, $color-quinary, $text-shadow-l);
-        @include margin($margin-xl, y); // fontos! minden címhez kell alkalmazni
-        @include margin($margin-l, x); // fontos! minden címhez kell alkalmazni
+        margin: $margin-l, $margin-xl;
         text-align: center;
       }
 
@@ -25,7 +24,7 @@
 
       &__text {
         @include text($font-family-a, $font-size-xs, $font-weight-m, $color-basic, $text-shadow-s);
-        @include margin($margin-l, xy);
+        margin: $margin-l;
         text-align: center;
       }
     }
@@ -35,10 +34,10 @@
     @include flex(flex, column, center, center, nowrap);
 
     .projects {
-      @include border($border-m, xy, $color-quinary);
-      @include margin($margin-xl, y);
-      @include size(20rem, auto);
       background: linear-gradient($color-fifth, $color-secondary);
+      margin: 0 $margin-xl;
+      width: $img-size-xxl;
+      @include border($border-m, xy, $color-quinary);
       border-radius: $border-radius-s;
       filter: $drop-shadow-m;
 
@@ -57,13 +56,13 @@
 
       .projects__title {
         @include text($font-family-a, $font-size-s, $font-weight-m, $color-basic, $text-shadow-l);
-        @include margin($margin-l, y);
+        margin: 0 $margin-l;
         text-align: center;
       }
 
       .projects__text {
         @include text($font-family-a, $font-size-base, $font-weight-m, $color-basic, $text-shadow-s);
-        @include padding($padding-l, xy);
+        padding: $padding-l;
       }
     }
   }

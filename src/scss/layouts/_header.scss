@@ -4,7 +4,7 @@
 
   &__title {
     @include text($font-family-b, $font-size-m, $font-weight-s, $color-tertiary, $text-shadow-l);
-    @include margin($margin-s, xy);
+    margin: $margin-s;
     cursor: pointer;
   }
 
@@ -12,8 +12,8 @@
     @include flex(flex, row, space-between, center, nowrap);
 
     &__link {
-      @include size($size-s, $size-auto);
-      @include margin($margin-m, xy);
+      width: $size-s;
+      margin: $margin-m;
       fill: #C4E8FE;
       filter: $drop-shadow-m;
 

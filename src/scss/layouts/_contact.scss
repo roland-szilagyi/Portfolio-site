@@ -1,42 +1,34 @@
 .contact {
   @include d-flex(column, flex-start, center, nowrap);
-  // height: 90vh;
 
-  .contact-info-cont {
+  &__info {
     @include flex(flex, column, center, center, nowrap);
 
-    .contact-info {
+    .info {
       @include flex(flex, row, center, center, nowrap);
       text-align: center;
 
-      .info-title {
+      &__title {
         @include text($font-family-b, $font-size-xl, $font-weight-s, $color-quinary, $text-shadow-l);
+        margin: $margin-l, $margin-xl;
         text-align: center;
-        margin: 3rem 2rem 2rem 2rem; // fontos! minden címhez kell alkalmazni
       }
 
-      .yellow {
-        color: $color-tertiary; // megoldást találni errre az osztályra. html-ben is.
+      .color--yellow {
+        color: $color-tertiary;
       }
     }
 
-    .contact-details {
+    .details {
       @include flex(flex, row, center, center, nowrap);
 
-      .details-text {
+      .details__text {
         @include text($font-family-a, $font-size-xs, $font-weight-m, $color-basic, $text-shadow-s);
-        margin: 1rem; // ez ad margót a contenteknek.
+        margin: $margin-m;
         text-align: center;
       }
     }
   }
-
-
-
-
-
-
-
 
 
 
@@ -53,9 +45,16 @@
 
 
 
+  
 
 
-  .contact-social-cont {
+
+
+
+
+
+
+  .contact__social {
     @include flex(flex, row, center, center, nowrap);
   
     .contact-social {
