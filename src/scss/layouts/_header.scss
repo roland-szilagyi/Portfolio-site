@@ -1,16 +1,29 @@
 .header {
   @include d-flex(row, space-between, center, nowrap);
-  @include size(100vw, 10vh);
+  @include size(100vw, 12vh);
+  //MQ
+  @include media("height<small") {
+    @include size(100vw, 5rem);
+  }
 
   &__title {
     @include text($font-family-b, $font-size-m, $font-weight-s, $color-tertiary, $text-shadow-l);
-    margin: $margin-s;
+    margin: $margin-m;
     cursor: pointer;
+    //MQ
+    @include media(">=medium", "<xlarge") {
+      margin: $margin-m $margin-l;
+      font-size: $font-size-l;
+    }
   }
 
   .nav {
     @include flex(flex, row, space-between, center, nowrap);
-
+    //MQ
+    @include media(">=medium") {
+      margin: $margin-m;
+    }
+    
     &__link {
       width: $size-s;
       margin: $margin-m;
@@ -19,6 +32,10 @@
 
       &:hover {
         @include linkhover;
+      }
+      //MQ
+      @include media(">=medium", "<xlarge") {
+        width: $size-l;
       }
     }
   }

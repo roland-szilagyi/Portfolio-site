@@ -28,6 +28,7 @@ body {
   line-height: 1.2;
   -webkit-font-smoothing: antialiased;
   background: linear-gradient(#128FC8, #00468B);
+  scroll-behavior: smooth;
 }
 
 ol, ul {
@@ -81,7 +82,7 @@ p, h1, h2, h3, h4, h5, h6 {
   flex-wrap: nowrap;
   background: linear-gradient(#219EBC, #00468B);
   margin: 3rem 1rem;
-  drop-shadow: drop-shadow(0.15rem 0.15rem 0.05rem darkslategrey);
+  filter: drop-shadow(0.15rem 0.15rem 0.05rem darkslategrey);
   border: 0.2rem solid rgba(196, 232, 254, 0.8);
   border-radius: 0.6rem;
 }
@@ -217,7 +218,13 @@ p, h1, h2, h3, h4, h5, h6 {
   align-items: center;
   flex-wrap: nowrap;
   width: 100vw;
-  height: 10vh;
+  height: 12vh;
+}
+@media (max-height: 575px) {
+  .ham__header {
+    width: 100vw;
+    height: 5rem;
+  }
 }
 .ham__header .close__img {
   width: 1.4rem;
@@ -230,6 +237,12 @@ p, h1, h2, h3, h4, h5, h6 {
   color: #FFBD33;
   fill: #FFBD33;
 }
+@media (min-width: 768px) and (max-width: 1599px) {
+  .ham__header .close__img {
+    width: 5rem;
+    margin: 1rem;
+  }
+}
 .ham__body {
   display: flex;
   flex-direction: column;
@@ -238,12 +251,24 @@ p, h1, h2, h3, h4, h5, h6 {
   flex-wrap: nowrap;
   height: 90vh;
 }
+@media (max-height: 575px) {
+  .ham__body {
+    width: 100vw;
+    height: calc(100vh - 5rem);
+  }
+}
 .ham__body .links {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   flex-wrap: nowrap;
+}
+@media (max-height: 575px) {
+  .ham__body .links {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 .ham__body .links .links__item {
   display: flex;
@@ -273,11 +298,25 @@ p, h1, h2, h3, h4, h5, h6 {
   align-items: center;
   flex-wrap: nowrap;
   font-family: "font2";
-  font-size: 6rem;
+  font-size: 5rem;
   font-weight: 100;
   color: #C4E8FE;
   text-shadow: 0.1rem 0.15rem darkslategrey;
   height: 6.8rem;
+}
+@media (max-height: 575px) {
+  .ham__body .links .links__item .links__title {
+    font-family: "font2";
+    font-size: 3rem;
+    font-weight: 100;
+    color: #C4E8FE;
+    text-shadow: 0.1rem 0.15rem darkslategrey;
+  }
+}
+@media (min-width: 768px) {
+  .ham__body .links .links__item .links__title {
+    font-size: 6rem;
+  }
 }
 .ham__body .links .links__item .links__title:hover {
   cursor: pointer;
@@ -297,6 +336,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .ham__body .social .social__item .social__img {
   width: 2rem;
+  height: auto;
   opacity: 0.7;
   fill: #C4E8FE;
   filter: drop-shadow(0.1rem 0.1rem 0.03rem darkslategrey);
@@ -347,7 +387,7 @@ p, h1, h2, h3, h4, h5, h6 {
   font-weight: 100;
   color: #C4E8FE;
   text-shadow: 0.1rem 0.15rem darkslategrey;
-  margin: 3rem, 2rem;
+  margin: 3rem;
   text-align: center;
 }
 .about__info .info .color--yellow {
@@ -476,7 +516,7 @@ p, h1, h2, h3, h4, h5, h6 {
   font-weight: 100;
   color: #C4E8FE;
   text-shadow: 0.1rem 0.15rem darkslategrey;
-  margin: 2rem, 3rem;
+  margin: 3rem;
   text-align: center;
 }
 .contact__info .info .color--yellow {
@@ -550,12 +590,19 @@ p, h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  width: 100vw;
+  height: 10vh;
   font-family: "font1";
   font-size: 0.7rem;
   font-weight: 100;
   color: #C4E8FE;
   text-shadow: 0.1rem 0.15rem darkslategrey;
-  height: 10vh;
+}
+@media (max-height: 575px) {
+  .footer {
+    width: 100vw;
+    height: 5rem;
+  }
 }
 .footer .made-cont {
   display: flex;
@@ -594,7 +641,13 @@ p, h1, h2, h3, h4, h5, h6 {
   align-items: center;
   flex-wrap: nowrap;
   width: 100vw;
-  height: 10vh;
+  height: 12vh;
+}
+@media (max-height: 575px) {
+  .header {
+    width: 100vw;
+    height: 5rem;
+  }
 }
 .header__title {
   font-family: "font2";
@@ -602,8 +655,14 @@ p, h1, h2, h3, h4, h5, h6 {
   font-weight: 100;
   color: #FFBD33;
   text-shadow: 0.1rem 0.15rem darkslategrey;
-  margin: 0.5rem;
+  margin: 1rem;
   cursor: pointer;
+}
+@media (min-width: 768px) and (max-width: 1599px) {
+  .header__title {
+    margin: 1rem 2rem;
+    font-size: 4rem;
+  }
 }
 .header .nav {
   display: flex;
@@ -611,6 +670,11 @@ p, h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
+}
+@media (min-width: 768px) {
+  .header .nav {
+    margin: 1rem;
+  }
 }
 .header .nav__link {
   width: 1.4rem;
@@ -623,17 +687,33 @@ p, h1, h2, h3, h4, h5, h6 {
   color: #FFBD33;
   fill: #FFBD33;
 }
+@media (min-width: 768px) and (max-width: 1599px) {
+  .header .nav__link {
+    width: 3rem;
+  }
+}
 
 .main {
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  height: 80vh;
+  height: 78vh;
+}
+@media (max-height: 575px) {
+  .main {
+    width: 100vw;
+    height: 35rem;
+  }
 }
 .main .paperplane__img {
   margin: 3rem;
   width: 10rem;
+}
+@media (min-width: 375px) {
+  .main .paperplane__img {
+    margin: 2rem;
+  }
 }
 .main .main__content {
   display: flex;
@@ -668,7 +748,7 @@ p, h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   color: whitesmoke;
   text-shadow: 0.05rem 0.05rem darkslategrey;
-  margin: 1rem 0.3rem;
+  margin: 0.3rem 1rem;
 }
 .main .main__content .content .color--yellow {
   color: #FFBD33;
@@ -683,14 +763,14 @@ p, h1, h2, h3, h4, h5, h6 {
   align-items: center;
   flex-wrap: nowrap;
 }
-.works .works__info {
+.works__info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
 }
-.works .works__info .info {
+.works__info .info {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -698,26 +778,26 @@ p, h1, h2, h3, h4, h5, h6 {
   flex-wrap: nowrap;
   text-align: center;
 }
-.works .works__info .info__title {
+.works__info .info__title {
   font-family: "font2";
   font-size: 5rem;
   font-weight: 100;
   color: #C4E8FE;
   text-shadow: 0.1rem 0.15rem darkslategrey;
-  margin: 2rem, 3rem;
+  margin: 3rem;
   text-align: center;
 }
-.works .works__info .info .color--yellow {
+.works__info .info .color--yellow {
   color: #FFBD33;
 }
-.works .works__info .details {
+.works__info .details {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
 }
-.works .works__info .details__text {
+.works__info .details__text {
   font-family: "font1";
   font-size: 1.2rem;
   font-weight: 600;

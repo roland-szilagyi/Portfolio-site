@@ -12,6 +12,7 @@ body {
     line-height: 1.2;
     -webkit-font-smoothing: antialiased;
     background: linear-gradient($color-primary, $color-secondary);
+    scroll-behavior: smooth;
 }
 
 ol, ul {

@@ -6,7 +6,11 @@
 
   &__header {
     @include flex(flex, row, flex-end, center, nowrap);
-    @include size(100vw, 10vh);
+    @include size(100vw, 12vh);
+    //MQ
+    @include media("height<small") {
+      @include size(100vw, 5rem);
+    }
 
     .close__img {
       width: $size-s;
@@ -17,15 +21,28 @@
       &:hover {
         @include linkhover;
       }
+      //MQ
+      @include media(">=medium", "<xlarge") {
+        width: $size-xl;
+        margin: $margin-m;
+      }
     }
   }
 
   &__body {
     @include flex(flex, column, center, center, nowrap);
     height: 90vh;
+    @include media("height<small") {
+      width: 100vw;
+      height: calc(100vh - 5rem);
+    }
 
     .links {
       @include flex(flex, column, center, flex-start, nowrap);
+      @include media("height<small") {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
 
       .links__item {
         @include flex(flex, row, center, center, nowrap);
@@ -39,8 +56,18 @@
 
         .links__title {
           @include flex(flex, column, center, center, nowrap);
-          @include text($font-family-b, $font-size-xxl, $font-weight-s, $color-quinary, $text-shadow-l);
+          @include text($font-family-b, $font-size-xl, $font-weight-s, $color-quinary, $text-shadow-l);
           height: 6.8rem;
+
+          //MQ
+          @include media("height<small") {
+            @include text($font-family-b, $font-size-m, $font-weight-s, $color-quinary, $text-shadow-l);
+          }
+
+          //MQ
+          @include media(">=medium") {
+            font-size: $font-size-xxl;
+          }
 
           &:hover {
             @include linkhover;
@@ -58,6 +85,7 @@
 
         .social__img {
           width: $size-m;
+          height: auto;
           opacity: 0.7;
           fill: $color-quinary;
           filter: $drop-shadow-s;

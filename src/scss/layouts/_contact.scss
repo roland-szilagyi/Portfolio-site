@@ -10,7 +10,7 @@
 
       &__title {
         @include text($font-family-b, $font-size-xl, $font-weight-s, $color-quinary, $text-shadow-l);
-        margin: $margin-l, $margin-xl;
+        margin: $margin-xl;
         text-align: center;
       }
 
