@@ -6,12 +6,17 @@
 
     .info {
       @include flex(flex, row, center, center, nowrap);
+      margin: $margin-xl;
       text-align: center;
 
       &__title {
         @include text($font-family-b, $font-size-xl, $font-weight-s, $color-quinary, $text-shadow-l);
-        margin: $margin-xl;
         text-align: center;
+        margin: 0 $margin-m;
+      }
+
+      &__text {
+        @include text($font-family-a, $font-size-s, $font-weight-m, $color-basic, $text-shadow-m);
       }
 
       .color--yellow {
@@ -29,12 +34,12 @@
 
         &__title {
           @include text($font-family-b, $font-size-m, $font-weight-s, $color-tertiary, $text-shadow-m);
-          margin: $margin-m, 0 $margin-s, 0;
+          margin: $margin-m 0 $margin-s 0;
         }
 
         &__text {
           @include text($font-family-a, $font-size-xs, $font-weight-m, $color-basic, $text-shadow-m);
-          margin: $margin-s, 0 $margin-m, 0;
+          margin: $margin-s 0 $margin-m 0;
         }
       }
     }
