@@ -5,27 +5,30 @@
     @include flex(flex, column, center, center, nowrap);
 
     .info {
-      @include flex(flex, row, center, center, nowrap);
+      @include flex(flex, column, center, center, nowrap);
+      margin: $margin-xl;
       text-align: center;
 
-      &__title {
-        @include text($font-family-b, $font-size-xl, $font-weight-s, $color-quinary, $text-shadow-l);
-        margin: $margin-xl;
+      &__cont1 {
+        @include flex(flex, row, center, center, nowrap);
+
+        .info__title {
+          @include text($font-family-b, $font-size-xl, $font-weight-s, $color-quinary, $text-shadow-l);
+          text-align: center;
+          margin: 0 $margin-m;
+        }
+
+        .color--yellow {
+          color: $color-tertiary;
+        }
+      }
+
+      &__cont2 {
         text-align: center;
       }
 
-      .color--yellow {
-        color: $color-tertiary;
-      }
-    }
-
-    .details {
-      @include flex(flex, row, center, center, nowrap);
-
-      .details__text {
-        @include text($font-family-a, $font-size-xs, $font-weight-m, $color-basic, $text-shadow-s);
-        margin: $margin-m;
-        text-align: center;
+      .info__text {
+        @include text($font-family-a, $font-size-s, $font-weight-m, $color-basic, $text-shadow-m);
       }
     }
   }
