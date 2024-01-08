@@ -1,10 +1,17 @@
 .main {
-  @include d-flex(column, flex-start, center, nowrap);
-  height: 80vh;
+  @include d-flex(column, center, center, nowrap);
+  height: 78vh;
+  @include media("height<small") {
+    @include size(100vw, 35rem);
+  }
 
   .paperplane__img {
     margin: $margin-xl;
     width: $img-size-l;
+
+    @include media(">=xsmall") {
+      margin: $margin-l;
+    }
   }
 
   .main__content {
@@ -24,7 +31,7 @@
 
       .content__text {
         @include text($font-family-a, $font-size-xs, $font-weight-m, $color-basic, $text-shadow-s);
-        margin: $margin-m $margin-xs;
+        margin: $margin-xs $margin-m;
       }
 
       .color--yellow {

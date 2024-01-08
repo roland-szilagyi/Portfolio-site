@@ -1,7 +1,7 @@
 .works {
   @include d-flex(column, flex-start, center, nowrap);
 
-  .works__info {
+  &__info {
     @include flex(flex, column, center, center, nowrap);
 
     .info {
@@ -10,7 +10,7 @@
 
       &__title {
         @include text($font-family-b, $font-size-xl, $font-weight-s, $color-quinary, $text-shadow-l);
-        margin: $margin-l, $margin-xl;
+        margin: $margin-xl;
         text-align: center;
       }
 
