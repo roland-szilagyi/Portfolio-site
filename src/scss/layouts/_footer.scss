@@ -1,38 +1,17 @@
 .footer {
-  @include flex(flex, column, center, center, nowrap);
+  @include flex(flex, row, center, center, nowrap);
   @include size(100vw, 10vh);
   @include text($font-family-a, $font-size-footer, $font-weight-s, $color-quinary, $text-shadow-l);
   //MQ
   @include media("height<small") {
     @include size(100vw, 5rem);
   }
-
-  .made-cont {
-    @include flex(flex, flex, space-evenly, center, nowrap);
-
-    .made-text {
-      margin: $margin-s;
+    
+  &__text {
+    margin: $margin-s;
+    //MQ
+    @include media(">=medium") {
+      font-size: $font-size-base;
     }
-  }
-
-  .skips-cont {
-    @include flex(flex, flex, center, center, nowrap);
-
-    .skips-link {
-      margin: $margin-s, 0;
-      cursor: pointer;
-
-      &:hover {
-        color: $color-tertiary;
-      }
-    }
-  }
-
-  .skips-cont p::before {
-    content: "\00a0"
-  }
-
-  .skips-cont p:not(:last-child)::after {
-    content: " |"
   }
 }

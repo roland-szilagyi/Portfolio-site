@@ -17,14 +17,14 @@
       margin: $margin-m;
       fill: $color-quinary;
       filter: $drop-shadow-m;
-
-      &:hover {
-        @include linkhover;
-      }
       //MQ
       @include media(">=medium", "<xlarge") {
         width: $size-xl;
         margin: $margin-m;
+      }
+
+      &:hover {
+        @include linkhover;
       }
     }
   }
@@ -32,6 +32,7 @@
   &__body {
     @include flex(flex, column, space-evenly, center, nowrap);
     height: 90vh;
+    //MQ
     @include media("height<small") {
       width: 100vw;
       height: calc(100vh - 5rem);
@@ -39,6 +40,7 @@
 
     .links {
       @include flex(flex, column, center, flex-start, nowrap);
+      //MQ
       @include media("height<small") {
         flex-direction: row;
         flex-wrap: wrap;
@@ -51,7 +53,6 @@
           @include flex(flex, column, center, center, nowrap);
           @include text($font-family-a, $font-size-s, $font-weight-s, $color-basic, $text-shadow-l);
           margin: 0 $margin-m;
-
           //MQ
           @include media(">=medium") {
             font-size: $font-size-m;
@@ -62,13 +63,10 @@
           @include flex(flex, column, center, center, nowrap);
           @include text($font-family-b, $font-size-l, $font-weight-s, $color-quinary, $text-shadow-l);
           height: 5.5rem;
-
           //MQ
           @include media("height<small") {
             @include text($font-family-b, $font-size-m, $font-weight-s, $color-quinary, $text-shadow-l);
           }
-
-          //MQ
           @include media(">=medium") {
             font-size: $font-size-xxl;
             margin: $margin-m;
@@ -94,16 +92,15 @@
           opacity: 0.7;
           fill: $color-quinary;
           filter: $drop-shadow-s;
-
-          &:hover {
-            @include linkhover;
-            opacity: 1;
-          }
-
           //MQ
           @include media(">=medium") {
             width: $size-l;
             margin: $margin-s $margin-m;
+          }
+
+          &:hover {
+            @include linkhover;
+            opacity: 1;
           }
         }
       }

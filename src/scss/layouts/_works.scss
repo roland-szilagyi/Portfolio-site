@@ -1,37 +1,30 @@
 .works {
   @include d-flex(column, flex-start, center, nowrap);
-  outline: $outline1;
 
-  &__info { // itt ezt lehet hogy megkell szüntetni (felesleges)
+  &__info {
     @include flex(flex, column, center, center, nowrap);
-    outline: $outline2;
 
-    .info {
-      @include flex(flex, column, center, center, nowrap);
-      margin: $margin-xxl;
+    .info__title {
+      @include text($font-family-b, $font-size-m, $font-weight-s, $color-quinary, $text-shadow-l);
+      margin: 0 $margin-m;
       text-align: center;
-      outline: $outline1;
+    }
 
-      &__title {
-        @include text($font-family-b, $font-size-m, $font-weight-s, $color-quinary, $text-shadow-l);
-        margin: 0 $margin-m;
-        text-align: center;
-        outline: $outline2;
-      }
+    .info__text {
+      @include text($font-family-a, $font-size-s, $font-weight-m, $color-basic, $text-shadow-m);
+    }
 
-      &__text {
-        @include text($font-family-a, $font-size-s, $font-weight-m, $color-basic, $text-shadow-m);
-        outline: $outline2;
-      }
-
-      .color--yellow {
-        color: $color-tertiary;
-      }
+    .color--yellow {
+      color: $color-tertiary;
     }
   }
 
   .works__projects {
     @include flex(flex, column, center, stretch, wrap);
+    //MQ
+    @include media(">=large") {
+      @include flex(flex, row, center, stretch, nowrap);
+    }
 
     .projects {
       background: linear-gradient($color-fifth, $color-secondary);
@@ -40,19 +33,17 @@
       @include border($border-m, xy, $color-quinary);
       border-radius: $border-radius-s;
       filter: $drop-shadow-m;
+      //MQ
+      @include media(">=medium") {
+        width: 28rem;
+      }
+      @include media(">=large") {
+        width: 16rem;
+      }
 
       &:hover {
         @include border($border-m, xy, $color-tertiary);
         scale: 1.02;
-      }
-
-      // //MQ
-      @include media(">=medium") {
-        width: 28rem;
-      }
-
-      @include media(">=large") {
-        width: 16rem;
       }
 
       .projects__thumbnails {
@@ -73,11 +64,6 @@
         @include text($font-family-a, $font-size-base, $font-weight-m, $color-basic, $text-shadow-s);
         padding: $padding-l;
       }
-    }
-
-    //MQ
-    @include media(">=large") {
-      @include flex(flex, row, center, stretch, nowrap);
     }
   }
 }

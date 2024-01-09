@@ -26,7 +26,7 @@
 
   &__menu {
     display: none;
-
+    //MQ
     @include media(">=large") {
       @include flex(flex, row, space-between, center, nowrap);
     }
@@ -46,14 +46,13 @@
 
     .menu__social {
       display: none;
-  
       //MQ
       @include media(">1280px") {
         @include flex(flex, row, flex-end, center, nowrap);
       }
   
       &__item {
-        margin: $margin-l;
+        margin: $margin-l $margin-m;
   
         .item__img {
           width: $size-m;
@@ -87,8 +86,8 @@
           @include linkhover;
         }
         //MQ
-        @include media(">=medium", "<xlarge") {
-          width: $size-l;
+        @include media(">=medium") {
+          width: $size-m;
         }
       }
   
