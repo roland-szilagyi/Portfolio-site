@@ -3,7 +3,7 @@
 
   &__info {
     @include flex(flex, column, center, center, nowrap);
-    margin: $margin-xl;
+    margin: $margin-xl $margin-s;
     text-align: center;
 
     .info__cont1 {
@@ -13,6 +13,10 @@
         @include text($font-family-b, $font-size-m, $font-weight-s, $color-quinary, $text-shadow-l);
         text-align: center;
         margin: 0 $margin-m;
+        //MQ
+        @include media(">=medium") {
+          font-size: $font-size-l;
+        }
       }
 
       .color--yellow {
@@ -26,6 +30,11 @@
 
     .info__text {
       @include text($font-family-a, $font-size-s, $font-weight-m, $color-basic, $text-shadow-m);
+      margin: $margin-m $margin-s;
+      //MQ
+      @include media(">=medium") {
+        font-size: $font-size-sm;
+      }
     }
   }
   .contact__social {

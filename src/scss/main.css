@@ -389,7 +389,7 @@ p, h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  margin: 3rem;
+  margin: 3rem 0.5rem;
   text-align: center;
 }
 .about__info .info__title {
@@ -401,12 +401,23 @@ p, h1, h2, h3, h4, h5, h6 {
   text-align: center;
   margin: 0 1rem;
 }
+@media (min-width: 768px) {
+  .about__info .info__title {
+    font-size: 4rem;
+  }
+}
 .about__info .info__text {
   font-family: "font1";
   font-size: 1.4rem;
   font-weight: 600;
   color: whitesmoke;
   text-shadow: 0.07rem 0.07rem darkslategrey;
+  margin: 1rem 0.5rem;
+}
+@media (min-width: 768px) {
+  .about__info .info__text {
+    font-size: 1.8rem;
+  }
 }
 .about__info .info .color--yellow {
   color: #FFBD33;
@@ -519,7 +530,7 @@ p, h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  margin: 3rem;
+  margin: 3rem 0.5rem;
   text-align: center;
 }
 .contact__info .info__cont1 {
@@ -538,6 +549,11 @@ p, h1, h2, h3, h4, h5, h6 {
   text-align: center;
   margin: 0 1rem;
 }
+@media (min-width: 768px) {
+  .contact__info .info__cont1 .info__title {
+    font-size: 4rem;
+  }
+}
 .contact__info .info__cont1 .color--yellow {
   color: #FFBD33;
 }
@@ -550,6 +566,12 @@ p, h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   color: whitesmoke;
   text-shadow: 0.07rem 0.07rem darkslategrey;
+  margin: 1rem 0.5rem;
+}
+@media (min-width: 768px) {
+  .contact__info .info__text {
+    font-size: 1.8rem;
+  }
 }
 .contact .contact__social {
   display: flex;
@@ -867,6 +889,7 @@ p, h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  margin: 3rem 0.5rem;
 }
 .works__info .info__title {
   font-family: "font4";
@@ -874,8 +897,13 @@ p, h1, h2, h3, h4, h5, h6 {
   font-weight: 100;
   color: #C4E8FE;
   text-shadow: 0.1rem 0.15rem darkslategrey;
-  margin: 0 1rem;
+  margin: 0 3rem;
   text-align: center;
+}
+@media (min-width: 768px) {
+  .works__info .info__title {
+    font-size: 4rem;
+  }
 }
 .works__info .info__text {
   font-family: "font1";
@@ -883,6 +911,12 @@ p, h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   color: whitesmoke;
   text-shadow: 0.07rem 0.07rem darkslategrey;
+  margin: 1rem 0.5rem;
+}
+@media (min-width: 768px) {
+  .works__info .info__text {
+    font-size: 1.8rem;
+  }
 }
 .works__info .color--yellow {
   color: #FFBD33;

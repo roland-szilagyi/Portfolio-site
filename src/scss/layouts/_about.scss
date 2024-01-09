@@ -6,17 +6,26 @@
 
     .info {
       @include flex(flex, row, center, center, nowrap);
-      margin: $margin-xl;
+      margin: $margin-xl $margin-s;
       text-align: center;
 
       &__title {
         @include text($font-family-b, $font-size-m, $font-weight-s, $color-quinary, $text-shadow-l);
         text-align: center;
         margin: 0 $margin-m;
+        //MQ
+        @include media(">=medium") {
+          font-size: $font-size-l;
+        }
       }
 
       &__text {
         @include text($font-family-a, $font-size-s, $font-weight-m, $color-basic, $text-shadow-m);
+        margin: $margin-m $margin-s;
+        //MQ
+        @include media(">=medium") {
+          font-size: $font-size-sm;
+        }
       }
 
       .color--yellow {

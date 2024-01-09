@@ -3,15 +3,25 @@
 
   &__info {
     @include flex(flex, column, center, center, nowrap);
+    margin: $margin-xl $margin-s;
 
     .info__title {
       @include text($font-family-b, $font-size-m, $font-weight-s, $color-quinary, $text-shadow-l);
-      margin: 0 $margin-m;
+      margin: 0 $margin-xl;
       text-align: center;
+      //MQ
+      @include media(">=medium") {
+        font-size: $font-size-l;
+      }
     }
 
     .info__text {
       @include text($font-family-a, $font-size-s, $font-weight-m, $color-basic, $text-shadow-m);
+      margin: $margin-m $margin-s;
+      //MQ
+      @include media(">=medium") {
+        font-size: $font-size-sm;
+      }
     }
 
     .color--yellow {
