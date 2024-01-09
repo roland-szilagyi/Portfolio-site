@@ -5,37 +5,97 @@
   @include media("height<small") {
     @include size(100vw, 5rem);
   }
+  @include media(">medium") {
+    @include size(100vw, 15vh);
+  }
 
   &__title {
-    @include text($font-family-b, $font-size-m, $font-weight-s, $color-tertiary, $text-shadow-l);
+    @include text($font-family-b, $font-size-sm, $font-weight-s, $color-tertiary, $text-shadow-l);
     margin: $margin-m;
     cursor: pointer;
     //MQ
-    @include media(">=medium", "<xlarge") {
+    @include media(">=medium") {
+      margin: $margin-m $margin-l;
+      font-size: $font-size-m;
+    }
+    @include media(">=large") {
       margin: $margin-m $margin-l;
       font-size: $font-size-l;
     }
   }
 
-  .nav {
-    @include flex(flex, row, space-between, center, nowrap);
-    //MQ
-    @include media(">=medium") {
-      margin: $margin-m;
-    }
-    
-    &__link {
-      width: $size-s;
-      margin: $margin-m;
-      fill: #C4E8FE;
-      filter: $drop-shadow-m;
+  &__menu {
+    display: none;
 
+    @include media(">=large") {
+      @include flex(flex, row, space-between, center, nowrap);
+    }
+
+    .menu__link {
+      @include text($font-family-a, $font-size-sm, $font-weight-m, $color-quinary, $text-shadow-l);
+      margin: 0 $margin-l;
+    
       &:hover {
         @include linkhover;
       }
+    }
+  }
+
+  .header__social {
+    @include flex(flex, row, space-between, center, nowrap);
+
+    .menu__social {
+      display: none;
+  
       //MQ
-      @include media(">=medium", "<xlarge") {
-        width: $size-l;
+      @include media(">1280px") {
+        @include flex(flex, row, flex-end, center, nowrap);
+      }
+  
+      &__item {
+        margin: $margin-l;
+  
+        .item__img {
+          width: $size-m;
+          height: auto;
+          opacity: 0.7;
+          fill: $color-quinary;
+          filter: $drop-shadow-s;
+  
+          &:hover {
+            @include linkhover;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  
+    .nav {
+      @include flex(flex, row, space-between, center, nowrap);
+      //MQ
+      @include media(">=medium") {
+        margin: $margin-m;
+      }
+      
+      &__link {
+        width: $size-s;
+        margin: $margin-m;
+        fill: #C4E8FE;
+        filter: $drop-shadow-m;
+  
+        &:hover {
+          @include linkhover;
+        }
+        //MQ
+        @include media(">=medium", "<xlarge") {
+          width: $size-l;
+        }
+      }
+  
+      &__link--hide {
+        @include media(">=large") {
+          display: none;
+        }
       }
     }
   }
