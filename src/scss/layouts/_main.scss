@@ -1,8 +1,12 @@
 .main {
   @include d-flex(column, center, center, nowrap);
   height: 78vh;
+  //MQ
   @include media("height<small") {
     @include size(100vw, 35rem);
+  }
+  @include media(">medium") {
+    @include size(100vw, 75vh);
   }
 
   .paperplane__img {
@@ -22,7 +26,7 @@
       text-align: center;
 
       .content__title {
-        @include text($font-family-b, $font-size-l, $font-weight-s, $color-quinary, $text-shadow-l);
+        @include text($font-family-b, $font-size-m, $font-weight-s, $color-quinary, $text-shadow-l);
 
         &:hover {
           @include linkhover2;

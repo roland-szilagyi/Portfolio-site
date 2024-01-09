@@ -8,12 +8,12 @@
 
     .info {
       @include flex(flex, column, center, center, nowrap);
-      margin: $margin-xl;
+      margin: $margin-xxl;
       text-align: center;
       outline: $outline1;
 
       &__title {
-        @include text($font-family-b, $font-size-xl, $font-weight-s, $color-quinary, $text-shadow-l);
+        @include text($font-family-b, $font-size-m, $font-weight-s, $color-quinary, $text-shadow-l);
         margin: 0 $margin-m;
         text-align: center;
         outline: $outline2;
@@ -31,12 +31,12 @@
   }
 
   .works__projects {
-    @include flex(flex, column, center, center, nowrap);
+    @include flex(flex, column, center, stretch, wrap);
 
     .projects {
       background: linear-gradient($color-fifth, $color-secondary);
-      margin: $margin-l;
-      width: $img-size-xl;
+      margin: $margin-xxl $margin-l;
+      width: $img-size-xxl;
       @include border($border-m, xy, $color-quinary);
       border-radius: $border-radius-s;
       filter: $drop-shadow-m;
@@ -46,11 +46,12 @@
         scale: 1.02;
       }
 
-      //MQ
-      @include media(">=small", "<large") {
-        width: 30rem;
+      // //MQ
+      @include media(">=medium") {
+        width: 28rem;
       }
-      @include media(">=large", "<xlarge") {
+
+      @include media(">=large") {
         width: 16rem;
       }
 
@@ -76,7 +77,7 @@
 
     //MQ
     @include media(">=large") {
-      @include flex(flex, row, center, center, nowrap);
+      @include flex(flex, row, center, stretch, nowrap);
     }
   }
 }
