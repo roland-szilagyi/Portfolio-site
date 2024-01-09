@@ -60,7 +60,7 @@
     padding: $padding-xs, $padding-m;
   }
 
-  .title {
+  .title__text {
     @include flex(flex, row, center, center, nowrap);
     @include text($font-family-a, $font-size-base, $font-weight-m, $color-basic, $text-shadow-l);
     margin: $margin-l 0;
