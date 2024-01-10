@@ -38,7 +38,7 @@
 
     .projects {
       background: linear-gradient($color-fifth, $color-secondary);
-      margin: $margin-xxl $margin-l;
+      margin: $margin-xl $margin-l;
       width: $img-size-xxl;
       @include border($border-m, xy, $color-quinary);
       border-radius: $border-radius-s;
@@ -49,6 +49,9 @@
       }
       @include media(">=large") {
         width: 16rem;
+      }
+      @include media(">=1200px") {
+        width: 20rem;
       }
 
       &:hover {
@@ -66,13 +69,21 @@
 
       .projects__title {
         @include text($font-family-a, $font-size-s, $font-weight-m, $color-basic, $text-shadow-l);
-        margin: 0 $margin-l;
+        margin: $margin-l;
         text-align: center;
+        //MQ
+        @include media(">=medium") {
+          font-size: $font-size-sm;
+        }
       }
 
       .projects__text {
         @include text($font-family-a, $font-size-base, $font-weight-m, $color-basic, $text-shadow-s);
-        padding: $padding-l;
+        padding: $padding-s $padding-l $padding-l $padding-l;
+        //MQ
+        @include media(">=medium") {
+          font-size: $font-size-s;
+        }
       }
     }
   }

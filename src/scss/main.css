@@ -385,7 +385,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .about__info .info {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
@@ -422,31 +422,49 @@ p, h1, h2, h3, h4, h5, h6 {
 .about__info .info .color--yellow {
   color: #FFBD33;
 }
-.about__info .details {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-}
-.about__info .details__item {
+.about__info .about__details {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  width: 45vw;
-  text-align: center;
 }
-.about__info .details__item__title {
+@media (min-width: 768px) {
+  .about__info .about__details {
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 3rem 0;
+  }
+}
+.about__info .about__details .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 80vw;
+  text-align: center;
+  margin: 2rem 0;
+}
+@media (min-width: 768px) {
+  .about__info .about__details .details {
+    width: 30vw;
+  }
+}
+.about__info .about__details .details__title {
   font-family: "font4";
   font-size: 3rem;
   font-weight: 100;
   color: #FFBD33;
-  text-shadow: 0.07rem 0.07rem darkslategrey;
+  text-shadow: 0.1rem 0.15rem darkslategrey;
   margin: 1rem 0 0.5rem 0;
 }
-.about__info .details__item__text {
+@media (min-width: 768px) {
+  .about__info .about__details .details__title {
+    font-size: 4rem;
+  }
+}
+.about__info .about__details .details__text {
   font-family: "font1";
   font-size: 1.2rem;
   font-weight: 600;
@@ -454,16 +472,26 @@ p, h1, h2, h3, h4, h5, h6 {
   text-shadow: 0.07rem 0.07rem darkslategrey;
   margin: 0.5rem 0 1rem 0;
 }
-.about__info .profile {
+@media (min-width: 1024px) {
+  .about__info .about__details .details__text {
+    font-size: 1.4rem;
+  }
+}
+.about__info .about__details .profile {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
 }
-.about__info .profile__img {
+.about__info .about__details .profile__img {
   width: 10rem;
-  margin: 2rem;
+  margin: 2rem 3rem;
+}
+@media (min-width: 1025px) {
+  .about__info .about__details .profile__img {
+    margin: 2rem 5rem;
+  }
 }
 .about .about__skills {
   display: flex;
@@ -471,6 +499,11 @@ p, h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+}
+@media (min-width: 768px) {
+  .about .about__skills {
+    width: 80vw;
+  }
 }
 .about .about__skills .skills {
   display: flex;
@@ -481,11 +514,17 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .about .about__skills .skills__title {
   font-family: "font4";
-  font-size: 3rem;
+  font-size: 1.8rem;
   font-weight: 100;
   color: #C4E8FE;
   text-shadow: 0.1rem 0.15rem darkslategrey;
-  margin: 2rem;
+  text-align: center;
+  margin: 1rem 0 0.5rem 0;
+}
+@media (min-width: 768px) {
+  .about .about__skills .skills__title {
+    font-size: 3rem;
+  }
 }
 .about .about__skills .skills .color--yellow {
   color: #FFBD33;
@@ -504,7 +543,13 @@ p, h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   color: whitesmoke;
   text-shadow: 0.05rem 0.05rem darkslategrey;
-  margin: 0.3rem, 1rem;
+  width: 80vw;
+  margin: 0.5rem 0 1rem 0;
+}
+@media (min-width: 1024px) {
+  .about .about__skills .workin__text {
+    font-size: 1.4rem;
+  }
 }
 .about .about__skills .elements {
   display: flex;
@@ -512,10 +557,16 @@ p, h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin: 3rem;
 }
 .about .about__skills .elements__icon {
   width: 3rem;
   margin: 1rem;
+}
+@media (min-width: 768px) {
+  .about .about__skills .elements__icon {
+    margin: 2rem;
+  }
 }
 
 .contact {
@@ -939,7 +990,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .works .works__projects .projects {
   background: linear-gradient(#219EBC, #00468B);
-  margin: 5rem 2rem;
+  margin: 3rem 2rem;
   width: 20rem;
   border: 0.2rem solid lightgrey;
   border-color: #C4E8FE;
@@ -954,6 +1005,11 @@ p, h1, h2, h3, h4, h5, h6 {
 @media (min-width: 1024px) {
   .works .works__projects .projects {
     width: 16rem;
+  }
+}
+@media (min-width: 1200px) {
+  .works .works__projects .projects {
+    width: 20rem;
   }
 }
 .works .works__projects .projects:hover {
@@ -975,8 +1031,13 @@ p, h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   color: whitesmoke;
   text-shadow: 0.1rem 0.15rem darkslategrey;
-  margin: 0 2rem;
+  margin: 2rem;
   text-align: center;
+}
+@media (min-width: 768px) {
+  .works .works__projects .projects .projects__title {
+    font-size: 1.8rem;
+  }
 }
 .works .works__projects .projects .projects__text {
   font-family: "font1";
@@ -984,5 +1045,10 @@ p, h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   color: whitesmoke;
   text-shadow: 0.05rem 0.05rem darkslategrey;
-  padding: 2rem;
+  padding: 0.5rem 2rem 2rem 2rem;
+}
+@media (min-width: 768px) {
+  .works .works__projects .projects .projects__text {
+    font-size: 1.4rem;
+  }
 }/*# sourceMappingURL=main.css.map */
