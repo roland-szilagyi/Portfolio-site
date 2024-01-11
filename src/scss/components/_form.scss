@@ -1,42 +1,86 @@
 .contact__form {
   @include flex(flex, column, center, center, nowrap);
+  outline: $outline2;
+  //MQ
+  @include media(">=medium") {
+    flex-direction: row;
+  }
   background: linear-gradient($color-fifth, $color-secondary);
   margin: $margin-xl $margin-m;
   filter: $drop-shadow-m;
   border: 0.2rem solid rgba($color: $color-quinary, $alpha: 0.8);
   border-radius: $border-radius-l;
-  outline: $outline1;
 
-  .form__name {
-    @include flex(flex, column, space-between, flex-start, nowrap);
-    width: $img-size-xxl;
-    margin: $margin-l;
-  }
-
-  .form__email {
-    @include flex(flex, column, space-between, flex-start, nowrap);
-    width: $img-size-xxl;
-    margin: $margin-l;
-  }
-
-  .form__message {
-    @include flex(flex, column, space-between, flex-start, nowrap);
-    width: $img-size-xxl;
-    margin: $margin-l;
-
-    textarea {
-      width: $img-size-xxl;
-      resize: none;
+  .side--A {
+    @include flex(flex, column, center, center, nowrap);
+    //MQ
+    @include media(">=medium") {
+      width: 35vw;
     }
   }
 
-  .form__checkbox {
-    @include flex(flex, column, space-between, flex-start, nowrap);
-    width: $img-size-xxl;
-    margin: $margin-l;
+  .side--B {
+    @include flex(flex, column, center, center, nowrap);
+    //MQ
+    @include media(">=medium") {
+      width: 35vw;
+    }
+  }
 
-    .checkbox {
-      @include flex(flex, row, space-between, flex-start, nowrap);
+  .form__detail {
+    @include flex(flex, column, center, flex-start, nowrap);
+    width: 70vw;
+    margin: $margin-m;
+
+    .detail__cont {
+      @include flex(flex, row, flex-start, center, nowrap);
+      width: 70vw;
+
+      .detail__icon {
+        @include size($size-s, $size-auto);
+        filter: $drop-shadow-s;
+        opacity: 0.7;
+        fill: #C4E8FE;
+      }
+
+      .detail__title {
+        @include flex(flex, column, space-between, flex-start, nowrap);
+        @include text($font-family-a, $font-size-base, $font-weight-m, $color-basic, $text-shadow-l);
+        width: $img-size-xxl;
+        margin: $margin-m;
+      }
+    }
+
+    .input__cont {
+
+      .input__text {
+        @include text($font-family-a, $font-size-base, $font-weight-m, $color-basic, $text-shadow-s);
+        width: 70vw;
+        padding: $padding-s;
+        background-color:rgba(0, 0, 0, 0.3);
+        border: none;
+        border-bottom: 1px solid rgba($color: $color-quinary, $alpha: 0.8);
+        border-radius: $border-radius-s;
+    
+        &::placeholder {
+          color: $color-quinary;
+          opacity: 0.5;
+        }
+      }
+
+      .input__textarea {
+        @include text($font-family-a, $font-size-base, $font-weight-m, $color-basic, $text-shadow-s);
+        width: 70vw;
+        padding: $padding-s;
+        background-color:rgba(0, 0, 0, 0.3);
+        border: none;
+        border-bottom: 1px solid rgba($color: $color-quinary, $alpha: 0.8);
+        border-radius: $border-radius-s;
+      }
+    }
+
+    .checkbox__cont {
+      @include flex(flex, row, space-around, flex-start, nowrap);
       width: 100%;
 
       .checkbox__label {
@@ -51,41 +95,6 @@
           margin: 0 $margin-s;
         }
       }
-    }
-  }
-
-  .submit-button {
-    @include text($font-family-a, $font-size-base, $font-weight-m, $color-tertiary, $text-shadow-s);
-    margin: $margin-m;
-    padding: $padding-xs, $padding-m;
-  }
-
-  .title__text {
-    @include flex(flex, row, center, center, nowrap);
-    @include text($font-family-a, $font-size-base, $font-weight-m, $color-basic, $text-shadow-l);
-    margin: $margin-l 0;
-  }
-
-  .title__icon {
-    @include size($size-s, $size-auto);
-    margin-right: $margin-m;
-    filter: $drop-shadow-s;
-    opacity: 0.7;
-    fill: #C4E8FE;
-  }
-
-  .input { // name, email, message
-    @include text($font-family-a, $font-size-base, $font-weight-m, $color-basic, $text-shadow-s);
-    width: $img-size-xxl;
-    padding: $padding-s;
-    background-color:rgba(0, 0, 0, 0.3);
-    border: none;
-    border-bottom: 1px solid rgba($color: $color-quinary, $alpha: 0.8);
-    border-radius: $border-radius-s;
-
-    &::placeholder {
-      color: $color-quinary;
-      opacity: 0.5;
     }
   }
 }
