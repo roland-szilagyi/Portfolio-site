@@ -94,7 +94,6 @@
   
     .nav {
       @include flex(flex, row, space-between, center, nowrap);
-      margin: 0 $model-s;
       
       &__link {
         width: $size-alpha-s;
