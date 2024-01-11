@@ -8,7 +8,7 @@
   }
     
   &__text {
-    margin: $margin-s;
+    margin: $model-s;
     //MQ
     @include media(">=medium") {
       font-size: $font-size-base;

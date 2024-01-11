@@ -5,15 +5,18 @@
   @include media("height<small") {
     @include size(100vw, auto); // a height 35rem volt.
   }
-  @include media(">medium") {
+  @include media(">=small") {
+    @include size(100vw, 80vh);
+  }
+  @include media(">=medium") {
     @include size(100vw, 75vh);
   }
 
   .paperplane__img {
-    width: $img-size-l;
+    width: $size-beta-l;
     //MQ
     @include media(">=medium") {
-      width: $img-size-xl;
+      width: $size-beta-xl;
     }
   }
 
@@ -44,7 +47,7 @@
 
       .content__text {
         @include text($font-family-a, $font-size-xs, $font-weight-m, $color-basic, $text-shadow-s);
-        margin: $margin-xs $margin-m;
+        margin: $model-xs $model-m;
         //MQ
         @include media(">=medium") {
           font-size: $font-size-s;

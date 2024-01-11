@@ -1,31 +1,38 @@
 .header {
   @include d-flex(row, space-between, center, nowrap);
   @include size(100vw, 12vh);
+  outline: $outlinedone;
   //MQ
-  @include media("height<small") {
-    @include size(100vw, 5rem);
+  @include media(">=small") {
+    @include size(100vw, 10vh);
   }
-  @include media(">medium") {
+  @include media(">=medium") {
     @include size(100vw, 15vh);
   }
 
   &__title {
     @include text($font-family-b, $font-size-sm, $font-weight-s, $color-tertiary, $text-shadow-l);
-    margin: $margin-m;
+    margin: $model-m; //coderbob margo
     cursor: pointer;
+    outline: $outlinedone;
     //MQ
-    @include media(">=medium") {
-      margin: $margin-m $margin-l;
+    @include media(">=small") {
+      margin: $model-m $model-m;
       font-size: $font-size-m;
     }
-    @include media(">=large") {
-      margin: $margin-m $margin-l;
+    @include media(">=medium") {
+      margin: $model-m $model-l;
+      font-size: $font-size-m;
+    }
+    @include media(">=xxlarge") {
+      margin: $model-m $model-l;
       font-size: $font-size-l;
     }
   }
 
   &__menu {
     display: none;
+    outline: $outlinedone;
     //MQ
     @include media(">=large") {
       @include flex(flex, row, space-between, center, nowrap);
@@ -33,7 +40,14 @@
 
     .menu__link {
       @include text($font-family-a, $font-size-sm, $font-weight-m, $color-quinary, $text-shadow-l);
-      margin: 0 $margin-l;
+      margin: 0 $model-l;
+      //MQ
+      @include media(">=xlarge") {
+        margin: 0 $model-xl;
+      }
+      @include media(">=xtreme") {
+        font-size: $font-size-m;
+      }
     
       &:hover {
         @include linkhover;
@@ -41,25 +55,34 @@
     }
   }
 
-  .header__social {
+  &__social {
     @include flex(flex, row, space-between, center, nowrap);
+    outline: $outlinedone;
 
-    .menu__social {
+    .social {
       display: none;
       //MQ
-      @include media(">1280px") {
+      @include media(">=xlarge") {
         @include flex(flex, row, flex-end, center, nowrap);
       }
   
-      &__item {
-        margin: $margin-l $margin-m;
+      &__link {
+        margin: 0 $model-m;
+        //MQ
+        @include media(">=xtreme") {
+          margin: 0 $model-l;
+        }
   
-        .item__img {
-          width: $size-m;
+        .link__img {
+          width: $size-alpha-m;
           height: auto;
           opacity: 0.7;
           fill: $color-quinary;
           filter: $drop-shadow-s;
+          //MQ
+          @include media(">=xtreme") {
+            width: $size-alpha-l;
+          }
   
           &:hover {
             @include linkhover;
@@ -71,23 +94,23 @@
   
     .nav {
       @include flex(flex, row, space-between, center, nowrap);
-      //MQ
-      @include media(">=medium") {
-        margin: $margin-m;
-      }
+      margin: 0 $model-s;
       
       &__link {
-        width: $size-s;
-        margin: $margin-m;
+        width: $size-alpha-s;
+        margin: 0 $model-m;
         fill: #C4E8FE;
         filter: $drop-shadow-m;
+        //MQ
+        @include media(">=small") {
+          width: $size-alpha-m;
+        }
+        @include media(">=xtreme") {
+          width: $size-alpha-l;
+        }
   
         &:hover {
           @include linkhover;
-        }
-        //MQ
-        @include media(">=medium") {
-          width: $size-m;
         }
       }
   

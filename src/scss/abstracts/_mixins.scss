@@ -44,42 +44,28 @@
     scale: 1.1;
 }
 
-// MARGIN - @include margin($margin-m, 'xy');
-@mixin margin($size, $directions: "xy") {
-    @if $directions == "xy" {
-        margin: $size;
-    } @else if $directions == "x" {
-        margin-left: $size;
-        margin-right: $size;
-    } @else if $directions == "y" {
-        margin-top: $size;
-        margin-bottom: $size;
-    }   @else if $directions == "b" {
-        margin-bottom: $size;
-    }   @else if $directions == "t" {
-        margin-top: $size;
-    }   @else if $directions == "l" {
-        margin-left: $size;
-    }   @else if $directions == "r" {
-        margin-right: $size;
-    }
-}
+// MARGIN / PADDING - @include box-model(5rem, "padding", "xy");
+@mixin box-model($size, $value, $directions: "xy") {
+    $margin: "margin";
+    $padding: "padding";
 
-// PADDING - @include padding($padding-m, 'xy');
-@mixin padding($size, $directions: "xy") {
     @if $directions == "xy" {
-        padding: $size;
+        #{$value}: $size;
     } @else if $directions == "x" {
-        padding-left: $size;
-        padding-right: $size;
+        #{$value}-left: $size;
+        #{$value}-right: $size;
     } @else if $directions == "y" {
-        padding-top: $size;
-        padding-bottom: $size;
+        #{$value}-top: $size;
+        #{$value}-bottom: $size;
     } @else if $directions == "b" {
-        padding-bottom: $size;
+        #{$value}-bottom: $size;
     } @else if $directions == "t" {
-        padding-top: $size;
-    } 
+        #{$value}-top: $size;
+    } @else if $directions == "l" {
+        #{$value}-left: $size;
+    } @else if $directions == "r" {
+        #{$value}-right: $size;
+    }
 }
 
 // BORDER - @include border($..., 'xy', $color-shadow);

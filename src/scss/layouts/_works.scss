@@ -4,12 +4,12 @@
 
   &__info {
     @include flex(flex, column, center, center, nowrap);
-    margin: $margin-xl $margin-s;
+    margin: $model-xl $model-s;
     outline: $outline1;
 
     .info__title {
       @include text($font-family-b, $font-size-m, $font-weight-s, $color-quinary, $text-shadow-l);
-      margin: 0 $margin-xl;
+      margin: 0 $model-xl;
       text-align: center;
       //MQ
       @include media(">=medium") {
@@ -19,7 +19,7 @@
 
     .info__text {
       @include text($font-family-a, $font-size-s, $font-weight-m, $color-basic, $text-shadow-m);
-      margin: $margin-m $margin-s;
+      margin: $model-m $model-s;
       //MQ
       @include media(">=medium") {
         font-size: $font-size-sm;
@@ -33,7 +33,7 @@
 
   &__projects {
     @include flex(flex, column, center, stretch, wrap);
-    margin: $margin-xl $margin-s;
+    margin: $model-xl $model-s;
     outline: $outline1;
     //MQ
     @include media(">=large") {
@@ -42,8 +42,8 @@
 
     .projects {
       background: linear-gradient($color-fifth, $color-secondary);
-      margin: $margin-xl $margin-l;
-      width: $img-size-xxl;
+      margin: $model-xl $model-l;
+      width: $size-beta-xxl;
       @include border($border-m, xy, $color-quinary);
       border-radius: $border-radius-s;
       filter: $drop-shadow-m;
@@ -73,7 +73,7 @@
 
       .projects__title {
         @include text($font-family-a, $font-size-s, $font-weight-m, $color-basic, $text-shadow-l);
-        margin: $margin-l;
+        margin: $model-l;
         text-align: center;
         //MQ
         @include media(">=medium") {
@@ -83,7 +83,7 @@
 
       .projects__text {
         @include text($font-family-a, $font-size-base, $font-weight-m, $color-basic, $text-shadow-s);
-        padding: $padding-s $padding-l $padding-l $padding-l;
+        padding: $model-s $model-l $model-l $model-l;
         //MQ
         @include media(">=medium") {
           font-size: $font-size-s;

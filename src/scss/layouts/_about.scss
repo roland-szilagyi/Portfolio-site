@@ -4,12 +4,12 @@
 
   &__info {
     @include flex(flex, column, center, center, nowrap);
-    margin: $margin-xl $margin-s;
+    margin: $model-xl $model-s;
     outline: $outline1;
 
     .info__title {
       @include text($font-family-b, $font-size-l, $font-weight-s, $color-quinary, $text-shadow-l);
-      margin: 0 $margin-xl;
+      margin: 0 $model-xl;
       text-align: center;
       //MQ
       @include media(">=medium") {
@@ -19,7 +19,7 @@
 
     .info__text {
       @include text($font-family-a, $font-size-s, $font-weight-m, $color-basic, $text-shadow-m);
-      margin: $margin-m $margin-s;
+      margin: $model-m $model-s;
       //MQ
       @include media(">=medium") {
         font-size: $font-size-sm;
@@ -33,7 +33,7 @@
 
   &__details {
     @include flex(flex, column, center, center, nowrap);
-    margin: $margin-xl $margin-s;
+    margin: $model-xl $model-s;
     outline: $outline1;
     // MQ
     @include media(">=medium") {
@@ -45,7 +45,7 @@
       @include flex(flex, column, center, center, nowrap);
       width: 80vw;
       text-align: center;
-      margin: $margin-l 0;
+      margin: $model-l 0;
       // MQ
       @include media(">=medium") {
         width: 30vw;
@@ -53,7 +53,7 @@
 
       &__title {
         @include text($font-family-b, $font-size-m, $font-weight-s, $color-tertiary, $text-shadow-l);
-        margin: $margin-m 0 $margin-s 0;
+        margin: $model-m 0 $model-s 0;
         // MQ
         @include media(">=medium") {
           font-size: $font-size-l;
@@ -62,7 +62,7 @@
 
       &__text {
         @include text($font-family-a, $font-size-s, $font-weight-m, $color-basic, $text-shadow-m);
-        margin: $margin-s 0 $margin-m 0;
+        margin: $model-s 0 $model-m 0;
         // MQ
         @include media(">=large") {
           font-size: $font-size-sm;
@@ -74,11 +74,11 @@
       @include flex(flex, row, center, center, nowrap);
 
       &__img {
-        width: $img-size-l;
-        margin: $margin-l $margin-xl;
+        width: $size-beta-l;
+        margin: $model-l $model-xl;
         // MQ
         @include media(">large") {
-          margin: $margin-l $margin-xxl;
+          margin: $model-l $model-xxl;
         }
       }
     }
@@ -86,7 +86,7 @@
 
   &__skills {
     @include flex(flex, column, center, center, nowrap);
-    margin: $margin-xl $margin-s;
+    margin: $model-xl $model-s;
     outline: $outline1;
 
     .skills {
@@ -95,7 +95,7 @@
       &__title {
         @include text($font-family-b, $font-size-sm, $font-weight-s, $color-quinary, $text-shadow-l);
         text-align: center;
-        margin: $margin-m 0 $margin-s 0;
+        margin: $model-m 0 $model-s 0;
         //MQ
         @include media(">=medium") {
           font-size: $font-size-m;
@@ -118,7 +118,7 @@
       &__text {
         @include text($font-family-a, $font-size-s, $font-weight-m, $color-basic, $text-shadow-s);
         width: 80vw;
-        margin: $margin-s 0 $margin-m 0;
+        margin: $model-s 0 $model-m 0;
         // MQ
         @include media(">=large") {
           font-size: $font-size-sm;
@@ -128,14 +128,14 @@
 
     .elements {
       @include flex(flex, row, center, center, wrap);
-      margin: $margin-xl;
+      margin: $model-xl;
 
       &__icon {
-        width: $size-l;
-        margin: $margin-m;
+        width: $size-alpha-l;
+        margin: $model-m;
         // MQ
         @include media(">=medium") {
-          margin: $margin-l;
+          margin: $model-l;
         }
       }
     }
