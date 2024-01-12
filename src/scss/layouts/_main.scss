@@ -9,6 +9,9 @@
   @include media(">=medium") {
     @include size(100vw, 75vh);
   }
+  @include media("height<small") {
+    height: $size-auto;
+  }
 
   .paperplane__img {
     width: $size-beta-l;
@@ -101,8 +104,6 @@
       }
     }
 
-    .content--row {
-      flex-direction: column;
-    }
+    
   }
 }

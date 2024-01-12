@@ -15,13 +15,15 @@
     @include media(">=medium") {
       @include size(100vw, 15vh);
     }
+    @include media("height<small") {
+      @include size(100vw, 5rem);
+    }
 
     .close__img {
       width: $size-alpha-s;
       margin: 0 $model-m;
       fill: $color-quinary;
       filter: $drop-shadow-m;
-      outline: $outlinedone;
       //MQ
       @include media(">=small") {
         width: $size-alpha-m;
@@ -39,14 +41,25 @@
   &__body {
     @include flex(flex, column, space-evenly, center, nowrap);
     height: 88vh;
+    @include media("height<medium") {
+      height: calc(100vh - 5rem);
+    }
 
     .links {
-      @include flex(flex, column, center, flex-start, nowrap);
+      @include flex(flex, column, center, flex-start, wrap);
       outline: $outlinedone;
+      //MQ
+      @include media("height<small") {
+        flex-direction: row;
+      }
 
       &__item {
         @include flex(flex, row, center, center, nowrap);
-
+        //MQ
+        @include media("height<medium") {
+          margin: 0 $model-m;
+        }
+    
         .links__number {
           @include flex(flex, column, center, center, nowrap);
           @include text($font-family-a, $font-size-s, $font-weight-s, $color-basic, $text-shadow-l);
@@ -54,6 +67,9 @@
           //MQ
           @include media(">=small") {
             font-size: $font-size-sm;
+          }
+          @include media("height<small") {
+            display: none;
           }
         }
 
@@ -66,6 +82,9 @@
             margin: $model-m;
             font-size: $font-size-xl;
           }
+          @include media("height<medium") {
+            font-size: $font-size-m;
+          }
 
           &:hover {
             @include linkhover;
@@ -77,12 +96,17 @@
     .social {
       @include flex(flex, row, center, center, nowrap);
       outline: $outlinedone;
+      //MQ
+      @include media("height<small") {
+        @include size(100vw, $size-auto);
+        margin: $model-l;
+      }
 
       &__item {
         margin: $model-l;
         //MQ
         @include media(">=small") {
-          margin: $model-xl;
+          margin: 0 $model-l;
         }
 
         .social__img {
@@ -94,6 +118,9 @@
           //MQ
           @include media(">=small") {
             width: $size-alpha-l;
+          }
+          @include media("height<small") {
+            width: $size-alpha-m;
           }
 
           &:hover {
