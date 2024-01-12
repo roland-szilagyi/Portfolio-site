@@ -47,6 +47,11 @@ $letter-spacing-s: 0.1rem;
 $letter-spacing-m: 0.2rem;
 $letter-spacing-l: 0.3rem;
 
+// LINE-HEIGHT
+$line-height-s: 1.2;
+$line-height-m: 1.4;
+$line-height-l: 1.6;
+
 /* --- SHADOW--- */
 
 // TEXT-SHADOW
@@ -74,7 +79,8 @@ $size-beta-s: 5rem;
 $size-beta-m: 8rem;
 $size-beta-l: 10rem;
 $size-beta-xl: 12rem;
-$size-beta-xxl: 20rem;
+$size-beta-xxl: 15rem;
+// $size-beta-xxl: 20rem;
 
 $size-auto: auto;
 

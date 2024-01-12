@@ -12,17 +12,13 @@
 
   .paperplane__img {
     width: $size-beta-l;
-    margin: $model-l;
-    outline: $outlinedone;
+    outline: $outline1;
     //MQ
     @include media(">=small") {
       margin: $model-xxl;
     }
     @include media(">=medium") {
       width: $size-beta-xl;
-    }
-    @include media(">=large") {
-      margin: $model-xl;
     }
     @include media(">=xxlarge") {
       width: $size-beta-xxl;
@@ -31,68 +27,45 @@
 
   .main__content {
     @include flex(flex, column, center, center, nowrap);
-    outline: $outlinedone;
+    // margin: $model-l;
+    outline: $outline1;
     //MQ
     @include media(">=small") {
-      width: 80vw;
-    }
-    @include media(">=medium") {
+      width: 70vw;
       margin: $model-l;
     }
-    @include media(">=large") {
-      margin: $model-s;
-    }
-    @include media(">=xlarge") {
-      width: 50vw;
-    }
-    @include media(">=xxlarge") {
+    @include media(">=medium") {
+      width: 70vw;
+      margin: $model-xxl;
     }
 
     .content {
       @include flex(flex, row, center, center, nowrap);
       text-align: center;
-      line-height: $line-height-m;
 
       .content__title {
         @include text($font-family-b, $font-size-m, $font-weight-s, $color-quinary, $text-shadow-l);
         //MQ
-        @include media(">=small") {
-          font-size: $font-size-l;
-        }
         @include media(">=medium") {
+        font-size: $font-size-l;
+        }
+        @include media(">large") {
           font-size: $font-size-xl;
         }
-        @include media(">=large") {
-          font-size: $font-size-l;
-        }
-        @include media(">=xxlarge") {
-          font-size: $font-size-xl;
-        }
-        @include media(">=xtreme") {
-          font-size: $font-size-xxl;
-        }
-
         &:hover {
           @include linkhover2;
         }
       }
 
       .content__text {
-        @include text($font-family-a, $font-size-xs, $font-weight-m, $color-basic, $text-shadow-m);
+        @include text($font-family-a, $font-size-xs, $font-weight-m, $color-basic, $text-shadow-s);
         margin: $model-xs $model-m;
         //MQ
-        @include media(">=small") {
-          font-size: $font-size-s;
-        }
         @include media(">=medium") {
-          font-size: $font-size-sm;
+          font-size: $font-size-s;
         }
         @include media(">large") {
           font-size: $font-size-sm;
-        }
-        @include media(">=xtreme") {
-          font-size: $font-size-m;
-          font-weight: $font-weight-s;
         }
       }
 
