@@ -228,7 +228,6 @@ p, h1, h2, h3, h4, h5, h6 {
   flex-wrap: nowrap;
   width: 100vw;
   height: 12vh;
-  outline: 2px solid lightgrey;
 }
 @media (min-width: 576px) {
   .ham__header {
@@ -239,7 +238,7 @@ p, h1, h2, h3, h4, h5, h6 {
 @media (min-width: 767px) {
   .ham__header {
     width: 100vw;
-    height: 15vh;
+    height: 12vh;
   }
 }
 @media (max-height: 575px) {
@@ -288,7 +287,6 @@ p, h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  outline: 2px solid lightgrey;
 }
 @media (max-height: 575px) {
   .ham__body .links {
@@ -331,7 +329,6 @@ p, h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  outline: 2px solid lightgrey;
 }
 @media (max-height: 575px) {
   .ham__body .social {
@@ -704,11 +701,16 @@ p, h1, h2, h3, h4, h5, h6 {
   font-weight: 100;
   color: #C4E8FE;
   text-shadow: 0.1rem 0.15rem darkslategrey;
-  outline: 2px solid lightgreen;
+}
+@media (min-width: 576px) {
+  .footer {
+    height: 7vh;
+  }
 }
 @media (min-width: 767px) {
   .footer {
     font-size: 1rem;
+    height: 10vh;
   }
 }
 @media (max-height: 575px) {
@@ -733,7 +735,6 @@ p, h1, h2, h3, h4, h5, h6 {
   flex-wrap: nowrap;
   width: 100vw;
   height: 12vh;
-  outline: 2px solid lightgrey;
 }
 @media (min-width: 576px) {
   .header {
@@ -744,7 +745,7 @@ p, h1, h2, h3, h4, h5, h6 {
 @media (min-width: 767px) {
   .header {
     width: 100vw;
-    height: 15vh;
+    height: 12vh;
   }
 }
 @media (max-height: 575px) {
@@ -761,7 +762,6 @@ p, h1, h2, h3, h4, h5, h6 {
   text-shadow: 0.1rem 0.15rem darkslategrey;
   margin: 1rem;
   cursor: pointer;
-  outline: 2px solid lightgrey;
 }
 @media (min-width: 576px) {
   .header__title {
@@ -783,7 +783,6 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .header__menu {
   display: none;
-  outline: 2px solid lightgrey;
 }
 @media (min-width: 992px) {
   .header__menu {
@@ -823,7 +822,6 @@ p, h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
-  outline: 2px solid lightgrey;
 }
 .header__social .social {
   display: none;
@@ -907,14 +905,14 @@ p, h1, h2, h3, h4, h5, h6 {
 @media (min-width: 576px) {
   .main {
     width: 100vw;
-    height: 80vh;
+    height: 83vh;
     justify-content: flex-start;
   }
 }
 @media (min-width: 767px) {
   .main {
     width: 100vw;
-    height: 75vh;
+    height: 78vh;
   }
 }
 @media (max-height: 575px) {
@@ -925,7 +923,6 @@ p, h1, h2, h3, h4, h5, h6 {
 .main .paperplane__img {
   width: 10rem;
   margin: 2rem;
-  outline: 2px solid lightgrey;
 }
 @media (min-width: 576px) {
   .main .paperplane__img {
@@ -953,7 +950,6 @@ p, h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  outline: 2px solid lightgrey;
 }
 @media (min-width: 576px) {
   .main .main__content {

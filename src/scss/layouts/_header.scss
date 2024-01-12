@@ -1,13 +1,13 @@
 .header {
   @include d-flex(row, space-between, center, nowrap);
   @include size(100vw, 12vh);
-  outline: $outlinedone;
+  // outline: $outlinedone;
   //MQ
   @include media(">=small") {
     @include size(100vw, 10vh);
   }
   @include media(">=medium") {
-    @include size(100vw, 15vh);
+    @include size(100vw, 12vh);
   }
   @include media("height<small") {
     @include size(100vw, 5rem);
@@ -17,7 +17,7 @@
     @include text($font-family-b, $font-size-sm, $font-weight-s, $color-tertiary, $text-shadow-l);
     margin: $model-m; //coderbob margo
     cursor: pointer;
-    outline: $outlinedone;
+    // outline: $outlinedone;
     //MQ
     @include media(">=small") {
       margin: $model-m $model-m;
@@ -35,7 +35,7 @@
 
   &__menu {
     display: none;
-    outline: $outlinedone;
+    //outline: $outlinedone;
     //MQ
     @include media(">=large") {
       @include flex(flex, row, space-between, center, nowrap);
@@ -60,7 +60,7 @@
 
   &__social {
     @include flex(flex, row, space-between, center, nowrap);
-    outline: $outlinedone;
+    // outline: $outlinedone;
 
     .social {
       display: none;

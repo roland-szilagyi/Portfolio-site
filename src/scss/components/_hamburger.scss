@@ -7,13 +7,13 @@
   &__header {
     @include flex(flex, row, flex-end, center, nowrap);
     @include size(100vw, 12vh);
-    outline: $outlinedone;
+    // outline: $outlinedone;
     //MQ
     @include media(">=small") {
       @include size(100vw, 10vh);
     }
     @include media(">=medium") {
-      @include size(100vw, 15vh);
+      @include size(100vw, 12vh);
     }
     @include media("height<small") {
       @include size(100vw, 5rem);
@@ -47,7 +47,7 @@
 
     .links {
       @include flex(flex, column, center, flex-start, wrap);
-      outline: $outlinedone;
+      // outline: $outlinedone;
       //MQ
       @include media("height<small") {
         flex-direction: row;
@@ -75,7 +75,7 @@
 
     .social {
       @include flex(flex, row, center, center, nowrap);
-      outline: $outlinedone;
+      // outline: $outlinedone;
       //MQ
       @include media("height<small") {
         @include size(100vw, $size-auto);

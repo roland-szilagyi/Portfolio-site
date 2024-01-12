@@ -3,11 +3,11 @@
   height: 78vh;
   //MQ
   @include media(">=small") {
-    @include size(100vw, 80vh);
+    @include size(100vw, 83vh);
     justify-content: flex-start;
   }
   @include media(">=medium") {
-    @include size(100vw, 75vh);
+    @include size(100vw, 78vh);
   }
   @include media("height<small") {
     height: $size-auto;
@@ -16,7 +16,7 @@
   .paperplane__img {
     width: $size-beta-l;
     margin: $model-l;
-    outline: $outlinedone;
+    // outline: $outlinedone;
     //MQ
     @include media(">=small") {
       margin: $model-xxl;
@@ -34,7 +34,7 @@
 
   .main__content {
     @include flex(flex, column, center, center, nowrap);
-    outline: $outlinedone;
+    // outline: $outlinedone;
     //MQ
     @include media(">=small") {
       width: 80vw;
