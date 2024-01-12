@@ -41,7 +41,7 @@
   &__body {
     @include flex(flex, column, space-evenly, center, nowrap);
     height: 88vh;
-    @include media("height<medium") {
+    @include media("height<small") {
       height: calc(100vh - 5rem);
     }
 
@@ -53,42 +53,22 @@
         flex-direction: row;
       }
 
-      &__item {
-        @include flex(flex, row, center, center, nowrap);
+      .links__title {
+        @include flex(flex, column, center, center, nowrap);
+        @include text($font-family-b, $font-size-l, $font-weight-s, $color-quinary, $text-shadow-l);
+        margin: $model-s;
         //MQ
-        @include media("height<medium") {
-          margin: 0 $model-m;
+        @include media(">=small") {
+          margin: $model-m;
+          font-size: $font-size-xl;
         }
-    
-        .links__number {
-          @include flex(flex, column, center, center, nowrap);
-          @include text($font-family-a, $font-size-s, $font-weight-s, $color-basic, $text-shadow-l);
-          margin: 0 $model-m;
-          //MQ
-          @include media(">=small") {
-            font-size: $font-size-sm;
-          }
-          @include media("height<small") {
-            display: none;
-          }
+        @include media("height<small") {
+          font-size: $font-size-m;
+          flex-direction: row;
         }
 
-        .links__title {
-          @include flex(flex, column, center, center, nowrap);
-          @include text($font-family-b, $font-size-l, $font-weight-s, $color-quinary, $text-shadow-l);
-          margin: $model-s;
-          //MQ
-          @include media(">=small") {
-            margin: $model-m;
-            font-size: $font-size-xl;
-          }
-          @include media("height<medium") {
-            font-size: $font-size-m;
-          }
-
-          &:hover {
-            @include linkhover;
-          }
+        &:hover {
+          @include linkhover;
         }
       }
     }

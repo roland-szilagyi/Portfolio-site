@@ -277,7 +277,7 @@ p, h1, h2, h3, h4, h5, h6 {
   flex-wrap: nowrap;
   height: 88vh;
 }
-@media (max-height: 766px) {
+@media (max-height: 575px) {
   .ham__body {
     height: calc(100vh - 5rem);
   }
@@ -295,42 +295,7 @@ p, h1, h2, h3, h4, h5, h6 {
     flex-direction: row;
   }
 }
-.ham__body .links__item {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-@media (max-height: 766px) {
-  .ham__body .links__item {
-    margin: 0 1rem;
-  }
-}
-.ham__body .links__item .links__number {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  font-family: "font1";
-  font-size: 1.4rem;
-  font-weight: 100;
-  color: whitesmoke;
-  text-shadow: 0.1rem 0.15rem darkslategrey;
-  margin: 0 1rem;
-}
-@media (min-width: 576px) {
-  .ham__body .links__item .links__number {
-    font-size: 1.8rem;
-  }
-}
-@media (max-height: 575px) {
-  .ham__body .links__item .links__number {
-    display: none;
-  }
-}
-.ham__body .links__item .links__title {
+.ham__body .links .links__title {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -344,17 +309,18 @@ p, h1, h2, h3, h4, h5, h6 {
   margin: 0.5rem;
 }
 @media (min-width: 576px) {
-  .ham__body .links__item .links__title {
+  .ham__body .links .links__title {
     margin: 1rem;
     font-size: 5rem;
   }
 }
-@media (max-height: 766px) {
-  .ham__body .links__item .links__title {
+@media (max-height: 575px) {
+  .ham__body .links .links__title {
     font-size: 3rem;
+    flex-direction: row;
   }
 }
-.ham__body .links__item .links__title:hover {
+.ham__body .links .links__title:hover {
   cursor: pointer;
   color: #FFBD33;
   fill: #FFBD33;
