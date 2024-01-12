@@ -2,7 +2,11 @@
   @include flex(flex, row, center, center, nowrap);
   @include size(100vw, 10vh);
   @include text($font-family-a, $font-size-footer, $font-weight-s, $color-quinary, $text-shadow-l);
+  outline: $outline1;
   //MQ
+  @include media(">=medium") {
+    font-size: $font-size-base;
+  }
   @include media("height<small") {
     @include size(100vw, 5rem);
   }

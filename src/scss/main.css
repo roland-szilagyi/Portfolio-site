@@ -704,6 +704,12 @@ p, h1, h2, h3, h4, h5, h6 {
   font-weight: 100;
   color: #C4E8FE;
   text-shadow: 0.1rem 0.15rem darkslategrey;
+  outline: 2px solid lightgreen;
+}
+@media (min-width: 767px) {
+  .footer {
+    font-size: 1rem;
+  }
 }
 @media (max-height: 575px) {
   .footer {
