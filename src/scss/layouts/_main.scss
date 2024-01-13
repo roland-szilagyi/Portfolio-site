@@ -1,54 +1,42 @@
-.main {
+.main { //
   @include d-flex(column, space-evenly, center, nowrap);
-  height: 78vh;
+  height: calc(100vh - 10rem);
   //MQ
-  @include media(">=small") {
-    @include size(100vw, 83vh);
-    justify-content: flex-start;
-  }
-  @include media(">=medium") {
-    @include size(100vw, 78vh);
-  }
-  @include media("height<small") {
-    height: $size-auto;
+  @include media("height<578px") {
+    height: auto;
   }
 
   .paperplane__img {
     width: $size-beta-l;
-    margin: $model-l;
-    // outline: $outlinedone;
     //MQ
-    @include media(">=small") {
-      margin: $model-xxl;
-    }
-    @include media(">=medium") {
+    @include media(">700px") {
       width: $size-beta-xl;
     }
-    @include media(">=large") {
-      margin: $model-xl;
-    }
-    @include media(">=xxlarge") {
+    @include media(">=1600px") {
       width: $size-beta-xxl;
+    }
+    @include media("height>1192px") {
+      width: $size-beta-xxl;
+    }
+    @include media("height>1600px") {
+      width: $size-beta-xtreme;
+    }
+    @include media("height<578px") {
+      margin: $model-l;
     }
   }
 
   .main__content {
     @include flex(flex, column, center, center, nowrap);
-    // outline: $outlinedone;
     //MQ
-    @include media(">=small") {
+    @include media(">=760px", "<1200px") {
       width: 80vw;
     }
-    @include media(">=medium") {
-      margin: $model-l;
-    }
-    @include media(">=large") {
-      margin: $model-s;
-    }
-    @include media(">=xlarge") {
+    @include media(">=1200px") {
       width: 50vw;
     }
-    @include media(">=xxlarge") {
+    @include media("height<578px") {
+      margin: $model-xxl;
     }
 
     .content {
@@ -59,20 +47,11 @@
       .content__title {
         @include text($font-family-b, $font-size-m, $font-weight-s, $color-quinary, $text-shadow-l);
         //MQ
-        @include media(">=small") {
+        @include media(">=760px") {
           font-size: $font-size-l;
         }
-        @include media(">=medium") {
+        @include media(">=1917px") {
           font-size: $font-size-xl;
-        }
-        @include media(">=large") {
-          font-size: $font-size-l;
-        }
-        @include media(">=xxlarge") {
-          font-size: $font-size-xl;
-        }
-        @include media(">=xtreme") {
-          font-size: $font-size-xxl;
         }
 
         &:hover {
@@ -84,18 +63,8 @@
         @include text($font-family-a, $font-size-xs, $font-weight-m, $color-basic, $text-shadow-m);
         margin: $model-xs $model-m;
         //MQ
-        @include media(">=small") {
-          font-size: $font-size-s;
-        }
-        @include media(">=medium") {
+        @include media(">=760px") {
           font-size: $font-size-sm;
-        }
-        @include media(">large") {
-          font-size: $font-size-sm;
-        }
-        @include media(">=xtreme") {
-          font-size: $font-size-m;
-          font-weight: $font-weight-s;
         }
       }
 
@@ -103,7 +72,5 @@
         color: $color-tertiary;
       }
     }
-
-    
   }
 }

@@ -1,25 +1,15 @@
-.footer {
+.footer { //
   @include flex(flex, row, center, center, nowrap);
-  @include size(100vw, 10vh);
+  @include size(100vw, 5rem);
   @include text($font-family-a, $font-size-footer, $font-weight-s, $color-quinary, $text-shadow-l);
-  // outline: $outlinedone;
-  //MQ
-  @include media(">=small") {
-    height: 7vh;
-  }
-  @include media(">=medium") {
-    font-size: $font-size-base;
-    height: 10vh;
-  }
-  @include media("height<small") {
-    @include size(100vw, 5rem);
-  }
     
   &__text {
-    margin: $model-s;
     //MQ
-    @include media(">=medium") {
+    @include media(">=576px", "<1921px") {
       font-size: $font-size-base;
+    }
+    @include media("height<576px") {
+      font-size: $font-size-footer;
     }
   }
 }

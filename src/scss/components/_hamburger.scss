@@ -1,23 +1,13 @@
-.ham {
+.ham { //
   @include flex(flex, column, flex-start, center, nowrap);
   @include size(100vw, 100vh);
   background: linear-gradient($color-fifth, $color-secondary);
   z-index: $z-index-first;
+  position: fixed; // maybe
 
   &__header {
     @include flex(flex, row, flex-end, center, nowrap);
-    @include size(100vw, 12vh);
-    // outline: $outlinedone;
-    //MQ
-    @include media(">=small") {
-      @include size(100vw, 10vh);
-    }
-    @include media(">=medium") {
-      @include size(100vw, 12vh);
-    }
-    @include media("height<small") {
-      @include size(100vw, 5rem);
-    }
+    @include size(100vw, 5rem);
 
     .close__img {
       width: $size-alpha-s;
@@ -25,11 +15,11 @@
       fill: $color-quinary;
       filter: $drop-shadow-m;
       //MQ
-      @include media(">=small") {
+      @include media(">=576px", "<1921px") {
         width: $size-alpha-m;
       }
-      @include media(">=xtreme") {
-        width: $size-alpha-l;
+      @include media("height<576px") {
+        width: $size-alpha-s;
       }
 
       &:hover {
@@ -40,16 +30,13 @@
 
   &__body {
     @include flex(flex, column, space-evenly, center, nowrap);
-    height: 88vh;
-    @include media("height<small") {
-      height: calc(100vh - 5rem);
-    }
+    height: calc(100vh - 10rem);
 
     .links {
       @include flex(flex, column, center, flex-start, wrap);
-      // outline: $outlinedone;
       //MQ
-      @include media("height<small") {
+      @include media("height<578px") {
+        font-size: $font-size-sm;
         flex-direction: row;
       }
 
@@ -58,13 +45,12 @@
         @include text($font-family-b, $font-size-l, $font-weight-s, $color-quinary, $text-shadow-l);
         margin: $model-s;
         //MQ
-        @include media(">=small") {
-          margin: $model-m;
+        @include media(">=576px", "<1921px") {
           font-size: $font-size-xl;
         }
-        @include media("height<small") {
+        @include media("height<576px") {
           font-size: $font-size-m;
-          flex-direction: row;
+          margin: $model-s $model-l;
         }
 
         &:hover {
@@ -75,19 +61,9 @@
 
     .social {
       @include flex(flex, row, center, center, nowrap);
-      // outline: $outlinedone;
-      //MQ
-      @include media("height<small") {
-        @include size(100vw, $size-auto);
-        margin: $model-l;
-      }
 
       &__item {
         margin: $model-l;
-        //MQ
-        @include media(">=small") {
-          margin: 0 $model-l;
-        }
 
         .social__img {
           width: $size-alpha-m;
@@ -96,11 +72,11 @@
           fill: $color-quinary;
           filter: $drop-shadow-s;
           //MQ
-          @include media(">=small") {
-            width: $size-alpha-l;
+          @include media(">=576px", "<1921px") {
+            width: $font-size-m;
           }
-          @include media("height<small") {
-            width: $size-alpha-m;
+          @include media("height<576px") {
+            width: $font-size-m;
           }
 
           &:hover {
@@ -113,9 +89,9 @@
   }
 }
 
-.ham--fix {
-  position: fixed;
-}
+/* .ham--fix {    maybe not
+position: fixed;
+} */
 
 .visible {
   display: flex;

@@ -1,55 +1,47 @@
-.header {
+.header { //
   @include d-flex(row, space-between, center, nowrap);
-  @include size(100vw, 12vh);
-  // outline: $outlinedone;
-  //MQ
-  @include media(">=small") {
-    @include size(100vw, 10vh);
-  }
-  @include media(">=medium") {
-    @include size(100vw, 12vh);
-  }
-  @include media("height<small") {
-    @include size(100vw, 5rem);
-  }
+  @include size(100vw, 5rem);
 
   &__title {
     @include text($font-family-b, $font-size-sm, $font-weight-s, $color-tertiary, $text-shadow-l);
-    margin: $model-m; //coderbob margo
+    margin-left: $model-m;
     cursor: pointer;
-    // outline: $outlinedone;
     //MQ
-    @include media(">=small") {
-      margin: $model-m $model-m;
+    @include media(">=576px", "<1921px") {
       font-size: $font-size-m;
     }
-    @include media(">=medium") {
-      margin: $model-m $model-l;
-      font-size: $font-size-m;
-    }
-    @include media(">=xxlarge") {
-      margin: $model-m $model-l;
+    @include media(">=1917px") {
       font-size: $font-size-l;
+    }
+    @include media("height<576px") {
+      font-size: $font-size-sm;
     }
   }
 
   &__menu {
     display: none;
-    //outline: $outlinedone;
     //MQ
-    @include media(">=large") {
+    @include media(">=992px") {
+      @include flex(flex, row, space-between, center, nowrap);
+    }
+    @include media("height>1022px") {
       @include flex(flex, row, space-between, center, nowrap);
     }
 
     .menu__link {
-      @include text($font-family-a, $font-size-sm, $font-weight-m, $color-quinary, $text-shadow-l);
+      @include text($font-family-b, $font-size-s, $font-weight-s, $color-basic, $text-shadow-l);
       margin: 0 $model-l;
       //MQ
-      @include media(">=xlarge") {
+      @include media(">=1023px", "<1918px") {
+        font-size: $font-size-sm;
         margin: 0 $model-xl;
       }
-      @include media(">=xtreme") {
+      @include media(">=1917px") {
+        margin: 0 $model-xxl;
         font-size: $font-size-m;
+      }
+      @include media("height>1438px") {
+        font-size: $font-size-sm;
       }
     
       &:hover {
@@ -60,32 +52,24 @@
 
   &__social {
     @include flex(flex, row, space-between, center, nowrap);
-    // outline: $outlinedone;
 
     .social {
       display: none;
       //MQ
-      @include media(">=xlarge") {
-        @include flex(flex, row, flex-end, center, nowrap);
+      @include media(">1192px") {
+        @include flex(flex, row, center, center, nowrap);
+        width: $size-beta-xxl;
       }
   
       &__link {
-        margin: 0 $model-m;
-        //MQ
-        @include media(">=xtreme") {
-          margin: 0 $model-l;
-        }
   
-        .link__img {
+        &__img {
           width: $size-alpha-m;
           height: auto;
+          margin: 0 $model-m;
           opacity: 0.7;
           fill: $color-quinary;
           filter: $drop-shadow-s;
-          //MQ
-          @include media(">=xtreme") {
-            width: $size-alpha-l;
-          }
   
           &:hover {
             @include linkhover;
@@ -100,15 +84,14 @@
       
       &__link {
         width: $size-alpha-s;
-        margin: 0 $model-m;
         fill: #C4E8FE;
         filter: $drop-shadow-m;
         //MQ
-        @include media(">=small") {
+        @include media(">=576px", "<1921px") {
           width: $size-alpha-m;
         }
-        @include media(">=xtreme") {
-          width: $size-alpha-l;
+        @include media("height<576px") {
+          width: $size-alpha-s;
         }
   
         &:hover {
@@ -116,10 +99,19 @@
         }
       }
   
-      &__link--hide {
-        @include media(">=large") {
+      &__link--hamicon {
+        margin-right: 1rem;
+        //MQ
+        @include media(">=992px") {
           display: none;
         }
+        @include media("height>1022px") {
+          display: none;
+        }
+      }
+
+      &__link--themeicon {
+        margin-right: 1.5rem;
       }
     }
   }
