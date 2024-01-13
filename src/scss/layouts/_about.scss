@@ -1,6 +1,10 @@
 .about {
   @include d-flex(column, flex-start, center, nowrap);
-  outline: $outline2;
+  height: calc(100vh - 10rem);
+  //MQ
+  @include media("height<1918px") {
+    height: auto;
+  }
 
   &__info {
     @include flex(flex, column, center, center, nowrap);
