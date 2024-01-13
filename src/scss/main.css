@@ -364,21 +364,19 @@ position: fixed;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  margin: 3rem 0.5rem;
-  outline: 2px solid lightgreen;
+  margin: 5rem 0.5rem;
 }
 .about__info .info__title {
   font-family: "font4";
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 100;
   color: #C4E8FE;
   text-shadow: 0.1rem 0.15rem darkslategrey;
-  margin: 0 3rem;
   text-align: center;
 }
-@media (min-width: 768px) {
+@media (min-width: 760px) {
   .about__info .info__title {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 }
 .about__info .info__text {
@@ -387,9 +385,9 @@ position: fixed;
   font-weight: 600;
   color: whitesmoke;
   text-shadow: 0.07rem 0.07rem darkslategrey;
-  margin: 1rem 0.5rem;
+  margin: 1rem 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 760px) {
   .about__info .info__text {
     font-size: 1.8rem;
   }
@@ -397,37 +395,47 @@ position: fixed;
 .about__info .color--yellow {
   color: #FFBD33;
 }
-.about__details {
+.about__bio {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  margin: 3rem 0.5rem;
-  outline: 2px solid lightgreen;
 }
-@media (min-width: 768px) {
-  .about__details {
+@media (min-width: 1022px) {
+  .about__bio {
+    display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: flex-start;
+    flex-wrap: nowrap;
   }
 }
-.about__details .details {
+.about__bio .bio {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  width: 80vw;
+  margin: 3rem 2rem;
   text-align: center;
-  margin: 2rem 0;
 }
-@media (min-width: 768px) {
-  .about__details .details {
-    width: 30vw;
+@media (min-width: 1022px) {
+  .about__bio .bio {
+    width: 20rem;
   }
 }
-.about__details .details__title {
+@media (min-width: 1280px) {
+  .about__bio .bio {
+    width: 30rem;
+  }
+}
+@media (min-width: 1600px) {
+  .about__bio .bio {
+    width: 35rem;
+  }
+}
+.about__bio .bio__title {
   font-family: "font4";
   font-size: 3rem;
   font-weight: 100;
@@ -435,12 +443,12 @@ position: fixed;
   text-shadow: 0.1rem 0.15rem darkslategrey;
   margin: 1rem 0 0.5rem 0;
 }
-@media (min-width: 768px) {
-  .about__details .details__title {
+@media (min-width: 760px) {
+  .about__bio .bio__title {
     font-size: 4rem;
   }
 }
-.about__details .details__text {
+.about__bio .bio__text {
   font-family: "font1";
   font-size: 1.4rem;
   font-weight: 600;
@@ -448,25 +456,26 @@ position: fixed;
   text-shadow: 0.07rem 0.07rem darkslategrey;
   margin: 0.5rem 0 1rem 0;
 }
-@media (min-width: 992px) {
-  .about__details .details__text {
+@media (min-width: 760px) {
+  .about__bio .bio__text {
     font-size: 1.8rem;
   }
 }
-.about__details .profile {
+.about__bio .profile {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  margin: 0 3rem;
+  align-self: center;
 }
-.about__details .profile__img {
+.about__bio .profile__img {
   width: 10rem;
-  margin: 2rem 3rem;
 }
-@media (min-width: 993px) {
-  .about__details .profile__img {
-    margin: 2rem 5rem;
+@media (min-width: 760px) {
+  .about__bio .profile__img {
+    width: 15rem;
   }
 }
 .about__skills {
@@ -475,8 +484,12 @@ position: fixed;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  margin: 3rem 0.5rem;
-  outline: 2px solid lightgreen;
+  margin: 5rem 0.5rem 1rem 0.5rem;
+}
+@media (min-width: 1023px) {
+  .about__skills {
+    margin: 5rem;
+  }
 }
 .about__skills .skills {
   display: flex;
@@ -487,16 +500,16 @@ position: fixed;
 }
 .about__skills .skills__title {
   font-family: "font4";
-  font-size: 1.8rem;
+  font-size: 3rem;
   font-weight: 100;
   color: #C4E8FE;
   text-shadow: 0.1rem 0.15rem darkslategrey;
   text-align: center;
   margin: 1rem 0 0.5rem 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 760px) {
   .about__skills .skills__title {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 }
 .about__skills .skills .color--yellow {
@@ -510,7 +523,7 @@ position: fixed;
   flex-wrap: nowrap;
   text-align: center;
 }
-@media (min-width: 768px) {
+@media (min-width: 760px) {
   .about__skills .workin {
     width: 50vw;
   }
@@ -524,7 +537,7 @@ position: fixed;
   width: 80vw;
   margin: 0.5rem 0 1rem 0;
 }
-@media (min-width: 992px) {
+@media (min-width: 760px) {
   .about__skills .workin__text {
     font-size: 1.8rem;
   }
@@ -541,8 +554,9 @@ position: fixed;
   width: 3rem;
   margin: 1rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 760px) {
   .about__skills .elements__icon {
+    width: 5rem;
     margin: 2rem;
   }
 }
@@ -1068,7 +1082,7 @@ position: fixed;
   font-size: 1.4rem;
   font-weight: 600;
   color: whitesmoke;
-  text-shadow: 0.1rem 0.15rem darkslategrey;
+  text-shadow: 0.07rem 0.07rem darkslategrey;
   margin: 2rem;
   text-align: center;
 }

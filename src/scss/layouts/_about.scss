@@ -1,4 +1,4 @@
-.about {
+.about { //
   @include d-flex(column, flex-start, center, nowrap);
   height: calc(100vh - 10rem);
   //MQ
@@ -8,24 +8,22 @@
 
   &__info {
     @include flex(flex, column, center, center, nowrap);
-    margin: $model-xl $model-s;
-    outline: $outline1;
+    margin: $model-xxl $model-s;
 
-    .info__title {
-      @include text($font-family-b, $font-size-l, $font-weight-s, $color-quinary, $text-shadow-l);
-      margin: 0 $model-xl;
+    .info__title { // about me
+      @include text($font-family-b, $font-size-m, $font-weight-s, $color-quinary, $text-shadow-l);
       text-align: center;
       //MQ
-      @include media(">=medium") {
-        font-size: $font-size-xl;
+      @include media(">=760px") {
+        font-size: $font-size-l;
       }
     }
 
-    .info__text {
+    .info__text { // Who I am?
       @include text($font-family-a, $font-size-s, $font-weight-m, $color-basic, $text-shadow-m);
-      margin: $model-m $model-s;
+      margin: $model-m 0;
       //MQ
-      @include media(">=medium") {
+      @include media(">=760px") {
         font-size: $font-size-sm;
       }
     }
@@ -35,31 +33,33 @@
     }
   }
 
-  &__details {
+  &__bio {
     @include flex(flex, column, center, center, nowrap);
-    margin: $model-xl $model-s;
-    outline: $outline1;
-    // MQ
-    @include media(">=medium") {
-      flex-direction: row;
-      align-items: flex-start;
+    //MQ
+    @include media(">=1022px") {
+      @include flex(flex, row, center, flex-start, nowrap);
     }
 
-    .details {
+    .bio { // coder és designer doboz
       @include flex(flex, column, center, center, nowrap);
-      width: 80vw;
+      margin: $model-xl $model-l;
       text-align: center;
-      margin: $model-l 0;
-      // MQ
-      @include media(">=medium") {
-        width: 30vw;
+      //MQ
+      @include media(">=1022px") {
+        width: 20rem;
+      }
+      @include media(">=1280px") {
+        width: 30rem;
+      }
+      @include media(">=1600px") {
+        width: 35rem;
       }
 
       &__title {
         @include text($font-family-b, $font-size-m, $font-weight-s, $color-tertiary, $text-shadow-l);
         margin: $model-m 0 $model-s 0;
-        // MQ
-        @include media(">=medium") {
+        //MQ
+        @include media(">=760px") {
           font-size: $font-size-l;
         }
       }
@@ -67,8 +67,8 @@
       &__text {
         @include text($font-family-a, $font-size-s, $font-weight-m, $color-basic, $text-shadow-m);
         margin: $model-s 0 $model-m 0;
-        // MQ
-        @include media(">=large") {
+        //MQ
+        @include media(">=760px") {
           font-size: $font-size-sm;
         }
       }
@@ -76,13 +76,14 @@
 
     .profile {
       @include flex(flex, row, center, center, nowrap);
+      margin: 0 $model-xl;
+      align-self: center;
 
       &__img {
         width: $size-beta-l;
-        margin: $model-l $model-xl;
-        // MQ
-        @include media(">large") {
-          margin: $model-l $model-xxl;
+        //MQ
+        @include media(">=760px") {
+          width: $size-beta-xxl;
         }
       }
     }
@@ -90,19 +91,22 @@
 
   &__skills {
     @include flex(flex, column, center, center, nowrap);
-    margin: $model-xl $model-s;
-    outline: $outline1;
+    margin: $model-xxl $model-s $model-m $model-s;
+    //MQ
+    @include media(">=1023px") {
+      margin: $model-xxl;
+    }
 
     .skills {
       @include flex(flex, row, center, center, nowrap);
 
       &__title {
-        @include text($font-family-b, $font-size-sm, $font-weight-s, $color-quinary, $text-shadow-l);
+        @include text($font-family-b, $font-size-m, $font-weight-s, $color-quinary, $text-shadow-l);
         text-align: center;
         margin: $model-m 0 $model-s 0;
         //MQ
-        @include media(">=medium") {
-          font-size: $font-size-m;
+        @include media(">=760px") {
+          font-size: $font-size-l;
         }
       }
 
@@ -115,7 +119,7 @@
       @include flex(flex, row, center, center, nowrap);
       text-align: center;
       //MQ
-      @include media(">=medium") {
+      @include media(">=760px") {
         width: 50vw;
       }
 
@@ -123,8 +127,8 @@
         @include text($font-family-a, $font-size-s, $font-weight-m, $color-basic, $text-shadow-s);
         width: 80vw;
         margin: $model-s 0 $model-m 0;
-        // MQ
-        @include media(">=large") {
+        //MQ
+        @include media(">=760px") {
           font-size: $font-size-sm;
         }
       }
@@ -137,8 +141,9 @@
       &__icon {
         width: $size-alpha-l;
         margin: $model-m;
-        // MQ
-        @include media(">=medium") {
+        //MQ
+        @include media(">=760px") {
+          width: $size-alpha-xl;
           margin: $model-l;
         }
       }

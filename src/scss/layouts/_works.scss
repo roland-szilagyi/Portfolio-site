@@ -12,10 +12,6 @@
   &__info {
     @include flex(flex, column, center, center, nowrap);
     margin: $model-xxl $model-s;
-    //MQ
-    @include media(">700px") {
-    
-    }
 
     .info__title { // projects...
       @include text($font-family-b, $font-size-m, $font-weight-s, $color-quinary, $text-shadow-l);
@@ -76,7 +72,7 @@
       }
 
       .projects__title { // doboz cim
-        @include text($font-family-a, $font-size-s, $font-weight-m, $color-basic, $text-shadow-l);
+        @include text($font-family-a, $font-size-s, $font-weight-m, $color-basic, $text-shadow-m);
         margin: $model-l;
         text-align: center;
         //MQ
