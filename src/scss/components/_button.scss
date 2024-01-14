@@ -1,6 +1,6 @@
 .button {
   @include flex(flex, row, center, center, nowrap);
-  @include text($font-family-a, $font-size-base, $font-weight-m, $color-basic, $text-shadow-m);
+  @include text($font-family-a, $font-size-xs, $font-weight-m, $color-basic, $text-shadow-m);
   background-color: $color-primary;
   filter: $drop-shadow-s;
   margin-top: $model-l;

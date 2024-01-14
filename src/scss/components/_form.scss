@@ -1,6 +1,6 @@
 .contact__form {
   @include flex(flex, column, center, center, nowrap);
-  background: $color-fifth; // linear-gradient($color-fifth, $color-secondary)
+  background: linear-gradient($color-fifth, $color-sixth);
   margin: $model-xl $model-m;
   filter: $drop-shadow-m;
   border: 0.1rem solid rgba($color: $color-quinary, $alpha: 0.8);
@@ -68,7 +68,7 @@
 
       .detail__title { // cimek
         @include flex(flex, column, space-between, flex-start, nowrap);
-        @include text($font-family-a, $font-size-base, $font-weight-m, $color-basic, $text-shadow-s);
+        @include text($font-family-a, $font-size-xs, $font-weight-m, $color-basic, $text-shadow-s);
         width: $size-beta-xxl;
         margin: $model-m;
         //MQ
@@ -131,7 +131,7 @@
 
       .checkbox__label { // 1db checkbox kontenere
         @include flex(flex, row, center, center, nowrap);
-        @include text($font-family-a, $font-size-base, $font-weight-m, $color-quinary, $text-shadow-s);
+        @include text($font-family-a, $font-size-xs, $font-weight-m, $color-quinary, $text-shadow-s);
         margin: $model-s $model-s $model-s 0;
         //MQ
         @include media(">=576px") {

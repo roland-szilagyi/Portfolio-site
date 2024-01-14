@@ -44,7 +44,7 @@
     }
 
     .projects { // project doboz
-      background: $color-fifth;
+      background: linear-gradient($color-fifth, $color-sixth);
       margin: $model-xl $model-l;
       width: $size-beta-xtreme;
       filter: $drop-shadow-l;

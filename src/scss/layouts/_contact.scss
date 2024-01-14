@@ -79,6 +79,9 @@
         filter: $drop-shadow-s;
         //MQ
         @include media(">=576px") {
+          width: $size-alpha-m;
+        }
+        @include media(">=767px") {
           width: $size-alpha-l;
         }
       }
