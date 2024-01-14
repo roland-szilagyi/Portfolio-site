@@ -1,0 +1,29 @@
+.clouds {
+  width: 100%;
+  position: absolute;
+  animation-iteration-count: infinite;
+  left: 80vw;
+  animation-name: clouds;
+  animation-timing-function: linear;
+
+  .cloud1 {
+    @include cloud(absolute, 0, 10s, 0, 14rem, 100);
+  }
+  
+  .cloud2 {
+    @include cloud(absolute, 8rem, 8s, 5s, 17rem, 100);
+  }
+
+  .cloud3 {
+    @include cloud(absolute, 5rem, 14s, 7s, 15rem, 110);
+  }
+
+  .cloud4 {
+    @include cloud(absolute, 15rem, 17s, 10s, 14rem, 100);
+  }
+}
+
+@keyframes clouds {
+  from {left: 50%;}
+  to {left: -150%;}
+}

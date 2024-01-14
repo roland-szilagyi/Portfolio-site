@@ -85,3 +85,13 @@
     }
         border-color: $border-color;
 }
+
+// CLOUD
+@mixin cloud($position, $top, $duration, $delay, $width, $z-index) {
+    position: $position;
+    top: $top;
+    animation-duration: $duration;
+    animation-delay: $delay;
+    width: $width;
+    z-index: $z-index;
+}

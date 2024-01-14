@@ -4,6 +4,7 @@
   background: linear-gradient($color-fifth, $color-secondary);
   z-index: $z-index-first;
   position: fixed;
+  z-index: 200;
 
   &__header {
     @include flex(flex, row, flex-end, center, nowrap);

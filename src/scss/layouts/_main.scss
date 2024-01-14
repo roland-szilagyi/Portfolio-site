@@ -1,30 +1,13 @@
 .main {
   @include d-flex(column, space-evenly, center, nowrap);
   height: calc(100vh - 10rem);
+
   //MQ
   @include media("height<578px") {
     height: auto;
   }
 
-  .paperplane__img {
-    width: $size-beta-l;
-    //MQ
-    @include media(">700px") {
-      width: $size-beta-xl;
-    }
-    @include media(">=1600px") {
-      width: $size-beta-xxl;
-    }
-    @include media("height>1192px") {
-      width: $size-beta-xxl;
-    }
-    @include media("height>1600px") {
-      width: $size-beta-xtreme;
-    }
-    @include media("height<578px") {
-      margin: $model-l;
-    }
-  }
+  // paperplane.scss (in components)
 
   .main__content {
     @include flex(flex, column, center, center, nowrap);
