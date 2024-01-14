@@ -1,4 +1,4 @@
-.main { //
+.main {
   @include d-flex(column, space-evenly, center, nowrap);
   height: calc(100vh - 10rem);
   //MQ
@@ -44,7 +44,7 @@
       text-align: center;
       line-height: $line-height-m;
 
-      .content__title {
+      &__title {
         @include text($font-family-b, $font-size-m, $font-weight-s, $color-quinary, $text-shadow-l);
         //MQ
         @include media(">=760px") {
@@ -59,7 +59,7 @@
         }
       }
 
-      .content__text {
+      &__text {
         @include text($font-family-a, $font-size-xs, $font-weight-m, $color-basic, $text-shadow-m);
         margin: $model-xs $model-m;
         //MQ

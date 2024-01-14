@@ -2,31 +2,29 @@
   @include d-flex(column, flex-start, center, nowrap);
   height: calc(100vh - 10rem);
   //MQ
-  @include media("height<1918px") {
+  @include media("height<1921px") {
     height: auto;
   }
 
-  &__info {
+  &__info { // let's talk via email... (container)
     @include flex(flex, column, center, center, nowrap);
-    margin: $model-xl $model-s;
-    outline: $outline1;
+    margin: $model-xxl $model-s;
 
-    .info__title {
+    .info__title { // let's talk
       @include text($font-family-b, $font-size-m, $font-weight-s, $color-quinary, $text-shadow-l);
-      margin: 0 $model-xl;
       text-align: center;
       //MQ
-      @include media(">=medium") {
+      @include media(">=760px") {
         font-size: $font-size-l;
       }
     }
 
-    .info__text {
+    .info__text { // via email or social media
       @include text($font-family-a, $font-size-s, $font-weight-m, $color-basic, $text-shadow-m);
-      margin: $model-m $model-s;
+      margin: $model-m 0;
       text-align: center;
       //MQ
-      @include media(">=medium") {
+      @include media(">=760px") {
         font-size: $font-size-sm;
       }
     }
@@ -36,37 +34,43 @@
     }
   }
 
-  &__social {
+  &__social { // social (container)
     @include flex(flex, row, center, center, nowrap);
-    margin: $model-xl $model-s;
-    outline: $outline1;
+    margin: $model-xl;
   
-    .contact-social {
+    .social { // egy link (container)
       @include flex(flex, column, center, center, nowrap);
       margin: 2rem 1.5rem;
       //MQ
-      @include media(">=medium") {
-        flex-direction: row;
+      @include media(">=760px") {
+        margin: $model-xl;
       }
   
       &:hover {
         color: $color-tertiary;
+        scale: 1.1;
         cursor: pointer;
         opacity: 1;
-        fill: $color-tertiary;
+        filter: $drop-shadow-m;
   
-        .social-img {
+        &__img { // link icon (hover)
+          height: auto;
+          margin: $model-s;
+          opacity: 0.7;
           fill: $color-tertiary;
-          opacity: 1;
         }
 
-        .social-text {
-          opacity: 1;
-          color: $color-tertiary;
+        &__text { // link szöveg (hover)
+          @include text($font-family-a, $font-size-base, $font-weight-m, $color-basic, $text-shadow-s);
+          opacity: 0.7;
+          //MQ
+          @include media(">=576px") {
+            font-size: $font-size-xs;
+          }
         }
       }
 
-      .social-img {
+      &__img {
         width: $size-alpha-m;
         height: auto;
         margin: $model-s;
@@ -74,20 +78,19 @@
         fill: $color-quinary;
         filter: $drop-shadow-s;
         //MQ
-        @include media(">small") {
+        @include media(">=576px") {
           width: $size-alpha-l;
-          margin: $model-l;
         }
       }
 
-      .social-text {
+      &__text {
         @include text($font-family-a, $font-size-base, $font-weight-m, $color-basic, $text-shadow-s);
         opacity: 0.7;
         //MQ
-        @include media(">small") {
+        @include media(">=576px") {
           font-size: $font-size-xs;
         }
-      } 
+      }
     }
   }
 }  

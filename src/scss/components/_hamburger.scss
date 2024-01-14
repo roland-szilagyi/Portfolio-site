@@ -1,9 +1,9 @@
-.ham { //
+.ham {
   @include flex(flex, column, flex-start, center, nowrap);
   @include size(100vw, 100vh);
   background: linear-gradient($color-fifth, $color-secondary);
   z-index: $z-index-first;
-  position: fixed; // maybe
+  position: fixed;
 
   &__header {
     @include flex(flex, row, flex-end, center, nowrap);
@@ -40,7 +40,7 @@
         flex-direction: row;
       }
 
-      .links__title {
+      &__title {
         @include flex(flex, column, center, center, nowrap);
         @include text($font-family-b, $font-size-l, $font-weight-s, $color-quinary, $text-shadow-l);
         margin: $model-s;
@@ -88,10 +88,6 @@
     }
   }
 }
-
-/* .ham--fix {    maybe not
-position: fixed;
-} */
 
 .visible {
   display: flex;

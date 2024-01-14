@@ -1,12 +1,20 @@
 .button {
   @include flex(flex, row, center, center, nowrap);
-  @include text($font-family-a, $font-size-base, $font-weight-m, $color-basic, $text-shadow-s);
+  @include text($font-family-a, $font-size-base, $font-weight-m, $color-basic, $text-shadow-m);
   background-color: $color-primary;
   filter: $drop-shadow-s;
-  margin: 2rem;
-  padding: 0.6rem 1.8rem;
-  border-radius: 0.5rem;
+  margin-top: $model-l;
+  margin-bottom: $model-xl;
+  padding: 0.8rem 1.9rem;
+  border-radius: $model-s;
   border-style: none;
+  //MQ
+  @include media(">=576px") {
+    font-size: $font-size-xs; //xs
+  }
+  @include media(">=767px") {
+    font-size: $font-size-s;
+  }
 }
 
 .button:hover,

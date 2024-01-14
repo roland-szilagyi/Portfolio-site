@@ -1,9 +1,12 @@
-.about { //
+.about {
   @include d-flex(column, flex-start, center, nowrap);
   height: calc(100vh - 10rem);
   //MQ
   @include media("height<1918px") {
     height: auto;
+  }
+  @include media(">=1915px") {
+    height: calc(100vh - 10rem);
   }
 
   &__info {
@@ -81,6 +84,7 @@
 
       &__img {
         width: $size-beta-l;
+        filter: $drop-shadow-s;
         //MQ
         @include media(">=760px") {
           width: $size-beta-xxl;
@@ -141,6 +145,7 @@
       &__icon {
         width: $size-alpha-l;
         margin: $model-m;
+        filter: $drop-shadow-m;
         //MQ
         @include media(">=760px") {
           width: $size-alpha-xl;

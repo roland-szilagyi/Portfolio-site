@@ -70,12 +70,14 @@ $drop-shadow-l: drop-shadow(0.20rem 0.20rem 0.07rem $color-shadow);
 // SIZE (alpha)
 $size-alpha-xs: 1.2rem;
 $size-alpha-s: 1.4rem;
+$size-alpha-sm: 1.8rem;
 $size-alpha-m: 2rem;
 $size-alpha-l: 3rem;
 $size-alpha-xl: 5rem;
 
 // SIZE (beta)
 $size-beta-s: 5rem;
+$size-beta-sm: 6.5rem;
 $size-beta-m: 8rem;
 $size-beta-l: 10rem;
 $size-beta-xl: 12rem;
@@ -87,6 +89,7 @@ $size-auto: auto;
 // MARGIN & PADDING
 $model-xs: 0.3rem;
 $model-s: 0.5rem;
+$model-sm: 0.75rem;
 $model-m: 1rem;
 $model-l: 2rem;
 $model-xl: 3rem;

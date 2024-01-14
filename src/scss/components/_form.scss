@@ -1,98 +1,154 @@
 .contact__form {
   @include flex(flex, column, center, center, nowrap);
-  outline: $outline2;
-  //MQ
-  @include media(">=medium") {
-    flex-direction: row;
-  }
-  background: linear-gradient($color-fifth, $color-secondary);
+  background: $color-fifth; // linear-gradient($color-fifth, $color-secondary)
   margin: $model-xl $model-m;
   filter: $drop-shadow-m;
-  border: 0.2rem solid rgba($color: $color-quinary, $alpha: 0.8);
-  border-radius: $border-radius-l;
+  border: 0.1rem solid rgba($color: $color-quinary, $alpha: 0.8);
+  //MQ
+  @include media(">=1278px") {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+  }
+  @include media(">=1600px") {
+    width: 70%;
+  }
 
   .side--A {
     @include flex(flex, column, center, center, nowrap);
     //MQ
-    @include media(">=medium") {
-      width: 35vw;
+    @include media(">=1278px") {
+      width: 35%;
+      align-self: flex-start;
+    }
+    @include media(">=1600px") {
+      width: 30%;
     }
   }
 
   .side--B {
     @include flex(flex, column, center, center, nowrap);
     //MQ
-    @include media(">=medium") {
-      width: 35vw;
+    @include media(">=1278px") {
+      width: 45%;
+      align-self: flex-start;
+    }
+    @include media(">=1600px") {
+      width: 50%;
     }
   }
 
-  .form__detail {
-    @include flex(flex, column, center, flex-start, nowrap);
+  .form__detail { // name, email, subject dobozok
+    @include flex(flex, column, center, stretch, nowrap);
     width: 70vw;
-    margin: $model-m;
+    margin: $model-l;
+    //MQ
+    @include media(">=576px") {
+      width: 50vw;
+      margin: $model-l 2.5rem;
+    }
+    @include media(">=1278px") {
+      width: 100%;
+    }
 
-    .detail__cont {
+    .detail__cont { // cim, ikonnal kontener
       @include flex(flex, row, flex-start, center, nowrap);
-      width: 70vw;
+      margin-bottom: $model-s;
 
-      .detail__icon {
+      .detail__icon { // ikonok
         @include size($size-alpha-s, $size-auto);
         filter: $drop-shadow-s;
         opacity: 0.7;
         fill: #C4E8FE;
-      }
-
-      .detail__title {
-        @include flex(flex, column, space-between, flex-start, nowrap);
-        @include text($font-family-a, $font-size-base, $font-weight-m, $color-basic, $text-shadow-l);
-        width: $size-beta-xxl;
-        margin: $model-m;
-      }
-    }
-
-    .input__cont {
-
-      .input__text {
-        @include text($font-family-a, $font-size-base, $font-weight-m, $color-basic, $text-shadow-s);
-        width: 70vw;
-        padding: $model-s;
-        background-color:rgba(0, 0, 0, 0.3);
-        border: none;
-        border-bottom: 1px solid rgba($color: $color-quinary, $alpha: 0.8);
-        border-radius: $border-radius-s;
-    
-        &::placeholder {
-          color: $color-quinary;
-          opacity: 0.5;
+        //MQ
+        @include media(">=760px") {
+          width: $size-alpha-sm;
         }
       }
 
-      .input__textarea {
+      .detail__title { // cimek
+        @include flex(flex, column, space-between, flex-start, nowrap);
         @include text($font-family-a, $font-size-base, $font-weight-m, $color-basic, $text-shadow-s);
-        width: 70vw;
-        padding: $model-s;
-        background-color:rgba(0, 0, 0, 0.3);
-        border: none;
-        border-bottom: 1px solid rgba($color: $color-quinary, $alpha: 0.8);
-        border-radius: $border-radius-s;
+        width: $size-beta-xxl;
+        margin: $model-m;
+        //MQ
+        @include media(">=576px") {
+          font-size: $font-size-xs;
+        }
+        @include media(">=767px") {
+          font-size: $font-size-s;
+        }
       }
     }
 
-    .checkbox__cont {
-      @include flex(flex, row, space-around, flex-start, nowrap);
+    .input__text { // a szövegmezök amikbe irsz
+      @include text($font-family-a, $font-size-base, $font-weight-m, $color-basic, $text-shadow-s);
+      width: 100%;
+      padding: $model-s;
+      background-color:rgba(0, 0, 0, 0.3);
+      border: none;
+      border-bottom: 1px solid rgba($color: $color-quinary, $alpha: 0.8);
+      border-radius: $border-radius-s;
+      //MQ
+      @include media(">=767px") {
+        font-size: $font-size-xs;
+      }
+      @include media(">=1278px") {
+        padding: $model-sm;
+      }
+  
+      &::placeholder {
+        color: $color-quinary;
+        opacity: 0.5;
+      }
+    }
+
+    .input__textarea { // amibe az üzenetet irod
+      @include text($font-family-a, $font-size-base, $font-weight-m, $color-basic, $text-shadow-s);
+      width: 100%;
+      padding: $model-s;
+      background-color:rgba(0, 0, 0, 0.3);
+      border: none;
+      border-bottom: 1px solid rgba($color: $color-quinary, $alpha: 0.8);
+      border-radius: $border-radius-s;
+      //MQ
+      @include media(">=767px") {
+        font-size: $font-size-xs;
+      }
+      @include media(">=1278px") {
+        padding: $model-sm;
+      }
+
+      &::placeholder {
+        color: $color-quinary;
+        opacity: 0.5;
+      }
+    }
+
+    .checkbox__cont { // amiben a checkboxok vannak egymas mellett
+      @include flex(flex, column, space-around, flex-start, nowrap);
       width: 100%;
 
-      .checkbox__label {
+      .checkbox__label { // 1db checkbox kontenere
+        @include flex(flex, row, center, center, nowrap);
         @include text($font-family-a, $font-size-base, $font-weight-m, $color-quinary, $text-shadow-s);
+        margin: $model-s $model-s $model-s 0;
+        //MQ
+        @include media(">=576px") {
+          font-size: $font-size-xs;
+        }
+        @include media(">=767px") {
+          font-size: $font-size-s;
+        }
 
         &:hover {
           color: $color-tertiary;
           cursor: pointer;
         }
     
-        .checkbox__input {
-          margin: 0 $model-s;
+        .checkbox__input { // a checkbox
+          @include size(1rem, 1rem); 
+          margin-right: $model-m;
         }
       }
     }

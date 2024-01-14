@@ -44,11 +44,11 @@
     }
 
     .projects { // project doboz
-      background: linear-gradient($color-fifth, $color-secondary);
+      background: $color-fifth;
       margin: $model-xl $model-l;
       width: $size-beta-xtreme;
-      border-radius: $border-radius-s;
-      filter: $drop-shadow-m;
+      filter: $drop-shadow-l;
+      border: 0.1rem solid rgba($color: $color-quinary, $alpha: 0.8);
       //MQ
       @include media(">=576px", "<1022px") {
         width: 28rem;
@@ -67,11 +67,11 @@
         scale: 1.02;
       }
 
-      .projects__thumbnails { // doboz kép
+      &__thumbnails { // doboz kép
         @include border($border-m, b, $color-quinary);
       }
 
-      .projects__title { // doboz cim
+      &__title { // doboz cim
         @include text($font-family-a, $font-size-s, $font-weight-m, $color-basic, $text-shadow-m);
         margin: $model-l;
         text-align: center;
@@ -81,7 +81,7 @@
         }
       }
 
-      .projects__text { // doboz szöveg
+      &__text { // doboz szöveg
         @include text($font-family-a, $font-size-base, $font-weight-m, $color-basic, $text-shadow-s);
         padding: $model-s $model-l $model-l $model-l;
         //MQ
