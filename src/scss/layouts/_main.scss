@@ -1,7 +1,6 @@
 .main {
   @include d-flex(column, space-evenly, center, nowrap);
   height: calc(100vh - 10rem);
-
   //MQ
   @include media("height<578px") {
     height: auto;

@@ -6,24 +6,48 @@
   animation-name: clouds;
   animation-timing-function: linear;
 
+  @keyframes clouds {
+    from {left: 50%;}
+    to {left: -150%;}
+  }
+
   .cloud1 {
-    @include cloud(absolute, 0, 10s, 0, 14rem, 100);
+    @include cloud(absolute, 0, 10s, 0, 14rem, -3);
+    @include media(">=576px") {
+      width: 16rem;
+    }
+    @include media(">=1022px") {
+      width: 19rem;
+    }
   }
   
   .cloud2 {
-    @include cloud(absolute, 8rem, 8s, 5s, 17rem, 100);
+    @include cloud(absolute, 8rem, 8s, 5s, 17rem, -1);
+    @include media(">=576px") {
+      width: 19rem;
+    }
+    @include media(">=1022px") {
+      width: 22rem;
+    }
   }
 
   .cloud3 {
-    @include cloud(absolute, 5rem, 14s, 7s, 15rem, 110);
+    @include cloud(absolute, 23rem, 14s, 7s, 15rem, -1);
+    @include media(">=576px") {
+      width: 25rem;
+    }
+    @include media(">=1022px") {
+      width: 28rem;
+    }
   }
 
   .cloud4 {
-    @include cloud(absolute, 15rem, 17s, 10s, 14rem, 100);
+    @include cloud(absolute, 15rem, 17s, 10s, 14rem, -1);
+    @include media(">=576px") {
+      width: 17rem;
+    }
+    @include media(">=1022px") {
+      width: 20rem;
+    }
   }
-}
-
-@keyframes clouds {
-  from {left: 50%;}
-  to {left: -150%;}
 }

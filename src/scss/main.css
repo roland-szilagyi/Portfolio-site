@@ -320,7 +320,6 @@ p, h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(#219EBC, #00468B);
   z-index: 100;
   position: fixed;
-  z-index: 200;
 }
 .ham__header {
   display: flex;
@@ -452,39 +451,6 @@ p, h1, h2, h3, h4, h5, h6 {
   animation-name: clouds;
   animation-timing-function: linear;
 }
-.clouds .cloud1 {
-  position: absolute;
-  top: 0;
-  animation-duration: 10s;
-  animation-delay: 0;
-  width: 14rem;
-  z-index: 100;
-}
-.clouds .cloud2 {
-  position: absolute;
-  top: 8rem;
-  animation-duration: 8s;
-  animation-delay: 5s;
-  width: 17rem;
-  z-index: 100;
-}
-.clouds .cloud3 {
-  position: absolute;
-  top: 5rem;
-  animation-duration: 14s;
-  animation-delay: 7s;
-  width: 15rem;
-  z-index: 110;
-}
-.clouds .cloud4 {
-  position: absolute;
-  top: 15rem;
-  animation-duration: 17s;
-  animation-delay: 10s;
-  width: 14rem;
-  z-index: 100;
-}
-
 @keyframes clouds {
   from {
     left: 50%;
@@ -493,9 +459,82 @@ p, h1, h2, h3, h4, h5, h6 {
     left: -150%;
   }
 }
+.clouds .cloud1 {
+  position: absolute;
+  top: 0;
+  animation-duration: 10s;
+  animation-delay: 0;
+  width: 14rem;
+  z-index: -3;
+}
+@media (min-width: 576px) {
+  .clouds .cloud1 {
+    width: 16rem;
+  }
+}
+@media (min-width: 1022px) {
+  .clouds .cloud1 {
+    width: 19rem;
+  }
+}
+.clouds .cloud2 {
+  position: absolute;
+  top: 8rem;
+  animation-duration: 8s;
+  animation-delay: 5s;
+  width: 17rem;
+  z-index: -1;
+}
+@media (min-width: 576px) {
+  .clouds .cloud2 {
+    width: 19rem;
+  }
+}
+@media (min-width: 1022px) {
+  .clouds .cloud2 {
+    width: 22rem;
+  }
+}
+.clouds .cloud3 {
+  position: absolute;
+  top: 23rem;
+  animation-duration: 14s;
+  animation-delay: 7s;
+  width: 15rem;
+  z-index: -1;
+}
+@media (min-width: 576px) {
+  .clouds .cloud3 {
+    width: 25rem;
+  }
+}
+@media (min-width: 1022px) {
+  .clouds .cloud3 {
+    width: 28rem;
+  }
+}
+.clouds .cloud4 {
+  position: absolute;
+  top: 15rem;
+  animation-duration: 17s;
+  animation-delay: 10s;
+  width: 14rem;
+  z-index: -1;
+}
+@media (min-width: 576px) {
+  .clouds .cloud4 {
+    width: 17rem;
+  }
+}
+@media (min-width: 1022px) {
+  .clouds .cloud4 {
+    width: 20rem;
+  }
+}
+
 .paperplane__img {
   width: 10rem;
-  z-index: 100;
+  z-index: 1;
 }
 @media (min-width: 701px) {
   .paperplane__img {
@@ -523,11 +562,10 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.paperplane--fly {
+.paperplane {
   animation-iteration-count: infinite;
   position: relative;
   animation: paperplane 5s linear 0s infinite normal;
-  z-index: 10;
 }
 
 @keyframes paperplane {
@@ -535,13 +573,13 @@ p, h1, h2, h3, h4, h5, h6 {
     transform: translateY(0) rotateX(0) rotateZ(0deg);
   }
   25% {
-    transform: translateY(-2rem) rotateX(35deg) rotateZ(-5deg);
+    transform: translateY(-2rem) rotateX(35deg) rotateZ(10deg);
   }
   50% {
     transform: rotateX(0) translateY(0) rotateZ(0deg);
   }
   75% {
-    transform: rotateX(-30deg) translateY(2rem) rotateZ(5deg);
+    transform: rotateX(-30deg) translateY(2rem) rotateZ(-10deg);
   }
   100% {
     transform: rotateX(0) translateY(0) rotateZ(0deg);
