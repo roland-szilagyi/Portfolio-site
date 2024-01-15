@@ -4,8 +4,8 @@ hamBtnOpen.addEventListener('click', hamOpen);
 
 function hamOpen() {
   let hamIsOpen = document.querySelector('.ham');
+  hamIsOpen.classList.add('wave-in');
   hamIsOpen.classList.remove('hidden');
-  headerInvisible();
 };
 
 // Header Invisible

@@ -1,0 +1,24 @@
+.wave-in {
+  position: absolute;
+  top: 0rem;
+  animation-name: wave-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+
+  @keyframes wave-in {
+      from {right: -120%;}
+      to {right: 0%;}
+  }
+}
+
+.wave-out {
+  position: relative;
+  animation-name: wave-out;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+
+  @keyframes wave-out {
+      from {left: 0%;}
+      to {left: -120%;}
+  }
+}
