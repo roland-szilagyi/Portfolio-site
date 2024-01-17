@@ -602,9 +602,10 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .wave-out {
-  position: relative;
+  position: absolute;
+  top: 0rem;
   animation-name: wave-out;
-  animation-duration: 1s;
+  animation-duration: 0.3s;
   animation-fill-mode: forwards;
 }
 @keyframes wave-out {
@@ -612,7 +613,7 @@ p, h1, h2, h3, h4, h5, h6 {
     left: 0%;
   }
   to {
-    left: -120%;
+    left: 120%;
   }
 }
 

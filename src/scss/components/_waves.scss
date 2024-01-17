@@ -12,13 +12,14 @@
 }
 
 .wave-out {
-  position: relative;
+  position: absolute;
+  top: 0rem;
   animation-name: wave-out;
-  animation-duration: 1s;
+  animation-duration: 0.3s;
   animation-fill-mode: forwards;
 
   @keyframes wave-out {
       from {left: 0%;}
-      to {left: -120%;}
+      to {left: 120%;}
   }
 }
