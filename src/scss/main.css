@@ -27,6 +27,7 @@ body {
   -webkit-font-smoothing: antialiased;
   background: linear-gradient(#128FC8, #00468B);
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 ol, ul {
